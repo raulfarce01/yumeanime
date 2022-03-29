@@ -55,3 +55,23 @@ Voy a crear una página principalmente de noticias y contenido anime, donde pued
 ## Planificación
 Grant en el siguiente enlace: 
 https://docs.google.com/spreadsheets/d/1-KXS5N--oKPiSEBPsgFjpQpuVVrh9BLd4Oyl7MlccDY/edit?usp=sharing
+
+---
+
+# Diseño
+En este apartado se recogerán todas las características del diseño, es decir, tipografía, color, y el diseño de las páginas será publicado al github una vez finalizado.
+
+#### Colores
+Resalto -> #EA2900
+Fondo -> #E8EDEB
+Nav y cabecera -> #4F4947
+
+#### Fuentes
+Título ->{
+    - Oleo Script Swash Caps : https://fonts.google.com/specimen/Oleo+Script+Swash+Caps?category=Display&preview.text=Yumeanime&preview.text_type=custom
+    - Lilita One : https://fonts.google.com/specimen/Lilita+One?category=Display&preview.text=Yumeanime&preview.text_type=custom
+}
+
+Parrafadas -> Mulish : https://fonts.google.com/specimen/Mulish?category=Sans+Serif&preview.text=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur&preview.text_type=custom
+
+#### Web Design
