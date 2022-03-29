@@ -63,8 +63,8 @@ En este apartado se recogerán todas las características del diseño, es decir,
 
 #### Colores
 Resalto -> #EA2900
-Fondo -> #E8EDEB
-Nav y cabecera -> #4F4947
+Fondo -> #EAEDE8
+Nav y cabecera -> #012845
 
 #### Fuentes
 Título ->{
