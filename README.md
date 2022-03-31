@@ -58,13 +58,13 @@ https://docs.google.com/spreadsheets/d/1-KXS5N--oKPiSEBPsgFjpQpuVVrh9BLd4Oyl7Mlc
 
 ---
 
-# Diseño
+## Diseño
 En este apartado se recogerán todas las características del diseño, es decir, tipografía, color, y el diseño de las páginas será publicado al github una vez finalizado.
 
 #### Colores
-Resalto -> #EA2900
-Fondo -> #EAEDE8
-Nav y cabecera -> #012845
+Resalto -> #D4C859
+Fondo -> #FAF8F7
+Nav, cabecera y destacados -> #0A1940
 
 #### Fuentes
 Título ->{
@@ -75,3 +75,6 @@ Título ->{
 Parrafadas -> Mulish : https://fonts.google.com/specimen/Mulish?category=Sans+Serif&preview.text=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur&preview.text_type=custom
 
 #### Web Design
+
+
+---
