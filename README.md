@@ -65,6 +65,7 @@ En este apartado se recogerán todas las características del diseño, es decir,
 Resalto -> #D4C859
 Fondo -> #FAF8F7
 Nav, cabecera y destacados -> #0A1940
+Botones y contenedores -> #465987
 
 #### Fuentes
 Título ->{
