@@ -78,4 +78,6 @@ Parrafadas -> Mulish : https://fonts.google.com/specimen/Mulish?category=Sans+Se
 #### Web Design
 La maqueta se puede encontrar en el siguiente enlace: https://github.com/raulfarce01/yumeanime/tree/main/Maqueta
 
+La guía de estilo se encuentra en este: https://docs.google.com/presentation/d/1cGowuLXcR9wvUZ7bOUQY9obRuL_5cHW02LIcJG-rpFs/edit#slide=id.g122cc07b7eb_0_106
+
 ---
