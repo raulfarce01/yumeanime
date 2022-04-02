@@ -65,6 +65,7 @@ En este apartado se recogerán todas las características del diseño, es decir,
 Resalto -> #D4C859
 Fondo -> #FAF8F7
 Nav, cabecera y destacados -> #0A1940
+Botones y contenedores -> #465987
 
 #### Fuentes
 Título ->{
@@ -75,6 +76,8 @@ Título ->{
 Parrafadas -> Mulish : https://fonts.google.com/specimen/Mulish?category=Sans+Serif&preview.text=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur&preview.text_type=custom
 
 #### Web Design
+La maqueta se puede encontrar en el siguiente enlace: https://github.com/raulfarce01/yumeanime/tree/main/Maqueta
 
+La guía de estilo se encuentra en este: https://docs.google.com/presentation/d/1cGowuLXcR9wvUZ7bOUQY9obRuL_5cHW02LIcJG-rpFs/edit#slide=id.g122cc07b7eb_0_106
 
 ---
