@@ -81,3 +81,17 @@ La maqueta se puede encontrar en el siguiente enlace: https://github.com/raulfar
 La guía de estilo se encuentra en este: https://github.com/raulfarce01/yumeanime/blob/main/Gu%C3%ADa%20de%20Estilo.pdf
 
 ---
+
+## Base de Datos
+
+El modelo entidad - relación se puede encontrar en este enlace: https://github.com/raulfarce01/yumeanime/blob/main/YumeanimeE-R.png
+
+El grafo relacional se encuentra en este otro: https://github.com/raulfarce01/yumeanime/blob/main/Grafo%20Relacional%20Yumeanime.pdf
+En el último se explica qué era lo que faltaba para normalizar y el proceso para hacerlo.
+
+---
+
+## Casos de uso
+
+En este esquema podemos ver los distintos usuarios que vamos a poder crear en la página y las funcionalidades de cada uno de ellos:
+https://github.com/raulfarce01/yumeanime/blob/main/DiagramaCasosUso.png
