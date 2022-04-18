@@ -3,6 +3,19 @@ Repositorio para el proyecto del TFG, aquí se guardará toda la información, a
 
 ---
 
+1. [Nombre del Proyecto](#nombre)
+2. [Investigación y Comparación del Proyecto con similares](#compara)
+3. [Explicación de las especificaciones del proyecto](#explica)
+4. [Planning del Proyecto](#plan)
+5. [Diseño del proyecto y sus páginas](#design)
+6. [Esquemas y especificaciones de la base de datos](#baseDatos)
+7. [Diagrama de Casos de Uso](#casosUso)
+8. [Anotaciones y Aclaraciones](#memoria)
+
+<a name="nombre"></a>
+
+---
+
 ## Nombre del Proyecto
 
 Yumeanime
@@ -13,6 +26,8 @@ El nombre procede de la unión de dos palabras:
 
 - Yume (del japonés), que traducido al español significa "sueño".
 - Anime (del japonés), que significa "animado".
+
+<a name="compara"></a>
 
 ## Investigación y Comparación del Mercado
 
@@ -48,13 +63,19 @@ El nombre procede de la unión de dos palabras:
         - No tiene página de noticias
         - No puedes hacer lista personalizada de animes
 
+<a name="explica"></a>
+
 ## Explicación del Proyecto
 
 Voy a crear una página principalmente de noticias y contenido anime, donde puedas investigar los animes del mercado y puedas crear tu propia lista personalizada de los animes que quieras almacenar en la misma, ya sea por su categoría, o por la atracción que te han creado, o por si sería un anime que recomendarías, etc... (opcionalmente también de las noticias). La página tendrá tres tipos de usuarios: "Usuario normal", es decir, el que se registra en la página, al que se le permite crear sus propias listas, comentar, dar "me gusta"; "Usuario sin registrar", al que no se le permite realizar ninguna acción exceptuando la de navegar por la aplicación, leer las páginas dedicadas de cada anime, y visualizar las listas de otros usuarios; "Usuario administrador", al que se le permite realizar cualquier acción en la página, como añadir animes y noticias. Opcionalmente, también intentaré crear una "mini" red social donde los otakus puedan interactuar entre ellos y compartir sus listas personalizadas, noticias, y hablar de otras cosas (versión extendida). En el caso de que sea rentable y tenga tiempo, seguiré desarrollando la página para que permita la visualización de los animes (versión extendida extendida).
     
+<a name="plan"></a>
+
 ## Planificación
 Grant en el siguiente enlace: 
 https://docs.google.com/spreadsheets/d/1-KXS5N--oKPiSEBPsgFjpQpuVVrh9BLd4Oyl7MlccDY/edit?usp=sharing
+
+<a name="design"></a>
 
 ---
 
@@ -80,6 +101,8 @@ La maqueta se puede encontrar en el siguiente enlace: https://github.com/raulfar
 
 La guía de estilo se encuentra en este: https://github.com/raulfarce01/yumeanime/blob/main/Gu%C3%ADa%20de%20Estilo.pdf
 
+<a name="baseDatos"></a>
+
 ---
 
 ## Base de Datos
@@ -89,6 +112,8 @@ El modelo entidad - relación se puede encontrar en este enlace: https://github.
 El grafo relacional se encuentra en este otro: https://github.com/raulfarce01/yumeanime/blob/main/Grafo%20Relacional%20Yumeanime.pdf
 En el último se explica qué era lo que faltaba para normalizar y el proceso para hacerlo.
 
+<a name="casosUso"></a>
+
 ---
 
 ## Casos de uso
@@ -96,9 +121,11 @@ En el último se explica qué era lo que faltaba para normalizar y el proceso pa
 En este esquema podemos ver los distintos usuarios que vamos a poder crear en la página y las funcionalidades de cada uno de ellos:
 https://github.com/raulfarce01/yumeanime/blob/main/DiagramaCasosUso.png
 
+<a name="memoria"></a>
+
 ---
 
-## Memoria
+## Anotaciones y Aclaraciones
 
 #### Despliegue de la aplicación con Laravel y phpMyAdmin
 
