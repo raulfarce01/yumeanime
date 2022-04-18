@@ -1,11 +1,3 @@
-
-# Memoria del Proyecto Web Yumeanime
-
-![Logo Portada](img/yumeanimeLogo-removebg-preview.png)
-
-Creado, diseñado, desplegado y redactado por **Raúl Fernández Arce**
-2º Ciclo Formativo de Grado Superior en **Desarrollo de Aplicaciones Web**
-
 # yumeanime
 Repositorio para el proyecto del TFG, aquí se guardará toda la información, avances y ficheros para la resolución del proyecto.
 
