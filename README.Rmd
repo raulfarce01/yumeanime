@@ -4,7 +4,7 @@
 
 ![Logo Portada](img/yumeanimeLogo-removebg-preview.png)
 
-Creado, diseñado, desplegado y redactado por **Raúl Fernández Arce**
+Creado, diseñado, desplegado y redactado por **Raúl Fernández Arce**  
 2º Ciclo Formativo de Grado Superior en **Desarrollo de Aplicaciones Web**
 
 </center>
