@@ -95,3 +95,41 @@ En el último se explica qué era lo que faltaba para normalizar y el proceso pa
 
 En este esquema podemos ver los distintos usuarios que vamos a poder crear en la página y las funcionalidades de cada uno de ellos:
 https://github.com/raulfarce01/yumeanime/blob/main/DiagramaCasosUso.png
+
+---
+
+## Memoria
+
+#### Despliegue de la aplicación con Laravel y phpMyAdmin
+
+Para desplegar la aplicación hemos tenido que crear el siguiente virtualHost en la ruta:
+
+*/etc/apache2/sites-available*
+
+![VirtualHost Apache](img/Memoria/virtualHost.png)
+
+La ruta del documento está puesta en public ya que ahí se encuentra la *welcome.blade.php* de laravel, la página donde tenemos la documentación y todo lo necesario de laravel. Una vez vayamos avanzando en el código crearemos una redirección al *index* del proyecto.
+
+Y debemos escribir los siguientes comandos:
+
+```
+sudo a2ensite yumeanime.com.conf  
+sudo systemctl restart apache2.service
+```
+
+También hemos tenido que añadir un Host en:
+
+*/etc/hosts*
+
+![Hosts](img/Memoria/hosts.png)
+
+Al hacer esto solamente, si entramos en *yumeanime.com* nos saldrá una pantalla de error típica de Laravel de que no hay permisos para mostrar la página, por eso, debemos escribir las siguientes líneas de comando:
+
+```
+sudo chown -R www-data:www-data /var/www/yumeanime/web  
+sudo chmod -R 755 /var/www/yumeanime/web
+```
+
+Estas líneas darán los permisos necesarios para que, a partir de ahora, podamos ver la página de larabel.
+
+Fuente: [Cómo instalar Laravel en Ubuntu Linux con Apache](https://liukin.es/como-instalar-laravel-en-ubuntu-linux-con-apache/)
