@@ -164,3 +164,5 @@ Fuente: [Cómo instalar Laravel en Ubuntu Linux con Apache](https://liukin.es/co
 #### Implementación y Codificación
 
 Se ha optado por no utilizar laravel por la falta de tiempo, ya que no es algo que se puede aprender a utilizar en dos semanas, se necesita dedicar MUCHO tiempo para aprender a usar laravel y ser capaz de cerrar las brechas que tiene, por ejemplo, las bases de datos al crearlas con Laravel, entre muchas otras brechas que tiene.
+
+Esta decisión se ha tomado el día 19/04/2022
