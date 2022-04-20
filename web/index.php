@@ -81,9 +81,29 @@
 
         </div>
 
+        <div class="botonMiperfil">
+
+            <p class="textoBotonMiperfil">Mis listas</p>
+            <i class="fa-solid fa-list"></i>
+
+        </div>
+
     </div>
 
     <!-- FIN CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
+
+    <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
+
+    <div class="contenedorMenuHamburguesa">
+        <div class="menuHamburguesa">
+
+            <div class="linea1 lineaHamb"></div>
+            <div class="linea2 lineaHamb"></div>
+            <div class="linea3 lineaHamb"></div>
+
+        </div>
+    </div>
+
 
     <header>
 
@@ -114,6 +134,19 @@
             <p>Login</p>
         </div>
 
+        <div class="editarPerfilMovil">
+
+            <i class="fa-regular fa-pencil"></i>
+            <p class="botonNav">Editar Perfil</p>
+
+        </div>
+
+        <div class="listasPerfilMovil">
+
+            <i class="fa-solid fa-list"></i>
+            <p class="botonNav">Mis listas</p>
+
+        </div>
     </nav>
 
     <main>
