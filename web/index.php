@@ -88,6 +88,8 @@
 
         </div>
 
+        <p class="cierraSesion">Cerrar sesión</p>
+
     </div>
 
     <!-- FIN CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
@@ -104,6 +106,7 @@
         </div>
     </div>
 
+    <!-- --------------------------FIN MENÚ HAMBURGUESA-------------------------------- -->
 
     <header>
 
@@ -152,7 +155,11 @@
     <main>
 
         <div class="contenedorNoticias" id="contenedorNoticias"></div>
-        <div class="noticiasPopu" id="noticiasPopu"></div>
+        <div class="noticiasPopu" id="noticiasPopu">
+
+            <h3>Noticias Populares</h3>
+
+        </div>
 
     </main>
 
