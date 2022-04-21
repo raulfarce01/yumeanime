@@ -82,6 +82,15 @@ CREATE TABLE IF NOT EXISTS noticia(
     ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS imagen(
+    idImagen INT PRIMARY KEY AUTO_INCREMENT,
+    codigo LONGBLOB NOT NULL,
+    idNoticia INT NOT NULL,
+    FOREIGN KEY (idNoticia) REFERENCES noticia(idNoticia)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
 CREATE TABLE IF NOT EXISTS userGustaNoticia(
     idNoticia INT,
     idUser INT,
