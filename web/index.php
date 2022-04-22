@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -30,7 +34,7 @@
 
     <!-- --------------------------REGISTRO-------------------------------- -->
 
-    <div class="contenedor registro">
+    <div class="contenedorRegistro">
         <form action="#" method="post">
             <label for="inputLogin" class="cabezaLogin">Usuario</p>
             <input type="text" class="inputLogin" id="inputLoginUser">
@@ -94,20 +98,6 @@
 
     <!-- FIN CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
-    <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
-
-    <div class="contenedorMenuHamburguesa">
-        <div class="menuHamburguesa">
-
-            <div class="linea1 lineaHamb"></div>
-            <div class="linea2 lineaHamb"></div>
-            <div class="linea3 lineaHamb"></div>
-
-        </div>
-    </div>
-
-    <!-- --------------------------FIN MENÚ HAMBURGUESA-------------------------------- -->
-
     <header>
 
         <a href="index.php">
@@ -117,38 +107,58 @@
 
         </a>
 
+        <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
+    
+    <div class="contenedorContenedor">
+        <div class="contenedorMenuHamburguesa">
+        <div class="menuHamburguesa">
+
+            <div class="linea1 lineaHamb"></div>
+            <div class="linea2 lineaHamb"></div>
+            <div class="linea3 lineaHamb"></div>
+
+        </div>
+        </div>
+    </div>
+    
+
+    <!-- --------------------------FIN MENÚ HAMBURGUESA-------------------------------- -->
+
     </header>
-    <nav>
+    <input type="checkbox" name="hamburg" id="hamburg" class="checkHamb">
+    <nav class="nav">
 
-        <div class="botonNav"><p>Top Noticias</p></div>
+        <div class="textoNav">
+            <div class="botonNav"><p>Top Noticias</p></div>
 
-        <div class="botonNav"><a href="./view/listasGenerales.php">Top Listas</a></div>
+            <div class="botonNav"><a href="./view/listasGenerales.php">Top Listas</a></div>
 
-        <div class="botonNav"><a href="./view/directorio.php">Directorio Anime</a></div>
+            <div class="botonNav"><a href="./view/directorio.php">Directorio Anime</a></div>
 
-        <form action="./view/busqueda.php">
+            <form action="./view/busqueda.php">
 
-            <input type="text" name="buscador" id="buscador" class="buscador" placeholer="Buscar...">
-            <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass"></i>
 
-        </form>
+            </form>
 
-        <div class="botonLogin">
-            <p>Login</p>
-        </div>
+            <div class="botonLogin">
+                <p>Login</p>
+            </div>
 
-        <div class="editarPerfilMovil">
+            <div class="editarPerfilMovil">
 
-            <i class="fa-regular fa-pencil"></i>
-            <p class="botonNav">Editar Perfil</p>
+                <i class="fa-regular fa-pencil"></i>
+                <p class="botonNav">Editar Perfil</p>
 
-        </div>
+            </div>
 
-        <div class="listasPerfilMovil">
+            <div class="listasPerfilMovil">
 
-            <i class="fa-solid fa-list"></i>
-            <p class="botonNav">Mis listas</p>
+                <i class="fa-solid fa-list"></i>
+                <p class="botonNav">Mis listas</p>
 
+            </div>
         </div>
     </nav>
 

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -94,20 +98,6 @@
 
     <!-- FIN CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
-    <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
-
-    <div class="contenedorMenuHamburguesa">
-        <div class="menuHamburguesa">
-
-            <div class="linea1 lineaHamb"></div>
-            <div class="linea2 lineaHamb"></div>
-            <div class="linea3 lineaHamb"></div>
-
-        </div>
-    </div>
-
-    <!-- --------------------------FIN MENÚ HAMBURGUESA-------------------------------- -->
-
     <!-- ----------------------------DETALLES LISTA----------------------------------- -->
 
     <div class="detallesLista">
@@ -125,47 +115,59 @@
 
     <!-- ----------------------------FIN DETALLES LISTA----------------------------------- -->
 
-    <header>
+    <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
 
-        <a href="index.php">
+    <div class="contenedorContenedor">
+        <div class="contenedorMenuHamburguesa">
+        <div class="menuHamburguesa">
 
-            <img src="./img/logo.png" alt="Logo" class="logo">
-            <p>Yumeanime</p>
+            <div class="linea1 lineaHamb"></div>
+            <div class="linea2 lineaHamb"></div>
+            <div class="linea3 lineaHamb"></div>
 
-        </a>
+        </div>
+        </div>
+    </div>
+    
+
+    <!-- --------------------------FIN MENÚ HAMBURGUESA-------------------------------- -->
 
     </header>
-    <nav>
+    <nav class="nav">
 
-        <div class="botonNav"><p>Top Noticias</p></div>
+        <input type="checkbox" name="hamburg" id="hamburg" class="checkHamb">
 
-        <div class="botonNav"><a href="./view/listasGenerales.php">Top Listas</a></div>
+        <div class="textoNav">
+            <div class="botonNav"><p>Top Noticias</p></div>
 
-        <div class="botonNav"><a href="./view/directorio.php">Directorio Anime</a></div>
+            <div class="botonNav"><a href="./view/listasGenerales.php">Top Listas</a></div>
 
-        <form action="./view/busqueda.php">
+            <div class="botonNav"><a href="./view/directorio.php">Directorio Anime</a></div>
 
-            <input type="text" name="buscador" id="buscador" class="buscador" placeholer="Buscar...">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <form action="./view/busqueda.php">
 
-        </form>
+                <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass"></i>
 
-        <div class="botonLogin">
-            <p>Login</p>
-        </div>
+            </form>
 
-        <div class="editarPerfilMovil">
+            <div class="botonLogin">
+                <p>Login</p>
+            </div>
 
-            <i class="fa-regular fa-pencil"></i>
-            <p class="botonNav">Editar Perfil</p>
+            <div class="editarPerfilMovil">
 
-        </div>
+                <i class="fa-regular fa-pencil"></i>
+                <p class="botonNav">Editar Perfil</p>
 
-        <div class="listasPerfilMovil">
+            </div>
 
-            <i class="fa-solid fa-list"></i>
-            <p class="botonNav">Mis listas</p>
+            <div class="listasPerfilMovil">
 
+                <i class="fa-solid fa-list"></i>
+                <p class="botonNav">Mis listas</p>
+
+            </div>
         </div>
     </nav>
 

@@ -1,0 +1,114 @@
+/*
+* Fondo: #FAF8F7
+* Header: #0A1940
+* Resalto: #0A1940
+* Contenedores: #465987
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.contenedorLogin, .contenedorRegistro, .olvidaPasswd, .contenedorPerfil, .botonLogin, .editarPerfilMovil, .listasPerfilMovil, .noticiasPopu{
+    display: none;
+}
+
+main{
+    width: 100vw;
+    background-color: #FAF8F7;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    background-color: #0A1940;
+    width: 100%;
+    flex-direction: row;
+}
+
+header a{
+    display: flex;
+    text-decoration: none;
+    color: #FAF8F7;
+    flex-direction: row;
+    font-family: 'Lilita One', cursive;
+    font-size: 1.8em;
+    width: 50%;
+}
+
+header a p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 30%;
+}
+
+.contenedorContenedor{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    z-index: 3;
+}
+
+.contenedorMenuHamburguesa{
+    position: relative;
+    background-color: #465987;
+    width: 50px;
+    margin: 15px;
+    margin-left: 17px;
+    margin-right: 17px;
+    border-radius: 10%;
+}
+
+.menuHamburguesa{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+}
+
+.lineaHamb{
+    width: 80%;
+    height: 3px;
+    background-color: #FAF8F7;
+}
+
+.checkHamb{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 17px;
+    top: 15px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+nav{
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    background-color: #0A1940;
+    right: -60%;
+    top: 0;
+}
+
+.checkHamb:checked ~ nav{
+    right: 0;
+}
+
+.textoNav{
+    margin-top: 30%;
+}
