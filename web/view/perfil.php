@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
-    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="../css/general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------CUADRO DE PERFIL-------------------------------- -->
@@ -41,8 +41,17 @@
 
     <!-- FIN CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
-    <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
+    <header>
 
+        <a href="index.php">
+
+            <img src="../img/logo.png" alt="Logo" class="logo">
+            <p>Yumeanime</p>
+
+        </a>
+
+        <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
+    
     <div class="contenedorContenedor">
         <div class="contenedorMenuHamburguesa">
         <div class="menuHamburguesa">
@@ -59,9 +68,8 @@
     <!-- --------------------------FIN MENÚ HAMBURGUESA-------------------------------- -->
 
     </header>
+    <input type="checkbox" name="hamburg" id="hamburg" class="checkHamb">
     <nav class="nav">
-
-        <input type="checkbox" name="hamburg" id="hamburg" class="checkHamb">
 
         <div class="textoNav">
             <div class="botonNav"><p>Top Noticias</p></div>

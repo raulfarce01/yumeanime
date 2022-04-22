@@ -117,3 +117,14 @@ nav{
 .textoNav{
     margin-top: 80px;
 }
+
+footer{
+    display: flex;
+    background-color: #0A1940;
+    color: #FAF8F7;
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
