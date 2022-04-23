@@ -77,7 +77,7 @@
     </form>
 
 
-    <!-- --------------------------OLVIDA CONTRASEÑA-------------------------------- -->
+    <!-- --------------------------OLVIDA CONTRASEÑA NO HACER POR EL MOMENTO -------------------------------- -->
 
     <div class="olvidaPasswd">
 

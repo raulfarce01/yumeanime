@@ -16,45 +16,65 @@
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
+    <form action="#" method="post">
+        <div class="contenedorLogin">
+            <div class="contenedorCampos">
+                <div class="campo">
+                    <label for="inputLogin" class="cabezaLogin">Usuario</p>
+                    <input type="text" class="inputLogin" id="inputLoginUser">
+                </div>
+                
+                <div class="campo">
+                    <label for="inputLogin" class="cabezaLogin">Contraseña</p>
+                    <input type="text" class="inputLogin" id="inputLoginPasswd">
+                </div>
+            </div>
 
-    <div class="contenedorLogin">
-        <form action="#" method="post">
-            <label for="inputLogin" class="cabezaLogin">Usuario</p>
-            <input type="text" class="inputLogin" id="inputLoginUser">
+            <div class="contenedorOtros">
+                <div class="botonOlvidaPasswd"><p>¿Has olvidado tu contraseña?</p></div>
 
-            <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-            <input type="text" class="inputLogin" id="inputLoginPasswd">
-
-            <div class="olvidaPasswd"><p>¿Has olvidado tu contraseña?</p></div>
-
-            <div class="botonRegistro" id="botonRegistro"><p>Registrarse</p></div>
-            <input type="submit" value="Iniciar" class="submit" id="submit">
-        </form>
-    </div>
+                <div class="botonesLogin">
+                    <div class="botonRegistro" id="botonRegistro"><p>Registrarse</p></div>
+                    <input type="submit" value="Iniciar" class="submit" id="submit">
+                </div>
+            </div>
+        </div>
+    </form>
 
     <!-- --------------------------REGISTRO-------------------------------- -->
+    <form action="#" method="post">
+        <div class="contenedorRegistro">
+            <div class="campo">
+                <label for="inputLogin" class="cabezaLogin">Usuario</p>
+                <input type="text" class="inputLogin" id="inputLoginUser">
+            </div>
 
-    <div class="contenedorRegistro">
-        <form action="#" method="post">
-            <label for="inputLogin" class="cabezaLogin">Usuario</p>
-            <input type="text" class="inputLogin" id="inputLoginUser">
+            <div class="campo">
+                <label for="inputLogin" class="cabezaLogin">Contraseña</p>
+                <input type="text" class="inputLogin" id="inputLoginPasswd">
+            </div>
 
-            <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-            <input type="text" class="inputLogin" id="inputLoginPasswd">
+            <div class="campo">
+                <label for="inputLogin" class="cabezaLogin">Confirmar Contraseña</p>
+                <input type="text" class="inputLogin" id="inputLoginConfirmaPasswd">
+            </div>
+            
+            <div class="campo">
+                <label for="inputLogin" class="cabezaLogin">Correo</p>
+                <input type="text" class="inputLogin" id="inputLoginCorreo">
+            </div>
 
-            <label for="inputLogin" class="cabezaLogin">Confirmar Contraseña</p>
-            <input type="text" class="inputLogin" id="inputLoginConfirmaPasswd">
-
-            <label for="inputLogin" class="cabezaLogin">Correo</p>
-            <input type="text" class="inputLogin" id="inputLoginCorreo">
-
-            <label for="inputLogin" class="cabezaLogin">Alias</p>
-            <input type="text" class="inputLogin" id="inputLoginAlias">
-
-            <div class="botonLoginRegistro" id="botonLoginRegistro"><p>Login</p></div>
-            <input type="submit" value="Registrarse" class="submit" id="submit">
-        </form>
-    </div>
+            <div class="campo">
+                <label for="inputLogin" class="cabezaLogin">Alias</p>
+                <input type="text" class="inputLogin" id="inputLoginAlias">
+            </div>
+            
+            <div class="botonesRegistro">
+                <div class="botonLoginRegistro" id="botonLoginRegistro"><p>Login</p></div>
+                <input type="submit" value="Registrarse" class="submit" id="submit">
+            </div>
+        </div>
+    </form>
 
     <!-- --------------------------OLVIDA CONTRASEÑA-------------------------------- -->
 
