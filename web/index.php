@@ -128,8 +128,11 @@
 
         </a>
 
-        <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
+    </header>
+
+    <!-- --------------------------MENÚ HAMBURGUESA-------------------------------- -->
     
+    <input type="checkbox" name="hamburg" id="hamburg" class="checkHamb">
     <div class="contenedorContenedor">
         <div class="contenedorMenuHamburguesa">
         <div class="menuHamburguesa">
@@ -141,12 +144,9 @@
         </div>
         </div>
     </div>
-    
 
     <!-- --------------------------FIN MENÚ HAMBURGUESA-------------------------------- -->
 
-    </header>
-    <input type="checkbox" name="hamburg" id="hamburg" class="checkHamb">
     <nav class="nav">
 
         <div class="textoNav">
