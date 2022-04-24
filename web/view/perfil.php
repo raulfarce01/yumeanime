@@ -43,7 +43,7 @@
 
     <header>
 
-        <a href="index.php">
+        <a href="../index.php">
 
             <img src="../img/logo.png" alt="Logo" class="logo">
             <p>Yumeanime</p>
