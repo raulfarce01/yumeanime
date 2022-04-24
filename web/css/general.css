@@ -15,6 +15,10 @@
     display: none;
 }
 
+i{
+    color: #FAF8F7;
+}
+
 main{
     width: 100vw;
     background-color: #FAF8F7;
@@ -104,7 +108,7 @@ header a p{
 nav{
     position: absolute;
     height: 100%;
-    width: 60%;
+    width: 250px;
     background-color: #0A1940;
     right: -60%;
     top: 0;
@@ -278,8 +282,93 @@ footer{
 
 /* CONTENEDOR REGISTRO FIN */
 
-/* CONTENEDOR OLVIDA PASSWD INICIO */
+/* NAV HAMBURGUESA INICIO */
 
-/*AÑADIR???????*/
+.textoNav{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+}
 
-/* CONTENEDOR OLVIDA PASSWD INICIO */
+.botonesNav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin-top: -65px;
+    margin-bottom: 20px;
+    width: 165px;
+    height: 50px;
+}
+
+.botonLoginNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #465987;
+    color: #FAF8F7;
+    width: 75px;
+    height: 40px;
+}
+
+.botonRegistroNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAF8F7;
+    width: 75px;
+    height: 40px;
+}
+
+.botonRegistroNav, .botonLoginNav{
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+nav form{
+    margin-bottom: 10px;
+}
+
+nav form input{
+    background-color: #465987;
+    font-family: 'Mulish', sans-serif;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 0;
+    height: 30px;
+}
+
+#lupaBuscar{
+    cursor: pointer;
+    color: #FAF8F7;
+    font-size: 15pt;
+}
+
+.botonNav{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+}
+
+.botonNav a i{
+    margin-right: 30px;
+    font-size: 25pt;
+}
+
+.botonNav a{
+    display: flex;
+    align-items: center;
+    color: #FAF8F7;
+    font-size: 1.3em;
+}
+
+.listasPerfilMovil, .editarPerfilMovil{
+    display: none;
+}
+
+/* NAV HAMBURGUESA FIN */

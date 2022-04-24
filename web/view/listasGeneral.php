@@ -166,34 +166,42 @@
     <nav class="nav">
 
         <div class="textoNav">
-            <div class="botonNav"><p>Top Noticias</p></div>
 
-            <div class="botonNav"><a href="./view/listasGenerales.php">Top Listas</a></div>
-
-            <div class="botonNav"><a href="./view/directorio.php">Directorio Anime</a></div>
+            <div class="botonesNav">
+                <div class="botonLoginNav">
+                    <p>Login</p>
+                </div>
+                <div class="botonRegistroNav">
+                    <p>Registro</p>
+                </div>
+            </div>
 
             <form action="./view/busqueda.php">
 
                 <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar...">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass" id="lupaBuscar"></i>
 
             </form>
 
-            <div class="botonLogin">
-                <p>Login</p>
+            <div class="botonNav listasNav"><a href="./view/listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
+
+            <div class="botonNav directorioNav"><a href="./view/directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
+
+            <div class="editarPerfilMovil botonNav">
+
+                <a href="./view.perfil.php">
+                    <i class="fa-solid fa-square-pen"></i>
+                    <p>Editar Perfil</p>
+                </a>
+
             </div>
 
-            <div class="editarPerfilMovil">
+            <div class="listasPerfilMovil botonNav">
 
-                <i class="fa-regular fa-pencil"></i>
-                <p class="botonNav">Editar Perfil</p>
-
-            </div>
-
-            <div class="listasPerfilMovil">
-
-                <i class="fa-solid fa-list"></i>
-                <p class="botonNav">Mis listas</p>
+                <a href="./view/lista.php">
+                    <i class="fa-solid fa-rectangle-list"></i>
+                    <p>Mis listas</p>
+                </a>
 
             </div>
         </div>
