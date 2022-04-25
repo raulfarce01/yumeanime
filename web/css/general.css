@@ -32,7 +32,7 @@ header{
     display: flex;
     background-color: #0A1940;
     width: 100%;
-    height: 80px;
+    /*height: 20vh;*/
     flex-direction: row;
 }
 
@@ -54,7 +54,7 @@ header a p{
 }
 
 .logo{
-    width: 75px;
+    width: 60px;
 }
 
 /* MENÚ HAMBURGUESA INICIO */
@@ -426,7 +426,6 @@ nav form input{
         justify-content: flex-end;
         position: initial;
         width: 70%;
-        height: 80px;
     }
     header{
         width: 30%;
@@ -441,10 +440,9 @@ nav form input{
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        padding-top: 40px;
         margin: 0;
         font-size: 1em;
-        width: 500px;
+        width: 600px;
     }
     .botonesNav{
         margin-top: 15px;
@@ -456,20 +454,29 @@ nav form input{
         width: 30%;
     }
     .buscador{
+        position: relative;
         width: 100%;
+        top: 10px;
     }
     footer{
         display: none;
     }
 
     #lupaBuscar{
-        display: none;
+        position: relative;
+        bottom: 13px;
+        left: 85%;
+        z-index: 3;
+        font-size: 1em;
     }
-
     .botonRegistroNav{
         display: none;
     }
+    .botonLoginNav{
+        width: 100%;
+    }
     .botonesNav{
-        width: 15%;
+        width: 20%;
+        margin: 0;
     }
 }
