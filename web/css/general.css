@@ -148,22 +148,20 @@ header a p{
 /* MENÚ HAMBURGUESA FIN */
 
 nav{
+    display: block;
     position: absolute;
     height: 100%;
     width: 250px;
     background-color: #0A1940;
-    right: -60%;
+    right: -250px;
     top: 0;
     transition: right 0.2s linear;
 }
 
 .checkHamb:checked ~ nav{
+    display: flex;
     right: 0;
     transition: right 0.2s linear;
-}
-
-.textoNav{
-    margin-top: 80px;
 }
 
 footer{
@@ -247,7 +245,6 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
 }
 
 .botonRegistro, .submit{
@@ -329,11 +326,11 @@ footer{
 /* NAV HAMBURGUESA INICIO */
 
 .textoNav{
-    display: flex;
     flex-direction: column;
-    height: 100%;
+    height: calc(100% - 80px);
     width: 100%;
     padding-left: 10px;
+    margin-top: 80px;
 }
 
 .botonesNav{
@@ -416,3 +413,63 @@ nav form input{
 }
 
 /* NAV HAMBURGUESA FIN */
+
+@media screen and (min-width:750px){
+    .contenedorContenedor{
+        display: none;
+    }
+    .checkHamb{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        position: initial;
+        width: 70%;
+        height: 80px;
+    }
+    header{
+        width: 30%;
+        float: left;
+    }
+
+    .botonNav a i{
+        display: none;
+    }
+    .textoNav{
+        display: inline-flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+        margin: 0;
+        font-size: 1em;
+        width: 500px;
+    }
+    .botonesNav{
+        margin-top: 15px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .textoNav form{
+        margin: 0;
+        width: 30%;
+    }
+    .buscador{
+        width: 100%;
+    }
+    footer{
+        display: none;
+    }
+
+    #lupaBuscar{
+        display: none;
+    }
+
+    .botonRegistroNav{
+        display: none;
+    }
+    .botonesNav{
+        width: 15%;
+    }
+}
