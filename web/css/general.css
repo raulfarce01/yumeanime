@@ -65,15 +65,15 @@ header a p{
     justify-content: end;
     z-index: 3;
     right: 17px;
-    top: 15px;
+    top: 8px;
 }
 
 .contenedorMenuHamburguesa{
     display: flex;
     position: relative;
     background-color: #465987;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin-left: 17px;
     border-radius: 10%;
     align-self: center;
@@ -98,10 +98,10 @@ header a p{
 
 .checkHamb{
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     right: 17px;
-    top: 15px;
+    top: 8px;
     z-index: 5;
     cursor: pointer;
     opacity: 0%;
@@ -185,7 +185,7 @@ footer{
     flex-direction: column;
     position: absolute;
     top: 30%;
-    left: 20%;
+    right: 30%;
     justify-content: center;
     align-items: flex-start;
     border-radius: 10px;
@@ -226,7 +226,7 @@ footer{
     width: 100%;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 15px;
 }
 
@@ -263,6 +263,7 @@ footer{
 .botonRegistro{
     background-color: #465987;
     color: #FAF8F7;
+    margin-right: 10px;
 }
 
 .submit{
@@ -285,7 +286,7 @@ footer{
     flex-direction: column;
     position: absolute;
     top: 25%;
-    left: 20%;
+    right: 30%;
     justify-content: center;
     align-items: flex-start;
     border-radius: 10px;
@@ -331,6 +332,7 @@ footer{
     width: 100%;
     padding-left: 10px;
     margin-top: 80px;
+    font-family: 'Mulish', sans-serif;
 }
 
 .botonesNav{
@@ -353,6 +355,7 @@ footer{
     color: #FAF8F7;
     width: 75px;
     height: 40px;
+    font-family: 'Mulish', sans-serif;
 }
 
 .botonRegistroNav{
@@ -362,6 +365,7 @@ footer{
     background-color: #FAF8F7;
     width: 75px;
     height: 40px;
+    font-family: 'Mulish', sans-serif;
 }
 
 .botonRegistroNav, .botonLoginNav{
@@ -430,6 +434,7 @@ nav form input{
     header{
         width: 30%;
         float: left;
+        padding-left: 3%;
     }
 
     .botonNav a i{
@@ -464,7 +469,7 @@ nav form input{
 
     #lupaBuscar{
         position: relative;
-        bottom: 13px;
+        bottom: 15px;
         left: 85%;
         z-index: 3;
         font-size: 1em;
@@ -478,5 +483,33 @@ nav form input{
     .botonesNav{
         width: 20%;
         margin: 0;
+    }
+    main{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        padding-top: 2%;
+    }
+    .noticiasPopu{
+        display: flex;
+        width: 17.5%;
+        background-color: #0A1940;
+        color: #FAF8F7;
+        border-radius: 10px;
+        padding-top: 1%;
+        padding-left: 1%;
+    }
+    .topPage{
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: #0A1940;
+    }
+    .contenedorRegistro{
+        top: 12%;
+        right: 2%;
+    }
+    .contenedorLogin{
+        top: 12%;
+        right: 2%;
     }
 }

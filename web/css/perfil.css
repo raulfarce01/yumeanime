@@ -1,0 +1,103 @@
+/*
+* Fondo: #FAF8F7
+* Header: #0A1940
+* Resalto: #D4C859
+* Contenedores: #465987
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedorPropio{
+    display: flex;
+    width: 90%;
+    height: 50vh;
+    flex-direction: row;
+    margin-top: 2%;
+}
+.fotoPerfil{
+    background-color: #D4C859;
+    width: 20%;
+    height: 30%;
+}
+.inputs{
+    width: 80%;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+.saveButton{
+    display: flex;
+    background-color: #465987;
+    color: #FAF8F7;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 80%;
+    margin-top: 2%;
+}
+.misListas{
+    display: flex;
+    height: 30vh;
+    background-color: #0A1940;
+    width: 90%;
+    color: #FAF8F7;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    padding-top: 1%;
+}
+.masButton{
+    font-size: 2.5em;
+    cursor: pointer;
+}
+.todasListas{
+    color: #D4C859;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 1%;
+}
+@media screen and (min-width:750px) {
+    main{
+        flex-direction: row;
+    }
+    .contenedorPropio{
+        width: 70vw;
+        height: 70vh;
+        padding-left: 20%;
+    }
+    .saveButton{
+        width: 25%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .misListas{
+        display: flex;
+        height: 70vh;
+        width: 20vw;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1%;
+    }
+    .contenedorListas{
+        height: 80%;
+    }
+}
