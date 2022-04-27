@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/listasGeneral.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
@@ -124,11 +125,11 @@
 
         <div class="cabeceraLista">
             <div class="imagenLista" id="imagenLista"></div>
-            <div class="titLista" id="titLista"></div>
+            <div class="titLista titulo textoCentro" id="titLista titulo">lkjDSFHLKSDHc lINWDXA</div>
         </div>
 
         <div class="animesLista">
-            <p class="verTodo">Ver todo</p>
+            <p class="verTodo texto amarillo textoCentro">Ver todo</p>
         </div>
 
     </div>
@@ -185,9 +186,9 @@
 
         </form>
 
-        <div class="botonNav listasNav"><a href="./view/listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
+        <div class="botonNav listasNav"><a href="./listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
 
-        <div class="botonNav directorioNav"><a href="./view/directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
+        <div class="botonNav directorioNav"><a href="./directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
 
         <div class="editarPerfilMovil botonNav">
 

@@ -1,7 +1,7 @@
 /*
 * Fondo: #FAF8F7
 * Header: #0A1940
-* Resalto: #0A1940
+* Resalto: #D4C859
 * Contenedores: #465987
 */
 
@@ -11,8 +11,30 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 .contenedorLogin, .contenedorRegistro, .olvidaPasswd, .contenedorPerfil, .botonLogin, .editarPerfilMovil, .listasPerfilMovil, .noticiasPopu{
     display: none;
+}
+
+.titulo{
+    font-family: 'Lilita One', cursive;
+}
+
+.texto{
+    font-family: 'Mulish', sans-serif;
+}
+
+.amarillo{
+    color: #D4C859;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.textoCentro{
+    text-align: center;
 }
 
 i{
@@ -173,6 +195,8 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 /* CONTENEDOR LOGIN INICIO */
@@ -462,9 +486,6 @@ nav form input{
         position: relative;
         width: 100%;
         top: 10px;
-    }
-    footer{
-        display: none;
     }
 
     #lupaBuscar{

@@ -189,9 +189,9 @@
 
                 </form>
 
-                <div class="botonNav listasNav"><a href="./view/listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
+                <div class="botonNav listasNav"><a href="./listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
 
-                <div class="botonNav directorioNav"><a href="./view/directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
+                <div class="botonNav directorioNav"><a href="./directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
 
                 <div class="editarPerfilMovil botonNav">
 

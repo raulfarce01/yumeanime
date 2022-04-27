@@ -92,9 +92,9 @@
 
                 </form>
 
-                <div class="botonNav listasNav"><a href="./view/listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
+                <div class="botonNav listasNav"><a href="./listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
 
-                <div class="botonNav directorioNav"><a href="./view/directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
+                <div class="botonNav directorioNav"><a href="./directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
 
                 <div class="editarPerfilMovil botonNav">
 
@@ -128,17 +128,17 @@
             <div class="fotoPerfil"></div>
 
             <div class="inputs">
-                <input type="text" name="nombre" id="nombre" class="nombre">
-                <input type="text" name="alias "class="alias" id="alias">
-                <input type="text" name="desc "class="desc" id="desc">
+                <input type="text" name="nombre" id="nombre" class="nombre texto">
+                <input type="text" name="alias "class="alias texto" id="alias">
+                <input type="text" name="desc "class="desc texto" id="desc">
 
-                <div class="saveButton" id="saveButton"><p>Guardar</p></div>
+                <div class="saveButton texto" id="saveButton"><p>Guardar</p></div>
             </div>
             
         </div>
 
         <div class="misListas">
-            <h3>Mis listas</h3>
+            <p class="titulo">Mis listas</p>
             <div class="contenedorListas" id="contenedorListas">
                 <div class="masButton"><i class="fa-solid fa-circle-plus"></i></div>
             </div>

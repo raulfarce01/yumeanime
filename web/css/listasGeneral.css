@@ -9,3 +9,81 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.contenedorListas{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.masButton{
+    display: block;
+    width: 10%;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.masButton i{
+    color: #0A1940;
+}
+
+.detallesLista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 50%;
+    background-color: #0A1940;
+    position: absolute;
+    right: 30%;
+    top: 30%;
+    border-radius: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.cabeceraLista{
+    display: flex;
+    width: 90%;
+    padding-top: 5%;
+}
+
+.imagenLista{
+    background-color: aliceblue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.titLista{
+    color: #FAF8F7;
+    width: 70%;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.animesLista{
+    height: 70%;
+}
+
+.verTodo{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    width: 95%;
+}
+
+@media screen and (min-width:750px) {
+    .detallesLista{
+        width: 20%;
+        right: 45%;
+    }
+
+    .cabeceraLista{
+        padding-left: 10%;
+    }
+
+    .contenedorListas{
+        flex-direction: row;
+    }
+}
