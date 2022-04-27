@@ -9,3 +9,50 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*Inicio del popup de listas*/
+
+.misListasPopup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2%;
+    position: absolute;
+    right: 30%;
+    top: 30%;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.misListasPopup p{
+    padding-left: 1%;
+    padding-top: 1%;
+    font-size: 1.5em;
+}
+
+.contenedorMisListasPopup{
+    display: flex;
+    width: 90%;
+}
+
+.masButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.masButton i{
+    cursor: pointer;
+    font-size: 2em;
+}
+
+/*Fin del popup de listas*/
+
+@media screen and (min-width:750px) {
+    .misListasPopup{
+        width: 20%;
+        right: 40%;
+    }
+}

@@ -13,6 +13,7 @@
 
 html{
     overflow-x: hidden;
+    background-color: #FAF8F7;
 }
 
 .contenedorLogin, .contenedorRegistro, .olvidaPasswd, .contenedorPerfil, .botonLogin, .editarPerfilMovil, .listasPerfilMovil, .noticiasPopu{
@@ -35,6 +36,22 @@ html{
 
 .textoCentro{
     text-align: center;
+}
+
+.contenedorAzul{
+    background-color: #465987;
+}
+
+.colorHeader{
+    background-color: #0A1940;
+}
+
+.colorFondo{
+    color: #FAF8F7;
+}
+
+.colorHeaderLetra{
+    color: #0A1940;
 }
 
 i{

@@ -131,10 +131,10 @@
 
     <!-- ---------------------------LISTAS ANIME------------------------------------ -->
 
-    <div class="misListas" id="misListas">
-        <h3>Mis listas</h3>
-        <div class="contenedorMisListas" id="contenedorMisListas"></div>
-        <div class="masButton"><i class="fa-solid fa-circle-plus"></i></div>
+    <div class="misListasPopup colorHeader" id="misListasPopup">
+        <p class="titulo colorFondo">Mis listas</p>
+        <div class="contenedorMisListasPopup texto" id="contenedorMisListasPopup"></div>
+        <div class="masButton colorFondo"><i class="fa-solid fa-circle-plus"></i></div>
     </div>
 
     <!-- --------------------------FIN LISTAS ANIME--------------------------------------- -->

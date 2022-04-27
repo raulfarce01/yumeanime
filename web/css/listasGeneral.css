@@ -28,7 +28,7 @@
 }
 
 .detallesLista{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 40%;
@@ -84,6 +84,7 @@
     }
 
     .contenedorListas{
+        width: 75%;
         flex-direction: row;
     }
 }

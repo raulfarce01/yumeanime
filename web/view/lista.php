@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/lista.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
@@ -14,6 +15,16 @@
 <body>
 
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
+
+    <!-- ---------------------------LISTAS ANIME------------------------------------ -->
+
+    <div class="misListasPopup colorHeader" id="misListasPopup">
+        <p class="titulo colorFondo">Mis listas</p>
+        <div class="contenedorMisListasPopup texto" id="contenedorMisListasPopup"></div>
+        <div class="masButton colorFondo"><i class="fa-solid fa-circle-plus"></i></div>
+    </div>
+
+    <!-- --------------------------FIN LISTAS ANIME--------------------------------------- -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
     <form action="#" method="post">
@@ -201,12 +212,22 @@
 
         <div class="contenedorDetallesLista">
 
-            <div class="imagenLista" id="imagenLista"></div>
-            <div class="guardarLista" id="guardarLista"><i class="fa-solid fa-circle-plus"></i> <p>Guardar Lista</p></div>
-            <div class="titLista" id="titLista"></div>
-            <div class="autorLista" id="autorLista"></div>
-            <div class="fechaLista" id="fechaLista"></div>
-            <div class="descLista" id="descLista"></div>
+            <div class="cabeceraLista">
+                <div class="imagenLista contenedorAzul" id="imagenLista"></div>
+                <div class="textoCabeceraLista">
+                    <div class="titLista titulo" id="titLista">Romances Favoritos</div>
+                    <div class="autorFecha">
+                        <div class="autorLista texto" id="autorLista"><i class="fa-solid fa-user colorHeaderLetra"></i><p>Neiroh</p></div>
+                        <div class="fechaLista texto" id="fechaLista"><i class="fa-solid fa-clock colorHeaderLetra"></i><p>13 de julio de 2001</p></div>
+                    </div>
+                    <div class="descLista texto" id="descLista">kjadgshlfkahsdlk adslkjfaskldf alsdkfalskd asdjfhaskjdhf alsdd lashdfkjasdhfkadsh jdh sdklfhasdlkjfh asldjfhalskddf jasdhfkasdh a akdsjfh</div>
+                    <hr class="lineaPc">
+                </div>
+            </div>
+            <div class="guardarLista texto textoCentro colorHeader colorFondo" id="guardarLista"><i class="fa-solid fa-circle-plus"></i> <p>Guardar Lista</p></div>
+
+            <hr class="lineaMovil">
+
             <div class="contenedorAnimesLista"></div>
 
         </div>
