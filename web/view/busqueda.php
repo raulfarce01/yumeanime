@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/busqueda.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
@@ -196,5 +197,39 @@
 
 
     <!-- --------------------COPIAR HASTA AQUÍ EN TODOS------------------------- -->
+
+    <main>
+
+        <div class="contenedoresBusca">
+            <div class="contenedorBuscaAnimes contenedorAzul">
+                <div class="tituloContenedorBusca titulo colorFondo">
+                    <p>Animes</p>
+                </div>
+                <div class="contenedorAnimes">
+                    
+                </div>
+                <p class="verTodo texto amarillo textoDerecha">Ver todo</p>
+            </div>
+            <div class="contenedorBuscaNoticias contenedorAzul">
+                <div class="tituloContenedorBusca titulo colorFondo">
+                    <p>Noticias</p>
+                </div>
+                <div class="contenedorNoticias">
+                    
+                </div>
+                <p class="verTodo texto amarillo textoDerecha">Ver todo</p>
+            </div>
+            <div class="contenedorBuscaListas contenedorAzul">
+                <div class="tituloContenedorBusca titulo colorFondo">
+                    <p>Listas</p>
+                </div>
+                <div class="contenedorListas">
+
+                </div>
+                <p class="verTodo texto amarillo textoDerecha">Ver todo</p>
+            </div>
+        </div>
+
+    </main>
 </body>
 </html>

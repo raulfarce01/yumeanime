@@ -73,6 +73,21 @@
     width: 95%;
 }
 
+.crearLista{
+    display: none;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    right: 35%;
+    top: 40%;
+    border-radius: 10px;
+}
+
+.botonCreaLista{
+    margin: auto;
+    margin-top: 25px;
+}
+
 @media screen and (min-width:750px) {
     .detallesLista{
         width: 20%;
@@ -86,5 +101,17 @@
     .contenedorListas{
         width: 75%;
         flex-direction: row;
+    }
+
+    .crearLista{
+        width: 200px;
+        height: 150px;
+        right: 45%;
+        top: 40%;
+    }
+    
+    .botonCreaLista{
+        margin: auto;
+        margin-top: 25px;
     }
 }

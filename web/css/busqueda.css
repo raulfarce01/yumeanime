@@ -9,3 +9,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedoresBusca{
+    display: flex;
+    width: 90%;
+    height: 85vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedorBuscaAnimes, .contenedorBuscaNoticias, .contenedorBuscaListas{
+    height: 30%;
+    width: 100%;
+    padding-left: 2%;
+    padding-top: 1%;
+    border-radius: 10px;
+    padding-right: 2%;
+}
+
+.contenedorNoticias, .contenedorAnimes, .contenedorListas{
+    height: 65%;
+}

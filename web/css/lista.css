@@ -115,7 +115,7 @@ hr{
 /*Inicio del popup de listas*/
 
 .misListasPopup{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     padding: 2%;

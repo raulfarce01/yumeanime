@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/anime.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
@@ -14,6 +15,35 @@
 <body>
 
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
+
+    <!-- ----------------------------DETALLES LISTA----------------------------------- -->
+
+    <div class="detallesLista">
+
+        <div class="cabeceraLista">
+            <div class="imagenLista" id="imagenLista"></div>
+            <div class="titLista titulo textoCentro" id="titLista titulo">lkjDSFHLKSDHc lINWDXA</div>
+        </div>
+
+        <div class="animesLista">
+            <p class="verTodo texto amarillo textoCentro">Ver todo</p>
+        </div>
+
+    </div>
+
+    <!-- ----------------------------FIN DETALLES LISTA----------------------------------- -->
+    
+    <!-- ----------------------- Crear lista Inicio ---------------------- -->
+
+    <div class="crearLista colorHeader">
+            <div class="campo">
+                <label for="nombreLista" class="cabezaLogin">Nombre de la lista</p>
+                <input type="text" class="inputLogin" id="nombreLista">
+            </div>
+            <div class="botonRegistro botonCreaLista" id="botonRegistro"><p>Crear Lista</p></div>
+        </div>
+
+    <!-- ----------------------- Crear lista Fin ---------------------- -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
     <form action="#" method="post">
@@ -201,15 +231,23 @@
 
         <div class="contenedor">
 
-            <div class="imagenAnime" id="imagenAnime"></div>
-            <div class="addButton" id="addButton">
-                <div class="masButton"><i class="fa-solid fa-circle-plus"></i></div>
-                <p>Añadir a Lista</p>
+            <div class="seccionIzq">
+                <div class="imagenAnime contenedorAzul" id="imagenAnime"></div>
+                <div class="contenedorCategorias" id="contenedorCategorias">
+                    <div class="cat colorHeader colorFondo">Acción</div>
+                    <div class="cat colorHeader colorFondo">Aventuras</div>
+                    <div class="cat colorHeader colorFondo">Romance</div>
+                </div>
+                <div class="addButton pointer" id="addButton">
+                    <div class="masButton"><i class="fa-solid fa-circle-plus colorHeaderLetra"></i></div>
+                    <p class="colorFondo">Añadir a Lista</p>
+                </div>
             </div>
-            <div class="titAnime" id="titAnime"></div>
-            <div class="contenedorCategorias" id="contenedorCategorias"></div>
-            <div class="descAnime"></div>
-
+            <div class="textoAnime">
+                <div class="titAnime titulo" id="titAnime">Zero no tsukaima: Final</div>
+                <div class="descAnime texto">fasjdhf asdhflkasdhflkas laksdhfaskd haskdjfh lkasdhf hdf dslhfsdad hd hsadlkfh jasdlfh daslhf kjadsh kasjdhf aksjhfksah hasld fasjdhf asdhflkasdhflkas laksdhfaskd haskdjfh lkasdhf hdf dslhfsdad hd hsadlkfh jasdlfh daslhf kjadsh kasjdhf aksjhfksah hasld fasjdhf asdhflkasdhflkas laksdhfaskd haskdjfh lkasdhf hdf dslhfsdad hd hsadlkfh jasdlfh daslhf kjadsh kasjdhf aksjhfksah hasld fasjdhf asdhflkasdhflkas laksdhfaskd haskdjfh lkasdhf hdf dslhfsdad hd hsadlkfh jasdlfh daslhf kjadsh kasjdhf aksjhfksah hasld</div>
+            </div>
+        
         </div>
 
         <div class="noticiasPopu" id="noticiasPopu">

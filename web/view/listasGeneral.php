@@ -16,6 +16,18 @@
 
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
+    <!-- ----------------------- Crear lista Inicio ---------------------- -->
+
+        <div class="crearLista colorHeader">
+            <div class="campo">
+                <label for="nombreLista" class="cabezaLogin">Nombre de la lista</p>
+                <input type="text" class="inputLogin" id="nombreLista">
+            </div>
+            <div class="botonRegistro botonCreaLista" id="botonRegistro"><p>Crear Lista</p></div>
+        </div>
+
+    <!-- ----------------------- Crear lista Fin ---------------------- -->
+
     <!-- --------------------------LOGIN-------------------------------- -->
     <form action="#" method="post">
         <div class="contenedorLogin">

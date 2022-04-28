@@ -20,6 +20,10 @@ html{
     display: none;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 .titulo{
     font-family: 'Lilita One', cursive;
 }
@@ -36,6 +40,10 @@ html{
 
 .textoCentro{
     text-align: center;
+}
+
+.textoDerecha{
+    text-align: right;
 }
 
 .contenedorAzul{
@@ -536,6 +544,7 @@ nav form input{
         border-radius: 10px;
         padding-top: 1%;
         padding-left: 1%;
+        height: fit-content;
     }
     .topPage{
         padding-top: 1vh;

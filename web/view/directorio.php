@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/directorio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
@@ -14,6 +15,18 @@
 <body>
 
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
+
+    <!-- ----------------------- Crear lista Inicio ---------------------- -->
+
+    <div class="crearLista colorHeader">
+            <div class="campo">
+                <label for="nombreLista" class="cabezaLogin">Nombre de la lista</p>
+                <input type="text" class="inputLogin" id="nombreLista">
+            </div>
+            <div class="botonRegistro botonCreaLista" id="botonRegistro"><p>Crear Lista</p></div>
+        </div>
+
+    <!-- ----------------------- Crear lista Fin ---------------------- -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
     <form action="#" method="post">
@@ -116,13 +129,30 @@
 
     </div>
 
+    <!-- ----------------------------DETALLES LISTA----------------------------------- -->
+
+    <div class="detallesLista">
+
+        <div class="cabeceraLista">
+            <div class="imagenLista" id="imagenLista"></div>
+            <div class="titLista titulo textoCentro" id="titLista titulo">lkjDSFHLKSDHc lINWDXA</div>
+        </div>
+
+        <div class="animesLista">
+            <p class="verTodo texto amarillo textoCentro">Ver todo</p>
+        </div>
+
+    </div>
+
+    <!-- ----------------------------FIN DETALLES LISTA----------------------------------- -->
+
     <!-- FIN CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- -------------------------VENTANA "MORE" ANIME-------------------------------- -->
 
-    <div class="opciones">
-        <div class="addList"><p>Añadir a lista</p></div>
-        <div class="detalles">
+    <div class="opciones colorHeader texto">
+        <div class="addList colorFondo pointer"><p>Añadir a lista</p></div>
+        <div class="detalles colorFondo pointer">
             <p>Detalles</p>
         </div>
     </div>
@@ -220,18 +250,27 @@
 
     <main>
 
-        <select name="categoria" id="categoria">
+    <div class="selects">
+
+        <select name="categoria" class="selectCat contenedorAzul colorFondo texto" id="categoria">
 
             <!-- <option value="valorX"> ValorX </option> -->
+            <option disabled selected>Categoría</option>
 
         </select>
 
-        <select name="orden" id="orden">
+        <select name="orden" class="selectOrden contenedorAzul colorFondo texto" id="orden">
 
             <!-- <option value="valorX"> ValorX </option> -->
+            <option disabled selected>Orden</option>
+            <option value="reciente"> Más reciente </option>
+            <option value="antiguo"> Más antiguo </option>
+            <option value="gusta"> Más gustado </option>
 
         </select>
 
+    </div>
+        
         <div class="contenedorAnimes">
 
         </div>
