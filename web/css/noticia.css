@@ -9,3 +9,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.noticia{
+    width: 75vw;
+    height: 90vh;
+}
+
+@media screen and (min-width:750px) {
+    main{
+        justify-content: space-around;
+    }
+
+    .noticia{
+        width: 75vw;
+        height: fit-content;
+    }
+}
