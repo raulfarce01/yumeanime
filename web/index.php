@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
+    <link rel="icon" type="image/png" size="32x32" href="./img/logo.png">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +18,7 @@
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
-    <form action="#" method="post">
-        <div class="contenedorLogin">
+    <div class="contenedorLogin" id="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
                     <label for="inputLogin" class="cabezaLogin">Usuario</p>
@@ -40,11 +40,9 @@
                 </div>
             </div>
         </div>
-    </form>
 
     <!-- --------------------------REGISTRO-------------------------------- -->
-    <form action="#" method="post">
-        <div class="contenedorRegistro">
+        <div class="contenedorRegistro" id="contenedorRegistro">
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Usuario</p>
                 <input type="text" class="inputLogin" id="inputLoginUser">
@@ -75,7 +73,6 @@
                 <input type="submit" value="Registrarse" class="submit" id="submit">
             </div>
         </div>
-    </form>
 
 
     <!-- --------------------------OLVIDA CONTRASEÑA NO HACER POR EL MOMENTO -------------------------------- -->
@@ -155,10 +152,10 @@
             <div class="textoNav">
 
                 <div class="botonesNav">
-                    <div class="botonLoginNav">
+                    <div class="botonLoginNav" id="botonLoginNav">
                         <p>Login</p>
                     </div>
-                    <div class="botonRegistroNav">
+                    <div class="botonRegistroNav" id="botonLoginNav">
                         <p>Registro</p>
                     </div>
                 </div>
@@ -220,5 +217,9 @@
         <p>Creador: Raúl Fernández Arce</p>
 
     </footer>
+
+    <script src="./js/recogeElementos.js"></script>
+    <script src="./js/abreContenedores.js"></script>
+    
 </body>
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
+    <link rel="icon" type="image/png" size="32x32" href="../img/logo.png">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/anime.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,8 +47,7 @@
     <!-- ----------------------- Crear lista Fin ---------------------- -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
-    <form action="#" method="post">
-        <div class="contenedorLogin">
+    <div class="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
                     <label for="inputLogin" class="cabezaLogin">Usuario</p>
@@ -69,10 +69,8 @@
                 </div>
             </div>
         </div>
-    </form>
 
     <!-- --------------------------REGISTRO-------------------------------- -->
-    <form action="#" method="post">
         <div class="contenedorRegistro">
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Usuario</p>
@@ -104,7 +102,6 @@
                 <input type="submit" value="Registrarse" class="submit" id="submit">
             </div>
         </div>
-    </form>
 
     <!-- --------------------------OLVIDA CONTRASEÑA-------------------------------- -->
 
