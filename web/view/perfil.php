@@ -131,7 +131,7 @@
             <div class="inputs">
                 <input type="text" name="nombre" id="nombre" class="nombre texto">
                 <input type="text" name="alias "class="alias texto" id="alias">
-                <input type="text" name="desc "class="desc texto" id="desc">
+                <!--<input type="text" name="desc "class="desc texto" id="desc">-->
 
                 <div class="saveButton texto" id="saveButton"><p>Guardar</p></div>
             </div>
