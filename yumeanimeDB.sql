@@ -5,6 +5,7 @@ USE yumeanimedb;
 CREATE TABLE IF NOT EXISTS user(
     idUser INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(200) NOT NULL,
+    alias VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL,
     passwd VARCHAR(100) NOT NULL,
     imgPerfil LONGBLOB,
@@ -74,7 +75,6 @@ CREATE TABLE IF NOT EXISTS userComentaAnime(
 CREATE TABLE IF NOT EXISTS noticia(
     idNoticia INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(200) NOT NULL,
-    contenido LONGTEXT NOT NULL,
     fechaCreacN TIMESTAMP,
     idUser INT,
     FOREIGN KEY (idUser) REFERENCES user(idUser)
