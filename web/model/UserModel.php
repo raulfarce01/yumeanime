@@ -24,7 +24,7 @@ class User{
     // FUNCIÓN PARA EL REGISTRO DE USUARIOS
     //
 
-    function registroUser(){
+    function registroUser($nombre, $alias, $correo, $passwd, $administrador = 0){
 
         $existe = false;
 
@@ -46,11 +46,11 @@ class User{
 
         try{
 
-            $consulta = $db->query("SELECT alias FROM user");
+            $consulta = $db->query("SELECT alias. correo FROM user");
 
             while($consulta->fetch_object()){
 
-                if($this->nombre == "$consulta->alias" || $this->correo == "$consulta->correo"){
+                if($alias == "$consulta->alias" || $correo == "$consulta->correo"){
 
                     $existe = true;
 
@@ -64,7 +64,7 @@ class User{
 
             }else{
 
-                $db->query("INSERT INTO user(nombre, alias, correo, passwd, administrador) VALUES ('$this->nombre', '$this->alias', '$this->correo', '$this->passwd', '$this->administrador')");
+                $db->query("INSERT INTO user(nombre, alias, correo, passwd, administrador) VALUES ('$nombre', '$alias', '$correo', '$passwd', $administrador)");
 
             }
 
@@ -81,7 +81,7 @@ class User{
     //
     // FUNCIÓN PARA INICIAR SESIÓN DEL USUARIO
     //
-    function inicioSesion(){
+    function inicioSesion($alias, $passwd){
 
         try{
 
@@ -99,11 +99,11 @@ class User{
 
         }
 
-        $consulta = $db->query("SELECT correo, passwd FROM user WHERE correo = '$correo'");
+        $consulta = $db->query("SELECT alias, passwd FROM user WHERE alias = '$alias'");
 
         if ($recorreConsulta = $consulta->fetch_object()){
 
-            if($recorreConsulta->passwd == $this->passwd){
+            if($recorreConsulta->passwd == "$passwd"){
                 
                 if(!isset($_SESSION['idUser'])){
 
@@ -121,7 +121,7 @@ class User{
 
         }else{
 
-            echo "<p> El correo no es correcto </p>";
+            echo "<p> El alias no es correcto </p>";
     
         }
 
@@ -201,12 +201,11 @@ class User{
         $recibeImagen = $db->query("SELECT imgPerfil FROM user WHERE idUser = $idUser");
         $comprueba = $recibeImagen->fetch_object();
 
-        if($comprueba != NULL){
-
+        /*if($comprueba != NULL){
 
             $db->query("UPDATE user SET imgPerfil = '$imgContent' WHERE idUser = $idUser");
 
-        }else{
+        }else{*/
             //echo $imgContent;
             $insert = $db->query("UPDATE user SET imgPerfil = '$imgContent' WHERE idUser = $idUser");
             if($insert){
@@ -214,7 +213,7 @@ class User{
             }else{
                 echo "<p>Error al subir el archivo a la base de datos</p>";
             } 
-        }
+        //}
     }
 
     //
@@ -249,7 +248,7 @@ class User{
             $muestra = array(
                 "nombre" => $res->nombreUser,
                 "correo" => $res->correo,
-                'foto' => $res->fotoPerfil
+                "foto" => $res->fotoPerfil
             );
 
             return $muestra;

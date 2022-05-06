@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS lista(
 
 CREATE TABLE IF NOT EXISTS userGuardaLista(
     idLista INT,
-    idUser INT,
+    idAnime INT,
     FOREIGN KEY (idLista) REFERENCES lista(idLista)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
