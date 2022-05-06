@@ -20,9 +20,18 @@ class User{
 
     }
 
-    //
-    // FUNCIÓN PARA EL REGISTRO DE USUARIOS
-    //
+    /*
+        
+        Función para registrar los usuarios en la base de datos
+        @param $nombre contiene el nombre del usuario que se registra
+        @param $alias contiene el alias con que el usuario iniciará sesión
+        @param $correo contiene el correo del usuario
+        @param $passwd contiene la contraseña que usará el usuario en el login
+        @param $administrador es para dar permisos de administrador 
+            [0 - Sin permisos]
+            [1 - Con permisos]
+    
+    */
 
     function registroUser($nombre, $alias, $correo, $passwd, $administrador = 0){
 
@@ -78,9 +87,13 @@ class User{
 
     }
 
-    //
-    // FUNCIÓN PARA INICIAR SESIÓN DEL USUARIO
-    //
+    /*
+        
+        Función para el inicio de sesión del usuario
+        @param $alias es el alias que usará el usuario para logarse
+        @param $passwd es la contraseña
+    
+    */
     function inicioSesion($alias, $passwd){
 
         try{
@@ -129,9 +142,15 @@ class User{
 
     }
 
-    //
-    // Función para cambio de datos
-    //
+    /*
+        
+        Función para cambiar los datos del usuario en su página dedicada del perfil
+        @param $nombreNew contiene el nuevo nombre que utilizará
+        @param $aliasNew contiene su nuevo alias
+        @param $correoNew contiene el nuevo correo
+        @param $idUser contiene la clave del usuario sobre el que realizar el cambio
+    
+    */
 
     function cambiaDatosUser($nombreNew, $aliasNew, $correoNew, $idUser){
 
@@ -175,9 +194,13 @@ class User{
 
     }
 
-    //
-    // Función para subir o cambiar la foto de perfil
-    //
+    /*
+        
+        Función para subir una foto de perfil en el usuario desde su página dedicada
+        @param $idUser contiene la clave sobre la que se realizará el cambio
+        @param $image contiene el texto de la imagen que convertiremos en un formate accesible para la base de datos
+    
+    */
 
     function fotoPerfil($idUser, $image){
 
@@ -216,9 +239,14 @@ class User{
         //}
     }
 
-    //
-    // Función para mostrar los datos del usuario
-    //
+    /*
+        
+        Función que devuelve los datos del usuario para su página dedicada
+        @param $idUser contiene la clave del usuario sobre el que queremos obtener la información.
+
+        @return $muestra es un array con la información.
+    
+    */
 
     function muestraDatosUsuario($idUser){
 

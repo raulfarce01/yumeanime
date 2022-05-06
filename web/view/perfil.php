@@ -124,19 +124,7 @@
 
     <main>
 
-        <div class="contenedorPropio" id="contenedorPropio">
-
-            <div class="fotoPerfil"></div>
-
-            <div class="inputs">
-                <input type="text" name="nombre" id="nombre" class="nombre texto">
-                <input type="text" name="alias "class="alias texto" id="alias">
-                <!--<input type="text" name="desc "class="desc texto" id="desc">-->
-
-                <div class="saveButton texto" id="saveButton"><p>Guardar</p></div>
-            </div>
-            
-        </div>
+        <?php require_once "../controller/UserController.php"; montaUsuario($_SESSION[$idUser]); ?>
 
         <div class="misListas">
             <p class="titulo">Mis listas</p>

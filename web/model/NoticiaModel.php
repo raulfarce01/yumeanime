@@ -12,6 +12,14 @@ class Noticia{
 
     }
 
+    /*
+        
+        Función para subir las noticias a la base de datos
+        @param $titulo contiene el título de la noticia.
+        @param $idUser contiene la clave del usuario al que se le asigna la noticia (autor)
+    
+    */
+
     public function subeNoticia($titulo, $idUser){
 
         try{
@@ -34,6 +42,14 @@ class Noticia{
 
     }
 
+    /*
+        
+        Función para obtener la información de la cabecera de la noticia
+        @param $idNoticia contiene la clave de la noticia
+
+        @return $montaNoticia es un array que contiene el título, la fecha de creación y el autor de la noticia
+    
+    */
     function sacaTitularNoticia($idNoticia){
 
         try{

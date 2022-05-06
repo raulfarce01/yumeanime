@@ -11,6 +11,14 @@
             $this->idNoticia = $idNoticia;
 
         }
+        
+        /*
+        
+            Función para dar y quitar el like de una noticia
+            @param $idUser contiene la clave del usuario que da o quita el like.
+            @param $idNoticia contiene la noticia donde se realiza esta acción.
+        
+        */
 
         function darLikeNoticia($idUser, $idNoticia){
 

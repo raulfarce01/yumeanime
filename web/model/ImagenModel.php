@@ -12,6 +12,13 @@
 
         }
 
+        /*
+        
+            Función para subir las imágenes una a una de las noticas a la base de datos.
+            @param $codigo recibe la cadena de caracteres que convertiremos en un tipo de dato que podremos subir a la base de datos
+            @param $idNoticia recibe la clave de la noticia a la que pertenece la imagen
+        
+        */
         function subeImagenNoticia($codigo, $idNoticia){
 
             try{
@@ -33,9 +40,14 @@
             $db->query("INSERT INTO imagen(codigo, idNoticia) VALUES ('$imgContent', $idNoticia)");    
         }
 
-        //
-        //  Función para sacar las imágenes de las noticias de la db
-        //
+        /* 
+        
+            Función para obtener las imágenes de una noticia de la base de datos
+            @param $idNoticia es la clave de la noticia
+            
+            @return $almacenImagenes, un array que contiene todas las imágenes
+        
+        */
 
         function sacaImagenesNoticia($idNoticia){
 

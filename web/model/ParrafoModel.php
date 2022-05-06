@@ -12,9 +12,13 @@ class Parrafo{
 
     }
 
-    //
-    // Función para subir los párrafos a la base de datos
-    //
+    /*
+        
+        Función para subir un párrafo de una noticia en la base de datos
+        @param $parrafos es un array que contiene todos los párrafos de la noticia
+        @param $idNoticia es la clave de la noticia
+    
+    */
 
     function subeParrafoNoticia($parrafos, $idNoticia){
 
@@ -39,9 +43,14 @@ class Parrafo{
         }
     }
 
-    //
-    //  Función para extraer los párrafos de la noticia de la db
-    //
+    /*
+        
+        Función para obtener los párrafos que se han asignado a una noticia de la base de datos
+        @param $idNoticia es la clave de la noticia de la que vamos a extraer los párrafos
+
+        @return almacenParrafos devuelve un array con todos los párrafos
+    
+    */
 
     function sacaParrafosNoticia($idNoticia){
 

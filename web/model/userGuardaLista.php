@@ -12,6 +12,14 @@ class userGuardaLista{
             
     }
 
+    /*
+        
+        Función para subir los animes que contiene una lista a la base de datos
+        @param $idLista contiene la clave de la lista en la que vamos a insertar el anime
+        @param $idAnime contiene el anime que vamos a insertar
+    
+    */
+
     function insertaAnimesLista($idLista, $idAnime){
 
         try{
@@ -83,9 +91,14 @@ class userGuardaLista{
 
     }*/
 
-    //
-    //  Función para traer los animes de dentro de una lista
-    //
+    /*
+        
+        Función para obtener los animes de una lista para montarlo en la página dedicada a la lista
+        @param $idLista contiene la clave de la lista de la que queremos obtener sus animes.
+
+        @return $animes, un array que contiene la información de los animes
+    
+    */
 
     function montaLista($idLista){
 
@@ -111,6 +124,7 @@ class userGuardaLista{
         while($recorre = $consulta->fetch_object()){
 
             //Aquí va la api para sacar los animes que tienen ese ID
+            //$animes[$cont] = API
 
         }
 
