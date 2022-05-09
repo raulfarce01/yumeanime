@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS lista(
 
 CREATE TABLE IF NOT EXISTS userGuardaLista(
     idLista INT,
-    idAnime INT,
+    idUser INT,
     FOREIGN KEY (idLista) REFERENCES lista(idLista)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
@@ -45,6 +45,18 @@ CREATE TABLE IF NOT EXISTS anime(
     FOREIGN KEY (idUser) REFERENCES user(idUser)
     ON DELETE CASCADE
     ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS animeLista(
+    idAnime INT,
+    idLista INT,
+    FOREIGN KEY (idLista) REFERENCES lista(idLista)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    FOREIGN KEY (idAnime) REFERENCES anime(idAnime)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    PRIMARY KEY (idLista, idAnime)
 );
 
 CREATE TABLE IF NOT EXISTS userGustaAnime(
