@@ -7,14 +7,17 @@ class NoticiaController{
 
     public static function noticiaIndex(){
 
+        $columna = 1;
+
         $noticiaModel = new NoticiaModel();
 
         $noticia = $noticiaModel->sacaTitularNoticiaIndex();
 
         for($i = 0; $i < 6; $i++){
 
+            echo "<div class='columna$columna' id='columna$columna'>";
             echo "<div class='noticiaIndividual'>
-        
+    
             <div class='titulo colorFondo'>";
     
             $noticia[$i]["titulo"];
@@ -28,7 +31,15 @@ class NoticiaController{
             
             $noticia[$i]["parrafo"];
 
-            echo "</div></div>";
+            echo "</div></div></div>";
+
+            $columna++;
+            
+            if($columna > 3){
+
+                $columna = 1;
+
+            }
 
         }
         

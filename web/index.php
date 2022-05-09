@@ -1,3 +1,10 @@
+<?php
+
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,15 +202,13 @@
 
     <main>
 
-        <div class="contenedorNoticiasMovil" id="contenedorNoticiasMovil">
-
-        <div class="contenedorNoticiasPc" id="contenedorNoticiasPc">
-            <div class="columna1" id="columna1"></div>
-            <div class="columna2" id="columna2"></div>
-            <div class="columna3" is="columna3"></div>
+        <div class="contenedorNoticias" id="contenedorNoticias">
+            <?php 
+                require_once "./controller/NoticiaController.php";
+                noticiaIndex(); 
+            ?>
         </div>
 
-        </div>
         <div class="noticiasPopu" id="noticiasPopu">
 
             <h3>Noticias Populares</h3>
