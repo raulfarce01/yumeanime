@@ -211,17 +211,12 @@
 
             <div class="cabeceraLista">
                 <div class="imagenLista contenedorAzul" id="imagenLista"></div>
-                <div class="textoCabeceraLista">
-                    <div class="titLista titulo" id="titLista">Romances Favoritos</div>
-                    <div class="autorFecha">
-                        <div class="autorLista texto" id="autorLista"><i class="fa-solid fa-user colorHeaderLetra"></i><p>Neiroh</p></div>
-                        <div class="fechaLista texto" id="fechaLista"><i class="fa-solid fa-clock colorHeaderLetra"></i><p>13 de julio de 2001</p></div>
-                    </div>
-                    <div class="descLista texto" id="descLista">kjadgshlfkahsdlk adslkjfaskldf alsdkfalskd asdjfhaskjdhf alsdd lashdfkjasdhfkadsh jdh sdklfhasdlkjfh asldjfhalskddf jasdhfkasdh a akdsjfh</div>
-                    <hr class="lineaPc">
-                </div>
+                <?php
+                require_once "../controller/ListaController.php";
+                montaListaEspecifica($idLista);
+                ?>
             </div>
-            <div class="guardarLista texto textoCentro colorHeader colorFondo" id="guardarLista"><i class="fa-solid fa-circle-plus"></i> <p>Guardar Lista</p></div>
+            <div class="guardarLista texto textoCentro colorHeader colorFondo" id="guardarLista"><i class="fa-solid fa-circle-plus"></i><p>Guardar Lista</p></div>
 
             <hr class="lineaMovil">
 

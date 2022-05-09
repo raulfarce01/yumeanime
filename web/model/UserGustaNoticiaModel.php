@@ -63,6 +63,40 @@
             $db->close();
         }
 
+        function cuentaLike($idNoticia){
+
+            $nLikes = 0;
+
+            try{
+                $db = new mysqli('localhost', "yumeanime", "123456", "yumeanimedb");
+    
+                if($db->connect_errno){
+    
+                    throw new Exception("No se ha podido acceder a la base de datos");
+    
+                }
+            }catch(Exception $ex){
+    
+                echo "Excepción $ex <br>";
+    
+            }
+
+            $consulta = $db->query("SELECT COUNT(idUser) FROM userGustaNoticia WHERE idNoticia = $idNoticia");
+
+            if($nLikes = $consulta->fetch_object()){
+
+                return $nLikes;
+
+            }else{
+
+                return 0;
+
+            }
+
+            $db->close();
+
+        }
+
     }
 
 ?>

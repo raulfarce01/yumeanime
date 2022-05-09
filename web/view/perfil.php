@@ -128,9 +128,9 @@
 
         <div class="misListas">
             <p class="titulo">Mis listas</p>
-            <div class="contenedorListas" id="contenedorListas">
-                <div class="masButton"><i class="fa-solid fa-circle-plus"></i></div>
-            </div>
+            <?php 
+            require_once "../controller/ListaController.php"; montaListasPerfil($_SESSION[$idUser]); 
+            ?>
             <p class="todasListas">Todas las listas</p>
         </div>
 
