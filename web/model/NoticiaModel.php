@@ -108,18 +108,18 @@ class Noticia{
 
             //echo $recorreConsulta[0] . "<br>";
 
-            $consultaPar = $db->query("SELECT contenido, idNoticia FROM parrafo WHERE idNoticia = $recorreConsulta[2] LIMIT 1");
+            $consultaPar = $db->query("SELECT contenido FROM parrafo WHERE idNoticia = $recorreConsulta[2] LIMIT 1");
 
             $consultaImg = $db->query("SELECT codigo FROM imagen WHERE idNoticia = $recorreConsulta[2]");
 
             if($parrafo = $consultaPar->fetch_object() && $imagen = $consultaImg->fetch_object()){
  
-                //var_dump[$parrafo->contenido];
+                var_dump($parrafo->contenido);
 
                 $montaNoticiaIndex[$cont] = array(
                     "titulo" => $recorreConsulta[0],
                     "imagen" => $imagen->codigo,
-                    "parrafo" => $parrafo
+                    "parrafo" => $parrafo->contenido,
                 );
 
             }else if($parrafo = $consultaPar->fetch_object() && !($imagen == $consultaImg->fetch_object())){
@@ -128,7 +128,6 @@ class Noticia{
 
                 $montaNoticiaIndex[$cont] = array(
                     "titulo" => $recorreConsulta[0],
-                    "imagen" => $imagen->codigo,
                     "parrafo" => $parrafo->contenido
                 );
 
