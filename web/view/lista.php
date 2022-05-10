@@ -212,8 +212,10 @@
             <div class="cabeceraLista">
                 <div class="imagenLista contenedorAzul" id="imagenLista"></div>
                 <?php
+                require_once "../controller/NoticiaController.php";
+
                 require_once "../controller/ListaController.php";
-                montaListaEspecifica($idLista);
+                ListaController::montaListaEspecifica($idLista);
                 ?>
             </div>
             <div class="guardarLista texto textoCentro colorHeader colorFondo" id="guardarLista"><i class="fa-solid fa-circle-plus"></i><p>Guardar Lista</p></div>

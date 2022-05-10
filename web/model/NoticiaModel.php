@@ -5,7 +5,7 @@ class Noticia{
     private $titulo;
     private $idUser;
 
-    public function __construct($titulo, $idUser){
+    public function __construct($titulo = "", $idUser = 0){
 
         $this->titulo = $titulo;
         $this->idUser = $idUser;

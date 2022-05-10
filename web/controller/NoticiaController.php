@@ -1,7 +1,9 @@
 <?php
 
-require_once "../model/NoticiaModel.php";
-require_once "../model/ImagenModel.php";
+require_once "./model/NoticiaModel.php";
+require_once "./model/ImagenModel.php";
+
+//require_once(__DIR__."/model/NoticiaModel.php");
 
 class NoticiaController{
 
@@ -15,7 +17,7 @@ class NoticiaController{
 
         $columna = 1;
 
-        $noticiaModel = new NoticiaModel();
+        $noticiaModel = new Noticia();
 
         $noticia = $noticiaModel->sacaTitularNoticiaIndex();
 
