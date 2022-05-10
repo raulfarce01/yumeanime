@@ -102,15 +102,29 @@ class Noticia{
 
         }
 
-        $consulta = $db->query("SELECT titulo, fechaCreacN, idNoticia FROM noticia ORDER BY noticia");
+        $consulta = $db->query("SELECT titulo, fechaCreacN, idNoticia FROM noticia ORDER BY fechaCreacN");
 
-        while($recorreConsulta = $consulta->fetch_object()){
+        while($recorreConsulta = $consulta->fetch_array()){
 
-            $consultaPar = $db->query("SELECT contenido FROM parrafo WHERE idNoticia = $recorreConsulta->idNoticia");
+            //echo $recorreConsulta[0] . "<br>";
 
-            $consultaImg = $db->query("SELECT codigo FROM imagen WHERE idNoticia = $recorreConsulta->idNoticia");
+            $consultaPar = $db->query("SELECT contenido, idNoticia FROM parrafo WHERE idNoticia = $recorreConsulta[2] LIMIT 1");
+
+            $consultaImg = $db->query("SELECT codigo FROM imagen WHERE idNoticia = $recorreConsulta[2]");
 
             if($parrafo = $consultaPar->fetch_object() && $imagen = $consultaImg->fetch_object()){
+ 
+                //var_dump[$parrafo->contenido];
+
+                $montaNoticiaIndex[$cont] = array(
+                    "titulo" => $recorreConsulta[0],
+                    "imagen" => $imagen->codigo,
+                    "parrafo" => $parrafo
+                );
+
+            }else if($parrafo = $consultaPar->fetch_object() && !($imagen == $consultaImg->fetch_object())){
+
+                //echo "$parrafo->contenido";
 
                 $montaNoticiaIndex[$cont] = array(
                     "titulo" => $recorreConsulta[0],
