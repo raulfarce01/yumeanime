@@ -5,6 +5,12 @@ require_once "../model/ImagenModel.php";
 
 class NoticiaController{
 
+    /*
+
+        Función para mostrar las noticias apiladas en el index
+        Muestra cada uno de los contenedores de noticias que se mostrarán en el index para poder acceder a la página dedicada
+
+    */
     public static function noticiaIndex(){
 
         $columna = 1;
@@ -17,6 +23,10 @@ class NoticiaController{
 
             echo "<div class='columna$columna' id='columna$columna'>";
             echo "<div class='noticiaIndividual'>
+
+            <form action='./view/noticia.php' method='get'>
+            <input type='submit' name='idNoticia'>
+            </form>
     
             <div class='titulo colorFondo'>";
     
@@ -45,6 +55,12 @@ class NoticiaController{
         
     }
 
+    /*
+    
+        Función para crear una página dedicada de la noticia
+        @param $idNoticia contiene un entero con la clave identificadora de la noticia
+    
+    */
     public static function noticiaDedicada($idNoticia){
 
         $noticiaModel = new Noticia();
