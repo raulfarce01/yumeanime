@@ -4,6 +4,8 @@
     ini_set('display_errors', '1');
     session_start();
 
+    //if (!isset($_SERVER['DOCUMENT_ROOT']) || empty($_SERVER['DOCUMENT_ROOT']))
+    //$_SERVER['DOCUMENT_ROOT'] = __DIR__;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -205,7 +207,7 @@
         <div class="contenedorNoticias" id="contenedorNoticias">
             <?php 
                 require_once "./controller/NoticiaController.php";
-                noticiaIndex(); 
+                NoticiaController::noticiaIndex(); 
             ?>
         </div>
 

@@ -196,9 +196,10 @@
     <!-- --------------------COPIAR HASTA AQUÍ EN TODOS------------------------- -->
 
     <main>
-        <div class="noticia">
-
-        </div>
+        <?php
+        require_once "../controller/NoticiaController";
+        NoticiaController::noticiaDedicada($idNoticia);
+        ?>
         <div class="noticiasPopu" id="noticiasPopu">
             
             <h3>Noticias Populares</h3>

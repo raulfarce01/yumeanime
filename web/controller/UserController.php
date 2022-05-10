@@ -46,8 +46,13 @@ class UserController{
 
         echo "<div class='contenedorPropio' id='contenedorPropio'>
 
-            <div class='fotoPerfil'><img width='100' src='data:image/png;base64, ".base64_encode($datos['foto'])."'></img></div>
-
+            <div class='fotoPerfil'>
+                <img width='100' src='data:image/png;base64, ".base64_encode($datos['foto'])."'></img>
+            </div>
+            <form action='./model/subeImagenUser.php' method='post' enctype='multipart/form-data'>
+                <input type='file' name='cambiaFoto'>
+            </form>
+        
             <div class='inputs'>
                 <input type='text' name='nombre' id='nombre' class='nombre texto' value='".$datos['nombre']."'>
                 <input type='text' name='alias 'class='alias texto' id='alias' value='".$datos['correo']."'>

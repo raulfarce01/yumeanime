@@ -37,6 +37,8 @@ class ListaController{
         <hr class='lineaPc'>
         </div>";
 
+        //AÑADIR ANIMES AQUÍ
+
     }
 
     public static function montaListasPerfil($idUser){
