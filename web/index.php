@@ -6,6 +6,12 @@
 
     //if (!isset($_SERVER['DOCUMENT_ROOT']) || empty($_SERVER['DOCUMENT_ROOT']))
     //$_SERVER['DOCUMENT_ROOT'] = __DIR__;
+
+    require_once "./controller/NoticiaController.php";
+    require_once "./controller/UserController.php";
+    require_once "./controller/ListaController.php";
+    require_once "./controller/ComentarioController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -206,7 +212,6 @@
 
         <div class="contenedorNoticias" id="contenedorNoticias">
             <?php 
-                require_once "./controller/NoticiaController.php";
                 NoticiaController::noticiaIndex(); 
             ?>
         </div>

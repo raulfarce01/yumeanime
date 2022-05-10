@@ -1,7 +1,7 @@
 <?php
 
-require_once "../model/ListaModel.php";
-require_once "../model/UserGuardaLista.php";
+require_once "./model/ListaModel.php";
+require_once "./model/UserGuardaLista.php";
 
 class ListaController{
 

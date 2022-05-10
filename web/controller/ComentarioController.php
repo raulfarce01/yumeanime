@@ -1,6 +1,6 @@
 <?php
 
-require_once "../model/UserComentaNoticiaModel.php";
+require_once "./model/UserComentaNoticiaModel.php";
 
 class comentarioController{
 
