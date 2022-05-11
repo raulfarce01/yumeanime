@@ -9,7 +9,7 @@ class User{
     private $imgPerfil;
     private $administrador;
 
-    public function __construct($nombre, $alias, $correo, $passwd, $imgPerfil, $administrador = 0){
+    public function __construct($nombre = '', $alias = '', $correo = '', $passwd = '', $imgPerfil = '', $administrador = 0){
 
         $this->nombre = $nombre;
         $this->alias = $alias;

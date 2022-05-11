@@ -6,7 +6,7 @@
         private $idNoticia;
         private $textoN;
 
-        public function __construct($idUser, $idNoticia, $textoN){
+        public function __construct($idUser = 0, $idNoticia = 0, $textoN = ''){
 
             $this->idUser = $idUser;
             $this->idNoticia = $idNoticia;
@@ -72,13 +72,15 @@
     
             }
 
-            $consulta = $db->query("SELECT c.textoN, u.nombre FROM userComentaNoticia c NATURAL JOIN user WHERE idNoticia = $idNoticia");
+            $consulta = $db->query("SELECT c.textoN AS comentario, u.alias AS autor, u.imgPerfil AS fotoPerfil FROM userComentaNoticia c NATURAL JOIN user u WHERE idNoticia = $idNoticia
+            ");
 
             while($recorre = $consulta->fetch_object()){
 
                 $comentarios[$cont] = array(
-                    "autor" => $recorre[1],
-                    "texto" => $recorre[0]
+                    "autor" => $recorre->autor,
+                    "texto" => $recorre->comentario,
+                    "imgPerfil" => $recorre->fotoPerfil,
                 );
 
                 $cont++;

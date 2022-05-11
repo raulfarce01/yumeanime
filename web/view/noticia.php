@@ -203,18 +203,38 @@ ini_set("display_errors", '1');
     <!-- --------------------COPIAR HASTA AQUÍ EN TODOS------------------------- -->
 
     <main>
+        <div class="contenedorDedicado">
         <?php
-        require_once "../controller/NoticiaController";
-        NoticiaController::noticiaDedicada($idNoticia);
+        $idNoticia = $_GET['idNoticia'];
+        echo "<script>console.log($idNoticia)</script>";
+        require_once "../controller/NoticiaDedicadaController.php";
+        NoticiaDedicadaController::noticiaDedicada($idNoticia);
         ?>
+        
         <div class="noticiasPopu" id="noticiasPopu">
             
             <h3>Noticias Populares</h3>
+            <?php
+            NoticiaDedicadaController::noticiasPopusController();
+            ?>
 
         </div>
-
-        <div class="autorNoticia"></div>
-        <div class="cajaComentarios"></div>
+        </div>
+    
+        <div class="contieneComentarios">
+        <hr>
+            <div class="comentarios">
+                <h3 class='colorHeaderLetra'>Cajita de Comentarios</h3>
+                <?php
+                    require "../controller/ComentarioController.php";
+                    if(isset($_SESSION['idUser'])){
+                        ComentarioController::userComenta($_SESSION['idUser']);
+                    }
+                    ComentarioController::traeComentariosController($idNoticia);
+                ?>
+            </div>
+        </div>
+        
     </main>
 
     <footer>

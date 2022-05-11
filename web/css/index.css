@@ -85,22 +85,4 @@ main{
         width: 95%;
     }
 
-    .contenedorPopu{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-
-    .imagenPopu img{
-        width: 70px;
-        height: 70px;
-        border-radius: 5px;
-    }
-
-    .imagenPopu{
-        margin-right: 10px;
-    }
-
 }

@@ -32,6 +32,10 @@ html{
     font-family: 'Mulish', sans-serif;
 }
 
+.negrita{
+    font-weight: bold;
+}
+
 .amarillo{
     color: #D4C859;
     font-weight: bold;
@@ -62,12 +66,15 @@ html{
     color: #0A1940;
 }
 
+.letraNegra{
+    color: black;
+}
+
 i{
     color: #FAF8F7;
 }
 
 main{
-    width: 100vw;
     background-color: #FAF8F7;
 }
 
@@ -537,6 +544,7 @@ nav form input{
         justify-content: space-around;
         flex-direction: row;
         padding-top: 2%;
+        height: fit-content;
     }
     .noticiasPopu{
         display: flex;
@@ -563,5 +571,22 @@ nav form input{
     .contenedorLogin{
         top: 12%;
         right: 2%;
+    }
+    .contenedorPopu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .imagenPopu img{
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    .imagenPopu{
+        margin-right: 10px;
     }
 }

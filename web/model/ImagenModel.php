@@ -5,7 +5,7 @@
         private $contenido;
         private $idNoticia;
 
-        public function __construct($contenido, $idNoticia){
+        public function __construct($contenido = '', $idNoticia = 0){
 
             $this->idNoticia = $idNoticia;
             $this->contenido = $contenido;
@@ -72,7 +72,7 @@
     
             while($imagen = $sacaImagenes->fetch_object()){
     
-                $almacenImagenes[$cont] = $imagen;
+                $almacenImagenes[$cont] = $imagen->codigo;
                 $cont++;
     
             }

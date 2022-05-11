@@ -68,15 +68,17 @@ class Noticia{
 
         $sacaAutor = $db->query("SELECT idUser FROM noticia WHERE idNoticia = $idNoticia");
         $idUser = $sacaAutor->fetch_object();
-        $consulta = $db->query("SELECT n.titulo, n.fechaCreacN, u.nombre FROM noticia n NATURAL JOIN user u WHERE l.idNoticia = $idNoticia");
+        $consulta = $db->query("SELECT n.titulo as titulo, n.fechaCreacN as fecha, u.nombre as nombre FROM noticia n NATURAL JOIN user u WHERE n.idNoticia = $idNoticia");
 
         if($recorreConsulta = $consulta->fetch_object()){
 
             $montaNoticia = array(
-                "titulo" => $recorreConsulta[0],
-                "fecha" => $recorreConsulta[1],
-                "autor" => $recorreConsulta[2]
+                "titulo" => $recorreConsulta->titulo,
+                "fecha" => $recorreConsulta->fecha,
+                "autor" => $recorreConsulta->nombre,
             );
+
+            //echo "<script>console.log(".$montaNoticia["fecha"].")</script>";
 
         }
 

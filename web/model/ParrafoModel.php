@@ -5,7 +5,7 @@ class Parrafo{
     private $contenido;
     private $idNoticia;
 
-    public function __construct($contenido, $idNoticia){
+    public function __construct($contenido = "", $idNoticia = 0){
 
         $this->contenido = $contenido;
         $this->idNoticia = $idNoticia;
@@ -75,7 +75,9 @@ class Parrafo{
 
         while($parrafo = $sacaParrafos->fetch_object()){
 
-            $almacenParrafos[$cont] = $parrafo;
+            //echo $cont . "<br>";
+            $almacenParrafos[$cont] = $parrafo->contenido;
+            //echo $almacenParrafos[$cont];
             $cont++;
 
         }
