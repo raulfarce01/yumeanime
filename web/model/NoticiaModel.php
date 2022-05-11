@@ -114,12 +114,13 @@ class Noticia{
 
             if($parrafo = $consultaPar->fetch_object() && $imagen = $consultaImg->fetch_object()){
  
-                var_dump($parrafo->contenido);
+                //var_dump($parrafo->contenido);
 
                 $montaNoticiaIndex[$cont] = array(
                     "titulo" => $recorreConsulta[0],
                     "imagen" => $imagen->codigo,
-                    "parrafo" => $parrafo->contenido,
+                    //"parrafo" => $parrafo->contenido,
+                    "idNoticia" => $recorreConsulta[2],
                 );
 
             }else if($parrafo = $consultaPar->fetch_object() && !($imagen == $consultaImg->fetch_object())){

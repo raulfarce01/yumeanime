@@ -36,7 +36,7 @@
             //echo $_POST['nombre'].", ".$_POST['desc'].", ".$_POST['precio'];
             //echo "INSERT INTO figura (nombreFig, descFig, precioFig, fotoFig) VALUES (".$_POST['nombre'].", ".$_POST['desc'].", ".$_POST['precio'].", '$imgContent')";
             //Insert image content into database
-            $insert = $db->query("INSERT INTO imagen(codigo, idNoticia) VALUES ('$imgContent', 1)");
+            $insert = $db->query("INSERT INTO imagen(codigo, idNoticia) VALUES ('$imgContent', 8)");
             //echo $imgContent;
             if($insert){
                 echo "<p>Archivo subido correctamente a la base de datos</p>";

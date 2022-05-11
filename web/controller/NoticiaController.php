@@ -23,35 +23,26 @@ class NoticiaController{
 
         for($i = 0; $i < 6; $i++){
 
-            echo "<div class='columna$columna' id='columna$columna'>";
-            echo "<div class='noticiaIndividual'>
+            echo "<div class='noticiaIndividual contenedorAzul'>
 
             <form action='./view/noticia.php' method='get'>
-            <input type='submit' name='idNoticia'>
-            </form>
-    
+            <input type='hidden' name='idNoticia' value='".$noticia[$i]["idNoticia"]."'>
+            <div class='noticiaIndividual contenedorAzul'>
+            
             <div class='titulo colorFondo'>";
     
-            $noticia[$i]["titulo"];
+            echo $noticia[$i]["titulo"];
             
             echo "</div>
 
-            <div class='imagenNoticiaIndividual'><img src='data:image/png;base64, ".base64_encode($noticia[$i]["imagen"])."'></img>
+            <div class='imagenNoticiaIndividual'><img class='imagenNoticia' src='data:image/png;base64, ".base64_encode($noticia[$i]["imagen"])."'></img>
             </div>
             
             <div class'descNoticiaIndividual colorFondo'>";
             
-            $noticia[$i]["parrafo"];
+            //$noticia[$i]["parrafo"];
 
-            echo "</div></div></div>";
-
-            $columna++;
-            
-            if($columna > 3){
-
-                $columna = 1;
-
-            }
+            echo "</div></div></form></div>";
 
         }
         
