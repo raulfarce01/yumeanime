@@ -23,13 +23,14 @@ class NoticiaController{
 
         for($i = 0; $i < 6; $i++){
 
-            echo "<div class='noticiaIndividual contenedorAzul'>
+            echo "<a href='./view/noticia.php?idNoticia=".$noticia[$i]["idNoticia"]."'><div class='noticiaIndividual contenedorAzul'>
+            <div class='tapaFinal contenedorAzul'></div>
 
             <form action='./view/noticia.php' method='get'>
             <input type='hidden' name='idNoticia' value='".$noticia[$i]["idNoticia"]."'>
             <div class='noticiaIndividual contenedorAzul'>
             
-            <div class='titulo colorFondo'>";
+            <div class='tituloNoticia titulo colorFondo'>";
     
             echo $noticia[$i]["titulo"];
             
@@ -38,11 +39,12 @@ class NoticiaController{
             <div class='imagenNoticiaIndividual'><img class='imagenNoticia' src='data:image/png;base64, ".base64_encode($noticia[$i]["imagen"])."'></img>
             </div>
             
-            <div class'descNoticiaIndividual colorFondo'>";
+            <div class='descNoticia colorFondo texto'>";
             
-            //$noticia[$i]["parrafo"];
+            echo $noticia[$i]["parrafo"];
 
-            echo "</div></div></form></div>";
+            //Div para evitar que el contendor quede feo cuando se pasen las letras
+            echo "</div></div></form></div></a>";
 
         }
         
@@ -69,13 +71,13 @@ class NoticiaController{
                 <div class='titulo'>
                 
                     <div class='autorFecha'>
-                        <div class='autorLista texto' id='autorLista'><i class='fa-solid fa-user colorHeaderLetra'></i><p>";
+                        <div class='autorNoticia texto' id='fechaNoticia'><i class='fa-solid fa-user colorHeaderLetra'></i><p>";
                 
                         $titular["autor"];
                 
         echo            "</p>
                         </div>
-                        <div class='fechaLista texto' id='fechaLista'><i class='fa-solid fa-clock colorHeaderLetra'></i><p>";
+                        <div class='fechaNoticia texto' id='fechaNoticia'><i class='fa-solid fa-clock colorHeaderLetra'></i><p>";
                     
                             $titular["fecha"];
                     
@@ -108,6 +110,28 @@ class NoticiaController{
             }
 
         echo "</div>";
+    }
+
+    public static function noticiasPopusController(){
+
+        $noticia = new Noticia();
+
+        $noticiasPopus = $noticia->noticiasPopu();
+
+        for($i = 0; $i < 5; $i++){
+
+            echo "<a href='../view/noticia.php?idNoticia=".$noticiasPopus[$i]["idNoticia"]."' class='colorFondo'><div class='contenedorPopu'>
+            
+            <div class='imagenPopu'><img src='data:image/png;base64,".base64_encode($noticiasPopus[$i]["imagen"])."'></img>
+            </div>
+            <div class='tituloPopu titulo colorFondo'>".
+            $noticiasPopus[$i]["titulo"]
+            ."</div>
+            
+            </div>";
+
+        }
+
     }
 
 }

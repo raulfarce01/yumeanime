@@ -38,3 +38,13 @@ INSERT INTO parrafo(contenido, idNoticia) VALUES ('En la edición más reciente 
 INSERT INTO parrafo(contenido, idNoticia) VALUES ('Uno de los OVAs tendrá una historia original centrada en los héroes profesionales amantes del béisbol que forman la Hero League Baseball (HLB). Esta temporada, los “Orcas”, liderados por Gang Orca, y los Lionels, liderados por Shishido, compiten por el primer puesto. Ambos equipos están decididos a ganar, por lo que piden el apoyo de los estudiantes de la Academia U.A. Todos los jugadores pueden utilizar sus habilidades especiales en el próximo partido. Por otra parte, Shueisha revelará más detalles del segundo OVA más adelante.', 7);
 INSERT INTO parrafo(contenido, idNoticia) VALUES ('En la cuenta oficial de Twitter para la adaptación al anime del manga Kaguya-sama: Love is War (Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen) se compartió la nueva secuencia de cierre utilizada (quizás por única ocasión) en el quinto episodio de la tercera temporada del proyecto, titulada como Kaguya-sama: Love Is War – Ultra Romantic. El video cuenta con el tema “My Nonfiction“, interpretado por Makoto Furukawa y Konomi Kohara, las voces de Miyuki Shirogane y Chika Fujiwara. (El video original está bloqueado fuera de Japón).', 8);
 INSERT INTO parrafo(contenido, idNoticia) VALUES ('La cuenta también compartió una variedad de ilustraciones para celebrar la emisión del quinto episodio de esta tercera temporada. La primera, segunda y tercera fueron realizadas por Kii Tanaka, quien se encarga de la dirección de animación del proyecto.', 8);
+
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (2, 1);
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (2, 2);
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (2, 3);
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (8, 1);
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (8, 2);
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (5, 3);
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (6, 1);
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (1, 2);
+INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (4, 2);

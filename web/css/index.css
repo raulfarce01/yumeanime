@@ -16,18 +16,20 @@ main{
 }
 
 .contenedorNoticias{
-    padding-top: 2%;
+    padding-top: 3%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     height: fit-content;
     border-radius: 10px;
     gap: 5px;
     grid-auto-flow: 200px;
+    grid-auto-rows: 505px;
     width: 90%;
     padding-bottom: 3%;
 }
 
 .noticiaIndividual{
+    position: relative;
     margin: auto;
     margin-top: 0;
     width: 100%;
@@ -35,6 +37,8 @@ main{
     cursor: pointer;
     border-radius: 10px;
     padding: 2%;
+    padding-top: 0;
+    overflow: hidden;
 }
 
 .noticiaIndividual form{
@@ -48,13 +52,25 @@ main{
 .imagenNoticia{
     width: 100%;
     margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
 }
 
-.titulo{
+.tituloNoticia{
     width: 100%;
     padding-left: 3%;
-    padding-top: 2%;
-    margin-bottom: 2%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+    font-size: 1.3em;
+}
+
+.tapaFinal{
+    position: relative;
+    width: 100%;
+    height: 4%;
+    top: 99%;
+    z-index: 3;
 }
 
 @media screen and (min-width:750px) {
@@ -67,6 +83,24 @@ main{
 
     .noticiaIndividual{
         width: 95%;
+    }
+
+    .contenedorPopu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .imagenPopu img{
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    .imagenPopu{
+        margin-right: 10px;
     }
 
 }

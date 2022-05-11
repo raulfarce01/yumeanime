@@ -110,7 +110,7 @@ header a p{
     position: absolute;
     display: flex;
     justify-content: end;
-    z-index: 3;
+    z-index: 20;
     right: 17px;
     top: 8px;
 }
@@ -149,7 +149,7 @@ header a p{
     height: 45px;
     right: 17px;
     top: 8px;
-    z-index: 5;
+    z-index: 100000;
     cursor: pointer;
     opacity: 0%;
 }
@@ -203,6 +203,7 @@ nav{
     right: -250px;
     top: 0;
     transition: right 0.2s linear;
+    z-index: 12;
 }
 
 .checkHamb:checked ~ nav{
@@ -539,12 +540,15 @@ nav form input{
     }
     .noticiasPopu{
         display: flex;
+        flex-direction: column;
         width: 17.5%;
         background-color: #0A1940;
         color: #FAF8F7;
         border-radius: 10px;
         padding-top: 1%;
         padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 1%;
         height: fit-content;
     }
     .topPage{

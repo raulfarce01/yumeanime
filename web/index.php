@@ -220,6 +220,10 @@
 
             <h3>Noticias Populares</h3>
 
+            <?php
+            NoticiaController::noticiasPopusController();
+            ?>
+
         </div>
 
     </main>

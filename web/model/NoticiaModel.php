@@ -102,24 +102,28 @@ class Noticia{
 
         }
 
-        $consulta = $db->query("SELECT titulo, fechaCreacN, idNoticia FROM noticia ORDER BY fechaCreacN");
+        $consulta = $db->query("SELECT titulo, fechaCreacN, idNoticia FROM noticia ORDER BY fechaCreacN DESC");
 
         while($recorreConsulta = $consulta->fetch_array()){
 
             //echo $recorreConsulta[0] . "<br>";
 
-            $consultaPar = $db->query("SELECT contenido FROM parrafo WHERE idNoticia = $recorreConsulta[2] LIMIT 1");
+            //echo $recorreConsulta[2]. "<br>";
 
             $consultaImg = $db->query("SELECT codigo FROM imagen WHERE idNoticia = $recorreConsulta[2]");
 
-            if($parrafo = $consultaPar->fetch_object() && $imagen = $consultaImg->fetch_object()){
- 
+            if($imagen = $consultaImg->fetch_object()){      
+                
+                $consultaPar = $db->query("SELECT contenido FROM parrafo WHERE idNoticia = $recorreConsulta[2] LIMIT 1");
+
+                $parrafo = $consultaPar->fetch_object();          
+                
                 //var_dump($parrafo->contenido);
 
                 $montaNoticiaIndex[$cont] = array(
                     "titulo" => $recorreConsulta[0],
                     "imagen" => $imagen->codigo,
-                    //"parrafo" => $parrafo->contenido,
+                    "parrafo" => $parrafo->contenido,
                     "idNoticia" => $recorreConsulta[2],
                 );
 
@@ -139,6 +143,61 @@ class Noticia{
         }
 
         return $montaNoticiaIndex;
+
+    }
+
+    /*
+    
+        Función para sacar las noticias con más "me gusta"
+
+        @return $almacenNoticias, un array con el título y la imagen de las 5 noticias más populares
+    
+    */
+    public static function noticiasPopu(){
+
+        $cont = 0;
+        $masGustado = [];
+        $almacenNoticias = [];
+
+        try{
+            $db = new mysqli('localhost', "yumeanime", "123456", "yumeanimedb");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la base de datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo "Excepción $ex <br>";
+
+        }
+
+        $consultaNoticia = $db->query("SELECT COUNT(idNoticia), idNoticia FROM userGustaNoticia GROUP BY idNoticia ORDER BY COUNT(idNoticia) DESC");
+
+        $likes = $consultaNoticia->fetch_object();
+
+        while($cont < 5){
+
+            $masGustado = $likes->idNoticia;
+
+            $noticiasGustadas = $db->query("SELECT n.titulo as titulo, i.codigo as codigo, n.idNoticia as idNoticia FROM noticia n NATURAL JOIN imagen i WHERE idNoticia = $masGustado");
+
+            $correNoticias = $noticiasGustadas->fetch_object();
+
+            $almacenNoticias[$cont] = array(
+                "titulo" => $correNoticias->titulo,
+                "imagen" => $correNoticias->codigo,
+                "idNoticia" => $correNoticias->idNoticia,
+            );
+            
+            $cont++;
+
+            $likes = $consultaNoticia->fetch_object();
+
+        }
+
+        return $almacenNoticias;        
 
     }
 
