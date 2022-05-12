@@ -197,6 +197,10 @@
 
     <main>
 
+        <?php
+            $busca = $_GET['buscador'];
+        ?>
+
         <div class="contenedoresBusca">
             <div class="contenedorBuscaAnimes contenedorAzul">
                 <div class="tituloContenedorBusca titulo colorFondo">
@@ -205,16 +209,19 @@
                 <div class="contenedorAnimes">
                     
                 </div>
-                <p class="verTodo texto amarillo textoDerecha">Ver todo</p>
+                <a href='./busquedaDedicada.php?busca=<?php echo $busca;?>&buscaAnime=true'><p class="verTodo texto amarillo textoDerecha">Ver todo</p></a>
             </div>
             <div class="contenedorBuscaNoticias contenedorAzul">
                 <div class="tituloContenedorBusca titulo colorFondo">
                     <p>Noticias</p>
                 </div>
                 <div class="contenedorNoticias">
-                    
+                    <?php
+                        require_once "../controller/BusquedaController.php";
+                        BusquedaController::buscaNoticiaGeneral($busca);
+                    ?>
                 </div>
-                <p class="verTodo texto amarillo textoDerecha">Ver todo</p>
+                <a href='./busquedaDedicada.php?busca=<?php echo $busca;?>&buscaNoticia=true'><p class="verTodo texto amarillo textoDerecha">Ver todo</p></a>
             </div>
             <div class="contenedorBuscaListas contenedorAzul">
                 <div class="tituloContenedorBusca titulo colorFondo">
@@ -223,10 +230,15 @@
                 <div class="contenedorListas">
 
                 </div>
-                <p class="verTodo texto amarillo textoDerecha">Ver todo</p>
+                <a href='./busquedaDedicada.php?busca=<?php echo $busca;?>&buscaLista=true'><p class="verTodo texto amarillo textoDerecha">Ver todo</p></a>
             </div>
         </div>
 
     </main>
+    <footer>
+
+        <p>Creador: Raúl Fernández Arce</p>
+
+    </footer>
 </body>
 </html>
