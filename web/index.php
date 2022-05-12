@@ -30,6 +30,7 @@
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
+    <form action="#" method='post'>
     <div class="contenedorLogin" id="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
@@ -52,6 +53,7 @@
                 </div>
             </div>
         </div>
+    </form>
 
     <!-- --------------------------REGISTRO-------------------------------- -->
         <div class="contenedorRegistro" id="contenedorRegistro">
