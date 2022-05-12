@@ -26,8 +26,8 @@
         
         $response = curl_exec($ch);
 
-        $data = isset($response) ? json_decode($response) : "Negativo";
+        //$data = isset($response) ? json_decode($response) : "Negativo";
         //echo json_decode($data);
-        var_dump($data);
+        //var_dump($data);
         //var_dump($response);
 ?>
