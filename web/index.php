@@ -164,10 +164,10 @@
             <div class="textoNav">
 
                 <div class="botonesNav">
-                    <div class="botonLoginNav" id="botonLoginNav">
+                    <div id="botonLoginNav" class="botonLoginNav">
                         <p>Login</p>
                     </div>
-                    <div class="botonRegistroNav" id="botonLoginNav">
+                    <div id="RegistroNav" class="botonRegistroNav">
                         <p>Registro</p>
                     </div>
                 </div>
