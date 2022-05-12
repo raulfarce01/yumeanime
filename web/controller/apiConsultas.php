@@ -11,12 +11,14 @@
         $query = $_GET['query'];
         $page = $_GET['page'];
         //$link =  "https://api.aniapi.com/v1/user_story"; 
-        $link =  "https://api.aniapi.com/v1/user_story"; 
+        $link =  "https://api.aniapi.com/v1/auth/me"; 
 
         //'Authorization: Bearer <' . $key . '>',
         $headers = array(
-            'Authorization: ' . $key,
+            'Authorization: Bearer ' . $key,
         );
+
+        $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_URL, $link);
@@ -24,6 +26,8 @@
         
         $response = curl_exec($ch);
 
-        $data = isset($response->status_code) ? json_decode($response->status_code) : "Negativo";
-        echo $data;
+        $data = isset($response) ? json_decode($response) : "Negativo";
+        //echo json_decode($data);
+        var_dump($data);
+        //var_dump($response);
 ?>
