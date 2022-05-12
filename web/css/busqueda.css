@@ -58,9 +58,11 @@ main{
 }
 .noticiaA{
     width: 25%;
-    margin-top: 30px;
 }
 
+.tituloContenedorBusca{
+    font-size: 1.6em;
+}
 @media screen and (min-width:750px) {
     .noticiaA{
         width: 15%;

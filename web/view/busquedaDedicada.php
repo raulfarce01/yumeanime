@@ -214,6 +214,15 @@
             ?>
 
         </div>
+        <div class="noticiasPopu" id="noticiasPopu">
+            
+            <h3>Noticias Populares</h3>
+            <?php
+            require_once "../controller/NoticiaDedicadaController.php";
+            NoticiaDedicadaController::noticiasPopusController();
+            ?>
+
+        </div>
 
     </main>
     <footer>

@@ -17,10 +17,22 @@ class BusquedaController{
         $noticias = $busqueda->realizaBusquedaNoticia($busca);
 
         for($i = 0; $i < count($noticias); $i++){
-        
-        echo "
-        <a href='./noticia.php?idNoticia=".$noticias[$i]['idNoticia']."'>
-            <div class='noticia'>
+
+            /*$numNoticias = 0;
+            $numNoticias = ceil(count($noticias)/3);
+
+            //echo $numNoticias;
+            if($i == $numNoticias || $i == $numNoticias * 2){
+                echo "</div>";
+            }
+
+            if($i == 0 || $i == $numNoticias || $i == $numNoticias * 2){
+                echo "<div class='col'>";
+            }*/
+
+            echo "
+        <a href='./noticia.php?idNoticia=".$noticias[$i]['idNoticia']."' class='busquedaDedicada colorFondo titulo'>
+            <div class='noticia contenedorAzul'>
             
                 <div class='imagen'>
                 
@@ -35,7 +47,7 @@ class BusquedaController{
                 </div>
             
             </div>
-        <a>
+        </a>
         
         ";
         }
@@ -52,26 +64,35 @@ class BusquedaController{
 
             for($i = 0; $i < 6; $i++){
 
-                echo "
-                <a href='./noticia.php?idNoticia=".$noticias[$i]['idNoticia']."' class='colorFondo noticiaA'>
-                    <div class='noticia'>
-                    
-                        <div class='imagen'>
+                if(!empty($noticias[$i]['imagen'])){
+
+                    echo "
+                    <a href='./noticia.php?idNoticia=".$noticias[$i]['idNoticia']."' class='colorFondo noticiaA'>
+                        <div class='noticia'>
                         
-                            <img src='data:image/png;base64, ".base64_encode($noticias[$i]['imagen'])."'></img>
-        
+                            <div class='imagen'>
+                            
+                                <img src='data:image/png;base64, ".base64_encode($noticias[$i]['imagen'])."'></img>
+            
+                            </div>
+            
+                            <div class='titulo tituloBusqueda'>
+                            
+                                <p>".$noticias[$i]['titulo']."</p>
+                            
+                            </div>
+                        
                         </div>
-        
-                        <div class='titulo tituloBusqueda'>
-                        
-                            <p>".$noticias[$i]['titulo']."</p>
-                        
-                        </div>
+                    </a>
                     
-                    </div>
-                </a>
-                
-                ";                
+                    ";        
+
+                }else{
+
+                    echo "<a class='noticiaA'><div class='noticia'></div></a>";
+
+                }
+                        
         }
 
     }
