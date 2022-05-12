@@ -15,6 +15,20 @@
 </head>
 <body>
 
+    <?php
+        if(!isset($_GET['nextPage'])){
+            $pagina = 1;
+            //echo 'no pulsado';
+        }else{
+            $pagina = $_GET['nextPage'];
+            //echo 'pulsado';
+        }
+
+        //echo $pagina;
+
+        echo "<script>console.log($pagina)</script>";
+    ?>
+
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- ----------------------- Crear lista Inicio ---------------------- -->
@@ -246,33 +260,49 @@
     <!-- --------------------COPIAR HASTA AQUÍ EN TODOS------------------------- -->
 
     <main>
-
+    <div class='izquierda'>
     <div class="selects">
+        <form action="./directorio.php" method="get" class='formSelect'>
 
-        <select name="categoria" class="selectCat contenedorAzul colorFondo texto" id="categoria">
+        <select name="genre" class="selectCat contenedorAzul colorFondo texto" id="genre">
 
             <!-- <option value="valorX"> ValorX </option> -->
             <option disabled selected>Categoría</option>
+            <?php
+                require_once "../controller/ApiBusqueda.php";
+                ApiBusqueda::listaGenerosAnime();
+            ?>
 
         </select>
 
-        <select name="orden" class="selectOrden contenedorAzul colorFondo texto" id="orden">
-
-            <!-- <option value="valorX"> ValorX </option> -->
-            <option disabled selected>Orden</option>
-            <option value="reciente"> Más reciente </option>
-            <option value="antiguo"> Más antiguo </option>
-            <option value="gusta"> Más gustado </option>
-
-        </select>
-
+        <input type="submit" class='filtrar colorHeader colorFondo' value='Filtrar'>
+        </form>
     </div>
+    
         
-        <div class="contenedorAnimes">
-
+        <div class="contenedorAnimes colorHeaderLetra">
+            <div class="contenedorASecas">
+            <?php
+                if(isset($_GET['genre'])){
+                    $genre = $_GET['genre'];
+                    ApiBusqueda::listaAnimes($genre, $pagina);
+                }else{
+                    ApiBusqueda::listaAnimes();
+                }
+            ?>
+            </div>
+            <form action='./directorio.php' method='get' class='formNextPage'>
+                <input type='hidden' name='genre' value='<?php echo $genre; ?>'>
+                <button name='nextPage' class=' colorFondo colorHeader nextPage' value='<?php echo ++$pagina; ++$pagina ?>'>Siguiente Página</button>
+            </form>
+        </div>
         </div>
         <div class="noticiasPopu" id="noticiasPopu">
             <h3>Noticias Populares</h3>
+            <?php
+            require_once "../controller/NoticiaDedicadaController.php";
+            NoticiaDedicadaController::noticiasPopusController();
+            ?>
         </div>
 
     </main>

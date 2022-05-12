@@ -127,6 +127,19 @@ main{
     padding-bottom: 1%;
 }
 
+.filtrar{
+    padding: 0.5% 1%;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 2%;
+}
+
+.izquierda{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
 .cabeceraLista{
     display: flex;
     width: 90%;
@@ -156,6 +169,69 @@ main{
     bottom: 2%;
     right: 2%;
     width: 95%;
+}
+
+.contenedorAnimes{
+    display: flex;
+    flex-direction: column;
+}
+
+.anime{
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.titAnime{
+    text-align: center;
+    width: 100%;
+}
+
+.imgAnime{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contenedorImagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 2%;
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+.animeA{
+    width: 30%;
+}
+
+.contenedorASecas{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1%;
+    flex-wrap: wrap;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.formNextPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextPage{
+    border: 0;
+    border-radius: 10px;
+    padding: 2% 4%;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.formSelect{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 @media screen and (min-width:750px) {
@@ -200,5 +276,8 @@ main{
     .botonCreaLista{
         margin: auto;
         margin-top: 25px;
+    }
+    .izquierda{
+        width: 75%;
     }
 }

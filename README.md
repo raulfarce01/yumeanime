@@ -172,3 +172,7 @@ Esta decisión se ha tomado el día 19/04/2022
 El 06/05/2022 Se ha optado por eliminar los modelos "UserComentaAnime" y "UserGustaAnime" porque los animes son recogidos de una API, por lo que no los tenemos en la base de datos, así que sería muy complicado guardar los comentarios y Likes. En este día también se han finalizado todos los modelos de la web en PHP.
 
 ---
+
+El 12/05/2022 se ha eliminado el select de orden de la página de directorio debido a que la API no tenía forma de ordenar los animes fecha al mismo tiempo
+
+---

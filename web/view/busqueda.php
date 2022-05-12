@@ -207,7 +207,10 @@
                     <p>Animes</p>
                 </div>
                 <div class="contenedorAnimes">
-                    
+                    <?php
+                        require_once "../controller/ApiBusqueda.php";
+                        ApiBusqueda::colocaAnimes($busca);
+                    ?>
                 </div>
                 <a href='./busquedaDedicada.php?busca=<?php echo $busca;?>&buscaAnime=true'><p class="verTodo texto amarillo textoDerecha">Ver todo</p></a>
             </div>
