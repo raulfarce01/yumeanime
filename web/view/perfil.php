@@ -1,3 +1,7 @@
+<?php
+    require_once "./controller/UserController.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,15 +82,15 @@
             <div class="textoNav">
 
                 <div class="botonesNav">
-                    <div class="botonLoginNav">
+                    <div id="botonLoginNav" class="botonLoginNav">
                         <p>Login</p>
                     </div>
-                    <div class="botonRegistroNav">
+                    <div id="botonRegistroNav" class="botonRegistroNav">
                         <p>Registro</p>
                     </div>
                 </div>
 
-                <form action="./busqueda.php">
+                <form id='formBusqueda' action="./busqueda.php">
 
                     <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar...">
                     <i class="fa-solid fa-magnifying-glass" id="lupaBuscar"></i>
@@ -133,6 +137,9 @@
             ?>
             <p class="todasListas">Todas las listas</p>
         </div>
+
+        <script src="../js/recogeElementos.js"></script>
+        <script src="../js/abreContenedores.js"></script>
 
     </main>
     <footer>

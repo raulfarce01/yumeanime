@@ -8,7 +8,7 @@
     //$_SERVER['DOCUMENT_ROOT'] = __DIR__;
 
     require_once "./controller/NoticiaController.php";
-    require_once "./controller/UserController.php";
+    require_once "./controller/UserControllerIndex.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +56,7 @@
     </form>
 
     <!-- --------------------------REGISTRO-------------------------------- -->
-        <form action='./controller/registroAjaxIndex.php' method='get'>
+        <form action='./controller/registroAjax.php' method='get'>
         <div class="contenedorRegistro" id="contenedorRegistro">
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Usuario</p>

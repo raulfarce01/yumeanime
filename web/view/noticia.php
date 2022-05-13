@@ -1,10 +1,15 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set("display_errors", '1');
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+    session_start();
 
+    //if (!isset($_SERVER['DOCUMENT_ROOT']) || empty($_SERVER['DOCUMENT_ROOT']))
+    //$_SERVER['DOCUMENT_ROOT'] = __DIR__;
+
+    require_once "../controller/NoticiaController.php";
+    require_once "../controller/UserController.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +18,9 @@ ini_set("display_errors", '1');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
-    <link rel="icon" type="image/png" size="32x32" href="../img/logo.png">
-    <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/noticia.css">
+    <link rel="icon" type="image/png" size="32x32" href="./img/logo.png">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
@@ -25,7 +30,8 @@ ini_set("display_errors", '1');
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
-        <div class="contenedorLogin">
+    <form action="#" method='post'>
+    <div class="contenedorLogin" id="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
                     <label for="inputLogin" class="cabezaLogin">Usuario</p>
@@ -47,41 +53,46 @@ ini_set("display_errors", '1');
                 </div>
             </div>
         </div>
+    </form>
 
     <!-- --------------------------REGISTRO-------------------------------- -->
-        <div class="contenedorRegistro">
+        <form action='../controller/registroAjax.php' method='get'>
+        <div class="contenedorRegistro" id="contenedorRegistro">
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Usuario</p>
-                <input type="text" class="inputLogin" id="inputLoginUser">
+                <input type="text" class="inputLogin" id="inputRegistroUser" name='inputRegistroUser'>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-                <input type="text" class="inputLogin" id="inputLoginPasswd">
+                <input type="text" class="inputLogin" id="inputRegistroPasswd" name='inputRegistroPasswd'>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Confirmar Contraseña</p>
-                <input type="text" class="inputLogin" id="inputLoginConfirmaPasswd">
+                <input type="text" class="inputLogin" id="inputLoginConfirmaPasswd" name='inputLoginConfirmaPasswd'>
             </div>
             
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Correo</p>
-                <input type="text" class="inputLogin" id="inputLoginCorreo">
+                <input type="text" class="inputLogin" id="inputLoginCorreo" name='inputLoginCorreo'>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Alias</p>
-                <input type="text" class="inputLogin" id="inputLoginAlias">
+                <input type="text" class="inputLogin" id="inputLoginAlias" name='inputLoginAlias'>
             </div>
             
             <div class="botonesRegistro">
                 <div class="botonLoginRegistro" id="botonLoginRegistro"><p>Login</p></div>
-                <input type="submit" value="Registrarse" class="submit" id="submit">
+                <input type="submit" value="Registrarse" class="submit" id="submitRegistro">
             </div>
+            <p id="errorR"></p>
         </div>
+        </form>
 
-    <!-- --------------------------OLVIDA CONTRASEÑA-------------------------------- -->
+
+    <!-- --------------------------OLVIDA CONTRASEÑA NO HACER POR EL MOMENTO -------------------------------- -->
 
     <div class="olvidaPasswd">
 
@@ -127,9 +138,9 @@ ini_set("display_errors", '1');
 
         <header>
 
-            <a href="../index.php">
+            <a href="index.php">
 
-                <img src="../img/logo.png" alt="Logo" class="logo">
+                <img src="./img/logo.png" alt="Logo" class="logo">
                 <p>Yumeanime</p>
 
             </a>
@@ -158,28 +169,28 @@ ini_set("display_errors", '1');
             <div class="textoNav">
 
                 <div class="botonesNav">
-                    <div class="botonLoginNav">
+                    <div id="botonLoginNav" class="botonLoginNav">
                         <p>Login</p>
                     </div>
-                    <div class="botonRegistroNav">
+                    <div id="botonRegistroNav" class="botonRegistroNav">
                         <p>Registro</p>
                     </div>
                 </div>
 
-                <form action="./busqueda.php">
+                <form id='formBusqueda' action="./busqueda.php">
 
                     <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar...">
                     <i class="fa-solid fa-magnifying-glass" id="lupaBuscar"></i>
 
                 </form>
 
-                <div class="botonNav listasNav"><a href="./listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
+                <div class="botonNav listasNav"><a href="./view/listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
 
-                <div class="botonNav directorioNav"><a href="./directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
+                <div class="botonNav directorioNav"><a href="./view/directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
 
                 <div class="editarPerfilMovil botonNav">
 
-                    <a href="./perfil.php">
+                    <a href="./view.perfil.php">
                         <i class="fa-solid fa-square-pen"></i>
                         <p>Editar Perfil</p>
                     </a>
@@ -188,7 +199,7 @@ ini_set("display_errors", '1');
 
                 <div class="listasPerfilMovil botonNav">
 
-                    <a href="./lista.php">
+                    <a href="./view/lista.php">
                         <i class="fa-solid fa-rectangle-list"></i>
                         <p>Mis listas</p>
                     </a>
@@ -234,6 +245,8 @@ ini_set("display_errors", '1');
                 ?>
             </div>
         </div>
+        <script src="../js/recogeElementos.js"></script>
+        <script src="../js/abreContenedores.js"></script>
         
     </main>
 

@@ -57,9 +57,9 @@ class User{
 
             $consulta = $db->query("SELECT alias, correo FROM user");
 
-            while($consulta->fetch_object()){
+            while($recorre = $consulta->fetch_object()){
 
-                if($alias == "$consulta->alias" || $correo == "$consulta->correo"){
+                if($alias == "$recorre->alias" || $correo == "$recorre->correo"){
 
                     $existe = true;
 
@@ -67,13 +67,8 @@ class User{
 
             }
 
-            if($existe){
+            if(!$existe){
 
-                throw new Exception("El usuario ya existe", 2);
-
-            }else{
-
-                echo "<p>Usuario Creado</p>";
                 $db->query("INSERT INTO user(nombre, alias, correo, passwd, administrador) VALUES ('$nombre', '$alias', '$correo', '$passwd', $administrador)");
 
             }
@@ -85,6 +80,8 @@ class User{
         }
 
         $db->close();
+
+        return $existe;
 
     }
 

@@ -1,3 +1,6 @@
+<?php
+    require_once "../controller/UserController.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,8 @@
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
-    <div class="contenedorLogin">
+    <form action="#" method='post'>
+    <div class="contenedorLogin" id="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
                     <label for="inputLogin" class="cabezaLogin">Usuario</p>
@@ -40,40 +44,43 @@
                 </div>
             </div>
         </div>
+    </form>
 
     <!-- --------------------------REGISTRO-------------------------------- -->
-        <div class="contenedorRegistro">
+    <form action='../controller/registroAjax.php' method='get'>
+        <div class="contenedorRegistro" id="contenedorRegistro">
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Usuario</p>
-                <input type="text" class="inputLogin" id="inputLoginUser">
+                <input type="text" class="inputLogin" id="inputRegistroUser" name='inputRegistroUser'>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-                <input type="text" class="inputLogin" id="inputLoginPasswd">
+                <input type="text" class="inputLogin" id="inputRegistroPasswd" name='inputRegistroPasswd'>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Confirmar Contraseña</p>
-                <input type="text" class="inputLogin" id="inputLoginConfirmaPasswd">
+                <input type="text" class="inputLogin" id="inputLoginConfirmaPasswd" name='inputLoginConfirmaPasswd'>
             </div>
             
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Correo</p>
-                <input type="text" class="inputLogin" id="inputLoginCorreo">
+                <input type="text" class="inputLogin" id="inputLoginCorreo" name='inputLoginCorreo'>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Alias</p>
-                <input type="text" class="inputLogin" id="inputLoginAlias">
+                <input type="text" class="inputLogin" id="inputLoginAlias" name='inputLoginAlias'>
             </div>
             
             <div class="botonesRegistro">
                 <div class="botonLoginRegistro" id="botonLoginRegistro"><p>Login</p></div>
-                <input type="submit" value="Registrarse" class="submit" id="submit">
+                <input type="submit" value="Registrarse" class="submit" id="submitRegistro">
             </div>
+            <p id="errorR"></p>
         </div>
-
+        </form>
     <!-- --------------------------OLVIDA CONTRASEÑA-------------------------------- -->
 
     <div class="olvidaPasswd">
@@ -149,17 +156,18 @@
         <nav class="nav">
 
             <div class="textoNav">
-
-                <div class="botonesNav">
-                    <div class="botonLoginNav">
+ 
+            <div class="botonesNav">
+                    <div id="botonLoginNav" class="botonLoginNav">
                         <p>Login</p>
                     </div>
-                    <div class="botonRegistroNav">
+                    <div id="botonRegistroNav" class="botonRegistroNav">
                         <p>Registro</p>
                     </div>
                 </div>
 
-                <form action="./busqueda.php">
+
+                <form id='formBusqueda' action="./busqueda.php">
 
                     <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar...">
                     <i class="fa-solid fa-magnifying-glass" id="lupaBuscar"></i>
@@ -224,6 +232,9 @@
             ?>
 
         </div>
+        
+        <script src="../js/recogeElementos.js"></script>
+        <script src="../js/abreContenedores.js"></script>
 
     </main>
     <footer>
