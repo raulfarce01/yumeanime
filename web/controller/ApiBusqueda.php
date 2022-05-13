@@ -66,19 +66,17 @@ class ApiBusqueda{
         $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
         ;
         $query = $_GET['query'];
-        $page = $_GET['page'];
         //$link =  "https://api.aniapi.com/v1/user_story"; 
+
+        //echo $page;
 
         if($genre == ''){
 
-            if($page = ''){
-                
-            }
-            $link =  "https://api.aniapi.com/v1/anime?nsfw=true&with_episodes=false"; 
+            $link =  "https://api.aniapi.com/v1/anime?page=$page&nsfw=true&with_episodes=false"; 
 
         }else{
 
-            $link =  "https://api.aniapi.com/v1/anime?genres=$genre&nsfw=true&with_episodes=false"; 
+            $link =  "https://api.aniapi.com/v1/anime?page=$page&genres=$genre&nsfw=true&with_episodes=false"; 
 
         }
         
