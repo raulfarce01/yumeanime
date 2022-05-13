@@ -193,6 +193,7 @@ footer{
     .cat{
         width: fit-content;
         padding: 2% 3%;
+        margin-left: 1%;
     }
 
     .addButton{
