@@ -108,12 +108,124 @@ class ApiBusqueda{
 
         for($i = 0; $i < count($animes["data"]["documents"]); $i++){
 
-            echo "<a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='animeA colorHeaderLetra'><div class='anime'>";
-            echo "<div class='imagen contenedorAzul contenedorImagen'><img src='".$animes["data"]["documents"][$i]["cover_image"]."' class='imgAnime'></div>";
-            echo "<div class='titAnime titulo'>".
+            echo "<div class='anime animeA'>";
+            echo "<a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class=' colorHeaderLetra'><div class='imagen contenedorAzul contenedorImagen'><img src='".$animes["data"]["documents"][$i]["cover_image"]."' class='imgAnime'></div></a>";
+            echo "<a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class=' colorHeaderLetra'><div class='titAnime titulo'><p>".
             $animes["data"]["documents"][$i]["titles"]["rj"]
-            ."</div>";
-            echo "</div></a>";
+            ."</p></a><i class='fa-solid fa-ellipsis-vertical'></i></div>";
+            echo "</div>";
+
+        }
+
+    }
+
+    public static function busquedaDedicadaAnime($cadena){
+
+        $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+        ;
+        $query = $_GET['query'];
+        $page = $_GET['page'];
+        //$link =  "https://api.aniapi.com/v1/user_story"; 
+
+        
+            $link =  "https://api.aniapi.com/v1/anime?title=$cadena&nsfw=true&with_episodes=false"; 
+            
+        
+
+        //'Authorization: Bearer <' . $key . '>',
+        $headers = array(
+            'Authorization: Bearer ' . $key,
+        );
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_URL, $link);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        
+        $response = curl_exec($ch);
+
+        $animes = json_decode($response, true);
+
+        //var_dump($response["data"]["documents"]);
+
+        for($i = 0; $i < count($animes["data"]["documents"]); $i++){
+
+            echo "
+        <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='busquedaDedicada colorFondo titulo'>
+            <div class='noticia contenedorAzul'>
+            
+                <div class='imagen'>
+                
+                    <img src='".$animes["data"]["documents"][$i]["cover_image"]."'></img>
+
+                </div>
+
+                <div class='titulo tituloBusqueda'>
+                
+                    <p>".$animes["data"]["documents"][$i]["titles"]["rj"]."</p>
+                
+                </div>
+            
+            </div>
+        </a>
+        
+        ";
+
+        }
+    }
+
+    public static function colocaAnimes($cadena){
+
+        $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+        ;
+        $query = $_GET['query'];
+        $page = $_GET['page'];
+        //$link =  "https://api.aniapi.com/v1/user_story"; 
+
+        
+            $link =  "https://api.aniapi.com/v1/anime?title=$cadena&nsfw=true&with_episodes=false"; 
+            
+        
+
+        //'Authorization: Bearer <' . $key . '>',
+        $headers = array(
+            'Authorization: Bearer ' . $key,
+        );
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_URL, $link);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        
+        $response = curl_exec($ch);
+
+        $animes = json_decode($response, true);
+
+        //var_dump($response["data"]["documents"]);
+
+        for($i = 0; $i < 6; $i++){
+
+            echo "
+            <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='colorFondo noticiaA'>
+                        <div class='noticia'>
+                        
+                            <div class='imagen imagenAnime'>
+                            
+                                <img src='".$animes["data"]["documents"][$i]["cover_image"]."'></img>
+            
+                            </div>
+            
+                            <div class='titulo tituloBusqueda'>
+                            
+                                <p>".$animes["data"]["documents"][$i]["titles"]["rj"]."</p>
+                            
+                            </div>
+                        
+                        </div>
+                    </a>
+                ";
 
         }
 
@@ -180,69 +292,6 @@ class ApiBusqueda{
         </div>
         
         ";
-    }
-
-    public static function colocaAnimes($cadena){
-
-        $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
-        ;
-        $query = $_GET['query'];
-        $page = $_GET['page'];
-        //$link =  "https://api.aniapi.com/v1/user_story"; 
-
-        
-            $link =  "https://api.aniapi.com/v1/anime?title=$cadena&nsfw=true&with_episodes=false"; 
-            
-        
-
-        //'Authorization: Bearer <' . $key . '>',
-        $headers = array(
-            'Authorization: Bearer ' . $key,
-        );
-
-        $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_URL, $link);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        
-        $response = curl_exec($ch);
-
-        $animes = json_decode($response, true);
-
-        //var_dump($response["data"]["documents"]);
-
-        for($i = 0; $i < 6; $i++){
-
-            if(!empty($animes["data"]["documents"][$i]["anilist_id"])){
-
-                echo "
-            <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='colorFondo noticiaA'>
-                        <div class='noticia'>
-                        
-                            <div class='imagen imagenAnime'>
-                            
-                                <img src='".$animes["data"]["documents"][$i]["cover_image"]."'></img>
-            
-                            </div>
-            
-                            <div class='titulo tituloBusqueda'>
-                            
-                                <p>".$animes["data"]["documents"][$i]["titles"]["rj"]."</p>
-                            
-                            </div>
-                        
-                        </div>
-                    </a>
-                ";
-            }else{
-                echo "<a class='noticiaA'><div class='noticia'></div></a>";
-            }
-
-            
-
-        }
-
     }
 
 }

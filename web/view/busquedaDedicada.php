@@ -207,7 +207,7 @@
                     BusquedaController::buscaNoticia($busca);
                 }else if(isset($_GET['buscaAnime'])){
                     require_once "../controller/ApiBusqueda.php";
-                    ApiBusqueda::buscaNoticiaDedicada($busca);
+                    ApiBusqueda::busquedaDedicadaAnime($busca);
                 }else if(isset($_GET['buscaLista'])){
 
                 }

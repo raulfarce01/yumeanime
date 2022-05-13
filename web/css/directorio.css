@@ -132,6 +132,16 @@ main{
     border: 0;
     border-radius: 5px;
     margin-left: 2%;
+    cursor: pointer;
+}
+
+.titAnime i{
+    color: #0A1940;
+    cursor: pointer;
+}
+
+.titAnime p{
+    width: fit-content;
 }
 
 .izquierda{
@@ -184,6 +194,8 @@ main{
 .titAnime{
     text-align: center;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .imgAnime{
