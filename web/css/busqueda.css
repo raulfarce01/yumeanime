@@ -56,8 +56,20 @@ main{
     position: relative;
     padding-bottom: 2%;
 }
+
+.verTodo:hover{
+    color: #fff492;
+}
+
 .noticiaA{
     width: 25%;
+    transform: scale(1);
+    transition: transform 0.2s linear;
+}
+
+.noticiaA:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s linear;
 }
 
 .tituloContenedorBusca{

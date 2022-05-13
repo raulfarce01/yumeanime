@@ -246,6 +246,14 @@ footer{
     padding-top: 20px;
 }
 
+.botonRegistro:hover{
+    background-color: #313f5f;
+} 
+
+.submit:hover{
+    background-color: #a19f9e;
+}
+
 .contenedorCampos{
     display: flex;
     flex-direction: column;
@@ -345,6 +353,10 @@ footer{
     border-radius: 10px;
 }
 
+.botonLoginRegistro:hover{
+    text-decoration: underline;
+}
+
 .cabezaLogin{
     font-family: 'Lilita One', cursive;
     font-size: 15pt;
@@ -409,6 +421,10 @@ footer{
     width: 75px;
     height: 40px;
     font-family: 'Mulish', sans-serif;
+}
+
+.botonLoginNav:hover{
+    background-color: #6882be;
 }
 
 .botonRegistroNav{
@@ -588,5 +604,9 @@ nav form input{
 
     .imagenPopu{
         margin-right: 10px;
+    }
+
+    .popuA:hover .contenedorPopu .tituloPopu{
+        text-decoration: underline;
     }
 }

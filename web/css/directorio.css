@@ -214,6 +214,12 @@ main{
 
 .animeA{
     width: 30%;
+    transition: transform 0.2s linear;
+}
+
+.animeA:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s linear;
 }
 
 .contenedorASecas{
@@ -238,6 +244,10 @@ main{
     padding: 2% 4%;
     margin-bottom: 2%;
     cursor: pointer;
+}
+
+.nextPage:hover{
+    background-color: #2e406e;
 }
 
 .formSelect{

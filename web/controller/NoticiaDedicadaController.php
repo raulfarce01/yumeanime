@@ -88,7 +88,7 @@ class NoticiaDedicadaController{
 
         for($i = 0; $i < 5; $i++){
 
-            echo "<a href='../view/noticia.php?idNoticia=".$noticiasPopus[$i]["idNoticia"]."' class='colorFondo'><div class='contenedorPopu'>
+            echo "<a href='../view/noticia.php?idNoticia=".$noticiasPopus[$i]["idNoticia"]."' class='colorFondo popuA'><div class='contenedorPopu'>
             
             <div class='imagenPopu'><img src='data:image/png;base64,".base64_encode($noticiasPopus[$i]["imagen"])."'></img>
             </div>

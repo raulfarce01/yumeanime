@@ -152,23 +152,24 @@ class ApiBusqueda{
         for($i = 0; $i < count($animes["data"]["documents"]); $i++){
 
             echo "
-        <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='busquedaDedicada colorFondo titulo'>
-            <div class='noticia contenedorAzul'>
-            
-                <div class='imagen'>
+            <div class='noticia busquedaDedicada'>
+            <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class=' colorFondo titulo'>
+                <div class='imagen contenedorAzul'>
                 
                     <img src='".$animes["data"]["documents"][$i]["cover_image"]."'></img>
 
                 </div>
+                </a>
 
                 <div class='titulo tituloBusqueda'>
-                
-                    <p>".$animes["data"]["documents"][$i]["titles"]["rj"]."</p>
+                <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class=' colorFondo titulo'>
+                    <p class='letraNegra'>".$animes["data"]["documents"][$i]["titles"]["rj"]."</p>
+                </a>
+                    <i class='fa-solid fa-ellipsis-vertical letraNegra'></i>
                 
                 </div>
             
             </div>
-        </a>
         
         ";
 
