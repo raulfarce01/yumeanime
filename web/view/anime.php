@@ -226,29 +226,19 @@
 
     <main>
 
-        <div class="contenedor">
-
-            <div class="seccionIzq">
-                <div class="imagenAnime contenedorAzul" id="imagenAnime"></div>
-                <div class="contenedorCategorias" id="contenedorCategorias">
-                    <div class="cat colorHeader colorFondo">Acción</div>
-                    <div class="cat colorHeader colorFondo">Aventuras</div>
-                    <div class="cat colorHeader colorFondo">Romance</div>
-                </div>
-                <div class="addButton pointer" id="addButton">
-                    <div class="masButton"><i class="fa-solid fa-circle-plus colorHeaderLetra"></i></div>
-                    <p class="colorFondo">Añadir a Lista</p>
-                </div>
-            </div>
-            <div class="textoAnime">
-                <div class="titAnime titulo" id="titAnime">Zero no tsukaima: Final</div>
-                <div class="descAnime texto">fasjdhf asdhflkasdhflkas laksdhfaskd haskdjfh lkasdhf hdf dslhfsdad hd hsadlkfh jasdlfh daslhf kjadsh kasjdhf aksjhfksah hasld fasjdhf asdhflkasdhflkas laksdhfaskd haskdjfh lkasdhf hdf dslhfsdad hd hsadlkfh jasdlfh daslhf kjadsh kasjdhf aksjhfksah hasld fasjdhf asdhflkasdhflkas laksdhfaskd haskdjfh lkasdhf hdf dslhfsdad hd hsadlkfh jasdlfh daslhf kjadsh kasjdhf aksjhfksah hasld fasjdhf asdhflkasdhflkas laksdhfaskd haskdjfh lkasdhf hdf dslhfsdad hd hsadlkfh jasdlfh daslhf kjadsh kasjdhf aksjhfksah hasld</div>
-            </div>
-        
-        </div>
+        <?php
+            $idAnime = $_GET['idAnime'];
+            //echo "<script>console.log($idAnime)</script>";
+            require_once "../controller/ApiBusqueda.php";
+            ApiBusqueda::buscaAnimeDedicado($idAnime);
+            ?>
 
         <div class="noticiasPopu" id="noticiasPopu">
             <h3>Noticias Populares</h3>
+            <?php
+            require_once "../controller/NoticiaDedicadaController.php";
+            NoticiaDedicadaController::noticiasPopusController();
+            ?>
         </div>
 
         <div class="cajaComentarios"></div>

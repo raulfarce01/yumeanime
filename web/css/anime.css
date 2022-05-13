@@ -22,15 +22,23 @@ main{
 }
 
 .imagenAnime{
-    width: 150px;
-    height: 225px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 2%;
+}
+
+.imagenAnime img{
+    width: 95%;
 }
 
 .contenedorCategorias{
     display: flex;
     justify-content: space-around;
-    width: 150px;
+    width: 200px;
     flex-wrap: wrap;
     padding-top: 2%;
 }
@@ -39,9 +47,9 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65px;
+    width: fit-content;
     border-radius: 5px;
-    height: 20px;
+    height: fit-content;
     font-size: 0.9em;
     margin-bottom: 2%;
 }
@@ -57,8 +65,8 @@ main{
 .masButton{
     width: fit-content;
     position: relative;
-    left: 55px;
-    top: 25px;
+    margin-bottom: 100%;
+    margin-top: 100%;
 }
 
 .masButton i{
@@ -68,6 +76,9 @@ main{
 .textoAnime{
     width: calc(95% - 150px);
     padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .crearLista{
@@ -130,6 +141,20 @@ main{
     right: 2%;
     width: 95%;
 }
+
+.descAnime i {
+    color: black;
+}
+
+footer{
+    display: none;
+}
+
+.titAnime{
+    width: 100%;
+    font-size: 2em;
+    text-align: left;
+}
 @media screen and (min-width:750px) {
 
     .detallesLista{
@@ -166,7 +191,8 @@ main{
     }
 
     .cat{
-        width: 100px;
+        width: fit-content;
+        padding: 2% 3%;
     }
 
     .addButton{
@@ -194,10 +220,6 @@ main{
         padding-left: 5%;
         font-size: 1.3em;
     }
-
-    .titAnime{
-        font-size: 2em;
-    }
     .crearLista{
         width: 200px;
         height: 150px;
@@ -208,9 +230,5 @@ main{
     .botonCreaLista{
         margin: auto;
         margin-top: 25px;
-    }
-
-    footer{
-        display: none;
     }
 }
