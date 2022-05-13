@@ -15,7 +15,7 @@
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
-    <form action="#" method='post'>
+    <form action="../index.php" method='post'>
     <div class="contenedorLogin" id="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
