@@ -244,6 +244,7 @@ footer{
     align-items: flex-start;
     border-radius: 10px;
     padding-top: 20px;
+    z-index: 10;
 }
 
 .botonRegistro:hover{
@@ -280,6 +281,8 @@ footer{
     font-family: 'Mulish', sans-serif;
     height: 25px;
     width: 100%;
+    padding-left: 2%;
+    color: #FAF8F7;
 }
 
 .contenedorOtros{
@@ -332,10 +335,6 @@ footer{
     background-color: #FAF8F7;
 }
 
-.contenedorLogin{
-    display: none;
-}
-
 /* CONTENEDOR LOGIN FIN */
 
 /* CONTENEDOR REGISTRO INICIO */
@@ -351,6 +350,7 @@ footer{
     justify-content: center;
     align-items: flex-start;
     border-radius: 10px;
+    z-index: 10;
 }
 
 .botonLoginRegistro:hover{
@@ -381,10 +381,6 @@ footer{
 
 .campo{
     width: 90%;
-}
-
-.contenedorRegistro{
-    display: none;
 }
 
 /* CONTENEDOR REGISTRO FIN */

@@ -55,7 +55,7 @@ class User{
 
         try{
 
-            $consulta = $db->query("SELECT alias. correo FROM user");
+            $consulta = $db->query("SELECT alias, correo FROM user");
 
             while($consulta->fetch_object()){
 
@@ -73,6 +73,7 @@ class User{
 
             }else{
 
+                echo "<p>Usuario Creado</p>";
                 $db->query("INSERT INTO user(nombre, alias, correo, passwd, administrador) VALUES ('$nombre', '$alias', '$correo', '$passwd', $administrador)");
 
             }
@@ -94,7 +95,7 @@ class User{
         @param $passwd es la contraseña
     
     */
-    function inicioSesion($alias, $passwd){
+    function inicioSesion($correo, $passwd){
 
         try{
 
@@ -112,7 +113,7 @@ class User{
 
         }
 
-        $consulta = $db->query("SELECT alias, passwd FROM user WHERE alias = '$alias'");
+        $consulta = $db->query("SELECT correo, passwd FROM user WHERE correo = '$correo'");
 
         if ($recorreConsulta = $consulta->fetch_object()){
 
@@ -134,7 +135,7 @@ class User{
 
         }else{
 
-            echo "<p> El alias no es correcto </p>";
+            echo "<p> El correo no es correcto </p>";
     
         }
 
