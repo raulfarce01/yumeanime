@@ -31,8 +31,9 @@ main{
     width: 100%;
 }
 
-.busquedaDedicada:hover{
-    transform: scale(1.05);
+
+.busquedaDedicada .imagen:hover{
+    transform: scale(1.02);
     transition: transform 0.2s linear;
 }
 
@@ -50,6 +51,7 @@ main{
     width: 100%;
     padding: 2%;
     border-radius: 10px;
+    transition: transform 0.2s linear;
 }
 
 .imagen img{

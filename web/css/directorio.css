@@ -214,11 +214,14 @@ main{
 
 .animeA{
     width: 30%;
+}
+
+.imagen{
     transition: transform 0.2s linear;
 }
 
-.animeA:hover{
-    transform: scale(1.05);
+.animeA:hover a .imagen{
+    transform: scale(1.02);
     transition: transform 0.2s linear;
 }
 
