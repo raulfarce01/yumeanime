@@ -110,7 +110,11 @@ class User{
 
         }
 
-        $consulta = $db->query("SELECT correo, passwd FROM user WHERE correo = '$correo'");
+        if(session_id() == ""){
+            session_start();
+        }
+
+        $consulta = $db->query("SELECT correo, passwd, idUser FROM user WHERE correo = '$correo'");
 
         if ($recorreConsulta = $consulta->fetch_object()){
 
@@ -124,19 +128,22 @@ class User{
 
                 $_SESSION['idUser'] = $recorreConsulta->idUser;
 
+                $db->close();
+
+                return $recorreConsulta->idUser;
+
+
             }else{
 
-                echo "<p> La contraseña no es correcta </p>";
+                return false;
 
             }
 
         }else{
 
-            echo "<p> El correo no es correcto </p>";
+            return false;
     
         }
-
-        $db->close();
 
     }
 
@@ -272,9 +279,9 @@ class User{
             //Usar <img width='100' src='data:image/png;base64, ".base64_encode($res->fotoPerfil)."'></img> para visualizar la imagen+
 
             $muestra = array(
-                "nombre" => $res->nombreUser,
+                "nombre" => $res->nombre,
                 "correo" => $res->correo,
-                "foto" => $res->fotoPerfil
+                "foto" => $res->imgPerfil
             );
 
             return $muestra;

@@ -81,14 +81,24 @@
 
             <div class="textoNav">
 
-                <div class="botonesNav">
-                    <div id="botonLoginNav" class="botonLoginNav">
+            <?php
+            
+            if(isset($_POST['submitLogin'])){
+                UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
+            }else{
+                echo"
+                <div class='botonesNav'>
+                    <div id='botonLoginNav' class='botonLoginNav'>
                         <p>Login</p>
                     </div>
-                    <div id="botonRegistroNav" class="botonRegistroNav">
+                    <div id='botonRegistroNav' class='botonRegistroNav'>
                         <p>Registro</p>
                     </div>
                 </div>
+                ";
+            }
+        
+        ?>
 
                 <form id='formBusqueda' action="./busqueda.php">
 

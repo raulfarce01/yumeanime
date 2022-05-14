@@ -1,6 +1,7 @@
 <?php
 
 require_once "./model/UserModel.php";
+require_once "./controller/Sesiones.php";
 
 class UserController{
 
@@ -94,18 +95,24 @@ class UserController{
         $user->cambiaDatosUser($nombreNew, $aliasNew, $correoNew, $idUser);
 
     }
-
+    
     /*
         
         Función que accede al modelo de User para iniciar sesión
         @see UserModel/inicioSesion
     
     */
-    public static function IniciarUser($alias, $passwd){
+    public static function iniciarUser($correo, $passwd){
 
         $user = new User();
 
-        $user->inicioSesion($alias, $passwd);
+        $idUser = $user->inicioSesion($correo, $passwd);
+
+        if($idUser){
+            montaHeaderPerfil($idUser);
+        }else{
+            montaLogin();
+        }
 
     }
 

@@ -35,13 +35,13 @@
     <div class="contenedorLogin" id="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
-                    <label for="inputLogin" class="cabezaLogin">Usuario</p>
-                    <input type="text" class="inputLogin" id="inputLoginUser">
+                    <label for="inputLogin" class="cabezaLogin">Correo</p>
+                    <input type="text" class="inputLogin" id="inputLoginUser" name='inputLoginUser'>
                 </div>
                 
                 <div class="campo">
                     <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-                    <input type="text" class="inputLogin" id="inputLoginPasswd">
+                    <input type="text" class="inputLogin" id="inputLoginPasswd" name='inputLoginPasswd'>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
 
                 <div class="botonesLogin">
                     <div class="botonRegistro" id="botonRegistro"><p>Registrarse</p></div>
-                    <input type="submit" value="Iniciar" class="submit" id="submit">
+                    <input type="submit" value="Iniciar" class="submit" id="submit" name='submitLogin'>
                 </div>
             </div>
         </div>
@@ -169,14 +169,24 @@
             <div class="textoNav">
 
                 
-            <div class="botonesNav">
-                    <div id="botonLoginNav" class="botonLoginNav">
-                        <p>Login</p>
+            <?php
+            
+                if(isset($_POST['submitLogin'])){
+                    UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
+                }else{
+                    echo"
+                    <div class='botonesNav'>
+                        <div id='botonLoginNav' class='botonLoginNav'>
+                            <p>Login</p>
+                        </div>
+                        <div id='botonRegistroNav' class='botonRegistroNav'>
+                            <p>Registro</p>
+                        </div>
                     </div>
-                    <div id="botonRegistroNav" class="botonRegistroNav">
-                        <p>Registro</p>
-                    </div>
-                </div>
+                    ";
+                }
+            
+            ?>
 
 
                 <form id='formBusqueda' action="./busqueda.php">
