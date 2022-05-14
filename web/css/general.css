@@ -488,6 +488,10 @@ nav form input{
     width: 75%;
 }
 
+.derecha{
+    width: 15%;
+}
+
 .flechita{
     cursor: pointer;
 }
@@ -498,13 +502,40 @@ nav form input{
 }
 
 .fotoMiPerfil{
-    margin-right: 30px;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 .masMiPerfil{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.headerMiPerfil{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.contenedorPerfil{
+    position: absolute;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #0A1940;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 20;
+    right: 30%;
+    top: 40%;
+}
+
+.textoBotonMiPerfil{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 @media screen and (min-width:750px){
@@ -623,5 +654,16 @@ nav form input{
 
     .popuA:hover .contenedorPopu .tituloPopu{
         text-decoration: underline;
+    }
+    .headerMiPerfil{
+        position: initial;
+        display: flex;
+        width: 100px;
+        margin-right: 50px;
+    }
+
+    .contenedorPerfil{
+        right: 30px;
+        top: 70px;
     }
 }

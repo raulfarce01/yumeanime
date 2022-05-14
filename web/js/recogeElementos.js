@@ -9,3 +9,7 @@ var botonLoginRegistro = document.getElementById("botonLoginRegistro");
 //var formBusqueda = document.getElementById("formBusqueda");
 var errorR = document.getElementById("errorR");
 var submitRegistro = document.getElementById("submitRegistro");
+var flechita = document.getElementById("flechita");
+var contenedorPerfil = document.getElementById("contenedorPerfil");
+
+console.log(flechita);

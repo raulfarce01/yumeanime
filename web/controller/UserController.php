@@ -116,6 +116,12 @@ class UserController{
 
     }
 
+    public static function userIniciado($idUser){
+
+        montaHeaderPerfil($idUser);
+
+    }
+
 }
 
 

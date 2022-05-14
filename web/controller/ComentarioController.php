@@ -3,7 +3,7 @@
 require_once "../model/UserComentaNoticiaModel.php";
 require_once "../model/UserModel.php";
 
-class comentarioController{
+class ComentarioController{
 
     /*
         
@@ -76,24 +76,31 @@ class comentarioController{
 
         $datos = $user->muestraDatosUsuario($idUser);
 
-        echo "<div class='comentario'>
+        echo "<div class='comentarioUser'>
         
-                <div class='fotoPerfil'>
-                    <img src='data:image/png;base64, ".base64_encode($datos["foto"])."' class='imgPerfilUser'>
-                </div>
+                <div class='fotoPerfil'>";
+                if(!is_null($datos["foto"])){
+                    echo "<img src='data:image/png;base64, ".base64_encode($datos["foto"])."' class='imgPerfilUser'>";
+                }else{
+                    echo "<i class='fa-solid fa-user personaje colorHeaderLetra'></i>";
+                }
+                    
+        echo    "</div>
                 
                 <div class='autorComenta'>
                 
                     <div class='autorComent'>
                     
-                        <p>".$datos["nombre"]."</p>
+                        <p class='titulo'>".$datos["nombre"]."</p>
 
                     </div>
                     <div class='coment'>
                     
                         <form action='#' method='post'>    
-                            <input type='text' placeholder='Escribe aquí tu comentario...' name='comentario'>
-                            <input type='submit' value='Enviar' class='botonComenta'>
+                            <input type='text' placeholder='Escribe aquí tu comentario...' name='comentario' class='inputComenta contenedorAzul'>
+                            <div class='botonSubmitComenta'>
+                            <input type='submit' value='Enviar' class='botonComenta colorHeader colorFondo texto'>
+                            </div>
                         </form>
 
                     </div>

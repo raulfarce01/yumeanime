@@ -110,21 +110,19 @@
 
     <!-- --------------------------CUADRO DE PERFIL-------------------------------- -->
 
-    <div class="contenedorPerfil">
+    <div class="contenedorPerfil colorHeader colorFondo" id="contenedorPerfil">
 
-        <p class="miPerfil">Mi Perfil</p>
+        <p class="miPerfil titulo">Mi Perfil</p>
 
         <div class="botonMiperfil">
-
-            <p class="textoBotonMiperfil">Editar</p>
-            <i class="fa-regular fa-pencil"></i>
+           
+            <div class="textoBotonMiperfil"> Editar<i class="fa-solid fa-pencil"></i></div>   
 
         </div>
 
         <div class="botonMiperfil">
 
-            <p class="textoBotonMiperfil">Mis listas</p>
-            <i class="fa-solid fa-list"></i>
+            <div class="textoBotonMiperfil">Mis listas<i class="fa-solid fa-list"></i></div>
 
         </div>
 
@@ -172,6 +170,8 @@
             
                 if(isset($_POST['submitLogin'])){
                     UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
+                }else if(isset($_SESSION['idUser'])){
+                    UserController::userIniciado($_SESSION['idUser']);
                 }else{
                     echo"
                     <div class='botonesNav'>
@@ -248,7 +248,7 @@
 
     <script src="./js/recogeElementos.js"></script>
     <script src="./js/abreContenedores.js"></script>
-    <script src="./js/registroAjax.js"></script>
+    <script src="./js/abreContenedoresPerfil.js"></script>
     
 </body>
 </html>

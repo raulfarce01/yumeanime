@@ -6,7 +6,7 @@ function montaHeaderPerfil($idUser){
 
     $datos = $user->muestraDatosUsuario($idUser);
 
-    echo "
+    echo "<div class='headerMiPerfil'>
     <div class='fotoMiPerfil'>";
     
     if(!is_null($datos['foto'])){
@@ -27,7 +27,7 @@ function montaHeaderPerfil($idUser){
 
         </div>
 
-    </div>
+    </div></div>
     ";
 
 }

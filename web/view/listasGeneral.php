@@ -191,6 +191,8 @@
             
             if(isset($_POST['submitLogin'])){
                 UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
+            }else if(isset($_SESSION['idUser'])){
+                UserController::userIniciado($_SESSION['idUser']);
             }else{
                 echo"
                 <div class='botonesNav'>

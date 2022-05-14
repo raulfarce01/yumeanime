@@ -223,21 +223,30 @@
             <div class="textoNav">
 
             <?php
+
+            // if(isset($_SESSION['idUser'])){
+            //     echo $_SESSION['idUser'];
+            // }else{
+            //     echo "hola";
+            // }
+
             
-                if(isset($_POST['submitLogin'])){
-                    UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
-                }else{
-                    echo"
-                    <div class='botonesNav'>
-                        <div id='botonLoginNav' class='botonLoginNav'>
-                            <p>Login</p>
-                        </div>
-                        <div id='botonRegistroNav' class='botonRegistroNav'>
-                            <p>Registro</p>
-                        </div>
+            if(isset($_POST['submitLogin'])){
+                UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
+            }else if(isset($_SESSION['idUser'])){
+                UserController::userIniciado($_SESSION['idUser']);
+            }else{
+                echo"
+                <div class='botonesNav'>
+                    <div id='botonLoginNav' class='botonLoginNav'>
+                        <p>Login</p>
                     </div>
-                    ";
-                }
+                    <div id='botonRegistroNav' class='botonRegistroNav'>
+                        <p>Registro</p>
+                    </div>
+                </div>
+                ";
+            }
             
             ?>
 
