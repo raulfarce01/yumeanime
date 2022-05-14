@@ -7,7 +7,7 @@
     //if (!isset($_SERVER['DOCUMENT_ROOT']) || empty($_SERVER['DOCUMENT_ROOT']))
     //$_SERVER['DOCUMENT_ROOT'] = __DIR__;
 
-    require_once "../controller/NoticiaController.php";
+    require_once "../controller/NoticiaDedicadaController.php";
     require_once "../controller/UserController.php";
 ?>
 <!DOCTYPE html>
@@ -18,9 +18,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/339ad83339.js" crossorigin="anonymous"></script>
     <title>Yumeanime</title>
-    <link rel="icon" type="image/png" size="32x32" href="./img/logo.png">
-    <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/png" size="32x32" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/noticia.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish&display=swap" rel="stylesheet">
@@ -138,9 +138,9 @@
 
         <header>
 
-            <a href="index.php">
+            <a href="../index.php">
 
-                <img src="./img/logo.png" alt="Logo" class="logo">
+                <img src="../img/logo.png" alt="Logo" class="logo">
                 <p>Yumeanime</p>
 
             </a>
@@ -194,13 +194,13 @@
 
                 </form>
 
-                <div class="botonNav listasNav"><a href="./view/listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
+                <div class="botonNav listasNav"><a href="./listasGeneral.php"><i class="fa-solid fa-list"></i>Listas</a></div>
 
-                <div class="botonNav directorioNav"><a href="./view/directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
+                <div class="botonNav directorioNav"><a href="./directorio.php"><i class="fa-solid fa-folder"></i>Directorio Anime</a></div>
 
                 <div class="editarPerfilMovil botonNav">
 
-                    <a href="./view.perfil.php">
+                    <a href="./perfil.php">
                         <i class="fa-solid fa-square-pen"></i>
                         <p>Editar Perfil</p>
                     </a>
@@ -209,7 +209,7 @@
 
                 <div class="listasPerfilMovil botonNav">
 
-                    <a href="./view/lista.php">
+                    <a href="./lista.php">
                         <i class="fa-solid fa-rectangle-list"></i>
                         <p>Mis listas</p>
                     </a>

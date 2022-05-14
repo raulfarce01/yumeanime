@@ -7,18 +7,23 @@ function montaHeaderPerfil($idUser){
     $datos = $user->muestraDatosUsuario($idUser);
 
     echo "
-    <div class='fotoMiPerfil'>
+    <div class='fotoMiPerfil'>";
     
-        <img src='data:image/png;base64, ".base64_encode($datos['foto'])."' class='imgMiPerfil'>
+    if(!is_null($datos['foto'])){
+        echo "<img src='data:image/png;base64, ".base64_encode($datos['foto'])."' class='personaje'>
+        ";
+    }else{
+        echo "<i class='fa-solid fa-user personaje'></i>";
+    }
     
-    </div>
+    echo "</div>
     <div class='derecha'>
 
         <p class='titulo colorFondo'>".$datos['nombre']."</p>
 
         <div class='masMiPerfil'>
 
-            <i class='fa-solid fa-caret-down flechita'></i>
+            <i class='fa-solid fa-caret-down flechita' id='flechita'></i>
 
         </div>
 
