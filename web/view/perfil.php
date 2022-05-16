@@ -151,12 +151,6 @@
         
         ?>
 
-                <div class='saveButton texto' id='saveButton' name='saveButton'><p>Guardar</p></div>
-                <p id='errorR'></p>
-                <p id='paR'></p>
-            </div>
-        </div>
-
         <div class="misListas">
             <p class="titulo">Mis listas</p>
             <?php 

@@ -2,6 +2,8 @@ var saveButton = document.getElementById("saveButton");
 
 function cambiaCredenciales(nombreNew, aliasNew, correoNew){
 
+    console.log("hola2");
+
     console.log(nombreNew);
     console.log(correoNew);
     console.log(aliasNew);
@@ -10,17 +12,17 @@ function cambiaCredenciales(nombreNew, aliasNew, correoNew){
         errorR.innerHTML = "Faltan datos";
     }else{
 
-        var xhttp = new XMLHttpRequest();
+        var xmlhttp = new XMLHttpRequest();
 
-        xhttp.onreadystatechange = function() {
+        xmlhttp.onload = function() {
 			if (this.responseText.trim() == '') {
 				if (this.readyState == 4 && this.status == 200) paR.innerHTML = 'Registro correcto.';
 			}
 			else if (this.readyState == 4 && this.status == 200) paR.innerHTML = this.responseText.trim();
 		};
 
-        xhttp.open("GET", "../controller/cambiaCredencialesAjax.php?correo="+correoNew+"&nombre="+nombreNew+"&alias="+aliasNew, true);
-		xhttp.send();
+        xmlhttp.open("GET", "../controller/cambia.php?correo="+correoNew+"&nombre="+nombreNew+"&alias="+aliasNew,true);
+		xmlhttp.send();
 
     }
 

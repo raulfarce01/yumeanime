@@ -78,10 +78,13 @@ class UserController{
                 <input type='text' name='alias' class='alias texto input contenedorAzul' id='alias' value='".$datos['alias']."'>
 
                 
-
-                
-        
-        ";
+                <div class='saveButton texto' id='saveButton' name='saveButton'><p>Guardar</p></div>
+                <p id='errorR'></p>
+                <p id='paR'></p>
+            </div>
+        </div>";
+               
+        echo "<script src='../js/cambiaCredencialesAjax.js'></script>''";
 
     }
 
