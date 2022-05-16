@@ -108,12 +108,6 @@ class UserController{
 
         $idUser = $user->inicioSesion($correo, $passwd);
 
-        if($idUser){
-            montaHeaderPerfil($idUser);
-        }else{
-            montaLogin();
-        }
-
     }
 
     public static function userIniciado($idUser){

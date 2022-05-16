@@ -29,13 +29,15 @@
 
     <?php if(isset($_GET['closeSesion'])){
         unset($_SESSION['idUser']);
-        header('Location: ../index.php');
-    } ?>
+    } 
+    if(isset($_POST['submitLogin'])){
+        UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
+    }?>
 
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
-    <form action="<?php $_SERVER[PHP_SELF] ?>" method='post'>
+    <form action="#" method='post'>
     <div class="contenedorLogin" id="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
@@ -177,9 +179,7 @@
 
             <?php
             
-                if(isset($_POST['submitLogin'])){
-                    UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
-                }else if(isset($_SESSION['idUser'])){
+                if(isset($_SESSION['idUser'])){
                     UserController::userIniciado($_SESSION['idUser']);
                 }else{
                     echo"
@@ -256,8 +256,9 @@
     </footer>
 
     <script src="./js/recogeElementos.js"></script>
-    <script src="./js/abreContenedores.js"></script>
     <script src="./js/abreContenedoresPerfil.js"></script>
+    <script src="./js/abreContenedores.js"></script>
+    
     
 </body>
 </html>

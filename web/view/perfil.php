@@ -3,6 +3,7 @@
     session_start();
 
     require_once "../controller/UserController.php";
+    require_once "../controller/ListaController.php";
 
 ?>
 
@@ -144,17 +145,55 @@
 
     <main>
 
-        <div class='contenedorPropio' id='contenedorPropio'>
         <?php 
         
-        UserController::montaUsuario($_SESSION['idUser']); 
+        $datos = UserController::montaUsuario($_SESSION['idUser']); 
         
         ?>
 
+        <div class='contenedorPropio' id='contenedorPropio'>
+        <div class='fotoPerfil'>
+
+                <div class='contenedorFotoPerfil contenedorAzul'>
+                    
+                    <?php
+
+                        echo $datos['foto'];
+
+                    ?>
+                
+                </div>
+                
+            
+            <form action='../model/subeImagenUser.php' method='post' enctype='multipart/form-data'>
+                <input type='file' name='image' style='color: transparent' class='cambiaFoto'>
+                <input type='submit' name='cambiaFoto' value='Subir Imagen' class='cambiaFotoSubmit contenedorAzul texto'>
+                </form>
+            </div>
+        
+            <div class='inputs'>
+                
+                <label for='nombre' class='titulo colorHeaderLetra'>Nombre</label>
+                <input type='text' name='nombre' id='nombre' class='nombre texto input contenedorAzul' value='<?php echo $datos['nombre'] ?>'>
+
+                <label for='correo' class='titulo colorHeaderLetra'>Correo</label>
+                <input type='text' name='alias 'class='alias texto input contenedorAzul' id='correo' value='<?php echo $datos['correo'] ?>'>
+
+                <label for='alias' class='titulo colorHeaderLetra'>Alias</label>
+                <input type='text' name='alias' class='alias texto input contenedorAzul' id='alias' value='<?php echo $datos['alias'] ?>'>
+
+                
+                <div id='saveButton' class='saveButton texto' name='saveButton'><p>Guardar</p></div>
+                <p id='errorR'></p>
+                <p id='paR'></p>
+            </div>
+        </div>
+
         <div class="misListas">
             <p class="titulo">Mis listas</p>
-            <?php 
-            require_once "../controller/ListaController.php"; ListaController::montaListasPerfil($_SESSION['idUser']); 
+            <?php
+            //echo $_SESSION['idUser'];
+            //ListaController::montaListasPerfil($_SESSION['idUser']); 
             ?>
             <p class="todasListas">Todas las listas</p>
         </div>

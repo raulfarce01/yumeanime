@@ -518,7 +518,6 @@ nav form input{
     position: absolute;
     width: 200px;
     height: 125px;
-    display: flex;
     flex-direction: column;
     background-color: #0A1940;
     justify-content: space-around;

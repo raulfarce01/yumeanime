@@ -1,4 +1,9 @@
 var saveButton = document.getElementById("saveButton");
+var paR = document.getElementById("paR");
+var errorR = document.getElementById("errorR");
+
+console.log("fumo?");
+
 
 function cambiaCredenciales(nombreNew, aliasNew, correoNew){
 
@@ -21,7 +26,7 @@ function cambiaCredenciales(nombreNew, aliasNew, correoNew){
 			else if (this.readyState == 4 && this.status == 200) paR.innerHTML = this.responseText.trim();
 		};
 
-        xmlhttp.open("GET", "../controller/cambia.php?correo="+correoNew+"&nombre="+nombreNew+"&alias="+aliasNew,true);
+        xmlhttp.open("GET","../controller/cambia.php?correo="+correoNew+"&nombre="+nombreNew+"&alias="+aliasNew,true);
 		xmlhttp.send();
 
     }

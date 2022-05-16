@@ -69,15 +69,15 @@
     
             }
 
-            $consulta = $db->query("SELECT u.nombre, l.nombreL, l.descL, l.idUser, l.fechaCreacL FROM lista l NATURAL JOIN user u WHERE l.idUser = $idUser");
+            $consulta = $db->query("SELECT u.nombre AS nombre, l.nombreL as nombreL, l.descL as descL, l.idUser as idUser, l.fechaCreacL as fechaCreac FROM lista l NATURAL JOIN user u WHERE l.idUser = $idUser");
 
             while($recorreConsulta = $consulta->fetch_object()){
 
                 $lista = array(
-                    "nombre" => $recorreConsulta[1],
-                    "desc" => $recorreConsulta[2],
-                    "autor" => $recorreConsulta[0],
-                    "fecha" => $recorreConsulta[4]
+                    "nombre" => $recorreConsulta->nombreL,
+                    "desc" => $recorreConsulta->descL,
+                    "autor" => $recorreConsulta->nombre,
+                    "fecha" => $recorreConsulta->fechaCreac
                 );
 
                 $listas[$cont] = $lista;

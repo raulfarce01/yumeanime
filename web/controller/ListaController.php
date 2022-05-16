@@ -1,7 +1,7 @@
 <?php
 
-require_once "./model/ListaModel.php";
-require_once "./model/UserGuardaLista.php";
+require_once "../model/ListaModel.php";
+require_once "../model/UserGuardaLista.php";
 
 class ListaController{
 
@@ -45,7 +45,11 @@ class ListaController{
 
         $listaUser = new Lista();
 
-        $listas = $listaUser->montaCabeceraListaPerfil($idUser);
+        echo "<script>console.log('listaskekw')</script>";
+
+        $listas = $listaUser->montaCabecerasListaPerfil($idUser);
+
+        echo "<script>console.log('contenedorListas')</script>";
 
         echo "
         <div class='contenedorListas' id='contenedorListas'>";

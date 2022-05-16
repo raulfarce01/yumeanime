@@ -47,44 +47,13 @@ class UserController{
 
         $datos = $user->muestraDatosUsuario($idUser);
 
-        echo "
-
-            <div class='fotoPerfil'>";
-
-                echo "<div class='contenedorFotoPerfil contenedorAzul'>";
-                if(!is_null($datos["foto"])){
-                    echo "<img width='100' src='data:image/png;base64, ".base64_encode($datos['foto'])."' class='imgUsuario'></img>";
-                }else{
-                    echo "<i class='fa-solid fa-user personajeFoto colorHeaderLetra'></i>";
-                }
-                echo "</div>";
-                
-            
-            echo "<form action='../model/subeImagenUser.php' method='post' enctype='multipart/form-data'>
-                <input type='file' name='image' style='color: transparent' class='cambiaFoto'>
-                <input type='submit' name='cambiaFoto' value='Subir Imagen' class='cambiaFotoSubmit contenedorAzul texto'>
-                </form>
-            </div>
+            if(!is_null($datos["foto"])){
+                $datos['foto'] = "<img width='100' src='data:image/png;base64, ".base64_encode($datos['foto'])."' class='imgUsuario'></img>";
+            }else{
+                $datos['foto'] = "<i class='fa-solid fa-user personajeFoto colorHeaderLetra'></i>";
+            }
         
-            <div class='inputs'>
-                
-                <label for='nombre' class='titulo colorHeaderLetra'>Nombre</label>
-                <input type='text' name='nombre' id='nombre' class='nombre texto input contenedorAzul' value='".$datos['nombre']."'>
-
-                <label for='correo' class='titulo colorHeaderLetra'>Correo</label>
-                <input type='text' name='alias 'class='alias texto input contenedorAzul' id='correo' value='".$datos['correo']."'>
-
-                <label for='alias' class='titulo colorHeaderLetra'>Alias</label>
-                <input type='text' name='alias' class='alias texto input contenedorAzul' id='alias' value='".$datos['alias']."'>
-
-                
-                <div class='saveButton texto' id='saveButton' name='saveButton'><p>Guardar</p></div>
-                <p id='errorR'></p>
-                <p id='paR'></p>
-            </div>
-        </div>";
-               
-        echo "<script src='../js/cambiaCredencialesAjax.js'></script>''";
+        return $datos;
 
     }
 

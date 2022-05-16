@@ -174,26 +174,8 @@ class User{
             echo $ex->getMessage(), "<br>";
 
         }
-        
-        $consulta = $db->query("SELECT nombre, correo, alias FROM user WHERE idUser = $idUser");
 
-        if($recorreConsulta = $consulta->fetch_object()){
-
-            if($recorreConsulta['nombre'] != "$nombreNew"){
-
-                $db->query("UPDATE user SET nombre = '$nombreNew'");
-
-            }else if($recorreConsulta['alias'] != "$aliasNew"){
-
-                $db->query("UPDATE user SET alias = '$aliasNew'");
-
-            }else if($recorreConsulta['correo'] != "$correoNew"){
-
-                $db->query("UPDATE correo SET nombre = '$correoNew'");
-
-            }
-
-        }
+        $db->query("UPDATE user SET nombre = '$nombreNew', alias= '$aliasNew', correo = '$correoNew' WHERE idUser = $idUser");
 
         $db->close();
 
