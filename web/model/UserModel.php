@@ -271,7 +271,7 @@ class User{
         }
 
         //Seleccionamos los valores desde la base de datos para mostrarlos en la página
-        $datos = $db->query("SELECT nombre, imgPerfil, correo FROM user WHERE idUser = $idUser");
+        $datos = $db->query("SELECT nombre, imgPerfil, correo, alias FROM user WHERE idUser = $idUser");
         
         if($res = $datos->fetch_object()){
             
@@ -281,7 +281,8 @@ class User{
             $muestra = array(
                 "nombre" => $res->nombre,
                 "correo" => $res->correo,
-                "foto" => $res->imgPerfil
+                "foto" => $res->imgPerfil,
+                "alias" => $res->alias,
             );
 
             return $muestra;

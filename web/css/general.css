@@ -501,11 +501,6 @@ nav form input{
     height: 25px;
 }
 
-.fotoMiPerfil{
-    margin-right: 2%;
-    margin-left: 2%;
-}
-
 .masMiPerfil{
     display: flex;
     justify-content: center;

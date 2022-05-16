@@ -1,5 +1,8 @@
 <?php
     require_once "../controller/UserController.php";
+
+    session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

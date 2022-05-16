@@ -18,7 +18,7 @@ function registro (user, passwd, passwdConfirm, correo, alias){
 			else if (this.readyState == 4 && this.status == 200) paR.innerHTML = this.responseText.trim();
 		};
 
-        request.open("GET","../controller/registroAjax.php?correo="+correo+"&user="+user+"&pass="+passwd+"&alias="+alias,true);
+        request.open("GET", "../controller/registroAjax.php?correo="+correo+"&user="+user+"&pass="+passwd+"&alias="+alias,true);
 		request.send();
 
     }

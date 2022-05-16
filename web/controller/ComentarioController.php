@@ -82,7 +82,7 @@ class ComentarioController{
                 if(!is_null($datos["foto"])){
                     echo "<img src='data:image/png;base64, ".base64_encode($datos["foto"])."' class='imgPerfilUser'>";
                 }else{
-                    echo "<i class='fa-solid fa-user personaje colorHeaderLetra'></i>";
+                    echo "<i class='fa-solid fa-user personajeComent colorHeaderLetra'></i>";
                 }
                     
         echo    "</div>

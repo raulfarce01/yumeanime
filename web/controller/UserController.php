@@ -45,26 +45,43 @@ class UserController{
 
         $user = new User();
 
-        $datos = $user->muestraDatosUsuario();
+        $datos = $user->muestraDatosUsuario($idUser);
 
-        echo "<div class='contenedorPropio' id='contenedorPropio'>
+        echo "
 
-            <div class='fotoPerfil'>
-                <img width='100' src='data:image/png;base64, ".base64_encode($datos['foto'])."'></img>
+            <div class='fotoPerfil'>";
+
+                echo "<div class='contenedorFotoPerfil contenedorAzul'>";
+                if(!is_null($datos["foto"])){
+                    echo "<img width='100' src='data:image/png;base64, ".base64_encode($datos['foto'])."' class='imgUsuario'></img>";
+                }else{
+                    echo "<i class='fa-solid fa-user personajeFoto colorHeaderLetra'></i>";
+                }
+                echo "</div>";
+                
+            
+            echo "<form action='../model/subeImagenUser.php' method='post' enctype='multipart/form-data'>
+                <input type='file' name='image' style='color: transparent' class='cambiaFoto'>
+                <input type='submit' name='cambiaFoto' value='Subir Imagen' class='cambiaFotoSubmit contenedorAzul texto'>
+                </form>
             </div>
-            <form action='./model/subeImagenUser.php' method='post' enctype='multipart/form-data'>
-                <input type='file' name='cambiaFoto'>
-            </form>
         
             <div class='inputs'>
-                <input type='text' name='nombre' id='nombre' class='nombre texto' value='".$datos['nombre']."'>
-                <input type='text' name='alias 'class='alias texto' id='alias' value='".$datos['correo']."'>
-                <!--<input type='text' name='desc' class='desc texto' id='desc'>-->
+                
+                <label for='nombre' class='titulo colorHeaderLetra'>Nombre</label>
+                <input type='text' name='nombre' id='nombre' class='nombre texto input contenedorAzul' value='".$datos['nombre']."'>
 
-                <div class='saveButton texto' id='saveButton'><p>Guardar</p></div>
-            </div>
+                <label for='correo' class='titulo colorHeaderLetra'>Correo</label>
+                <input type='text' name='alias 'class='alias texto input contenedorAzul' id='correo' value='".$datos['correo']."'>
+
+                <label for='alias' class='titulo colorHeaderLetra'>Alias</label>
+                <input type='text' name='alias' class='alias texto input contenedorAzul' id='alias' value='".$datos['alias']."'>
+
+                
+
+                
         
-        </div>";
+        ";
 
     }
 

@@ -114,17 +114,21 @@
 
         <p class="miPerfil titulo">Mi Perfil</p>
 
+        <a href='./view/perfil.php?idUser=<?php echo $_SESSION['idUser']; ?>'>
         <div class="botonMiperfil">
            
             <div class="textoBotonMiperfil"> Editar<i class="fa-solid fa-pencil"></i></div>   
 
         </div>
+        </a>
 
+        <a href='./view/listasGeneral.php?idUser=<?php echo $_SESSION['idUser']; ?>'>
         <div class="botonMiperfil">
 
             <div class="textoBotonMiperfil">Mis listas<i class="fa-solid fa-list"></i></div>
 
         </div>
+        </a>
 
         <p class="cierraSesion">Cerrar sesión</p>
 

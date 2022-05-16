@@ -1,5 +1,9 @@
 <?php
-    require_once "./controller/UserController.php";
+
+    session_start();
+
+    require_once "../controller/UserController.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -140,16 +144,28 @@
 
     <main>
 
-        <?php require_once "../controller/UserController.php"; montaUsuario($_SESSION[$idUser]); ?>
+        <div class='contenedorPropio' id='contenedorPropio'>
+        <?php 
+        
+        UserController::montaUsuario($_SESSION['idUser']); 
+        
+        ?>
+
+                <div class='saveButton texto' id='saveButton' name='saveButton'><p>Guardar</p></div>
+                <p id='errorR'></p>
+                <p id='paR'></p>
+            </div>
+        </div>
 
         <div class="misListas">
             <p class="titulo">Mis listas</p>
             <?php 
-            require_once "../controller/ListaController.php"; montaListasPerfil($_SESSION[$idUser]); 
+            require_once "../controller/ListaController.php"; ListaController::montaListasPerfil($_SESSION['idUser']); 
             ?>
             <p class="todasListas">Todas las listas</p>
         </div>
 
+        <script src="../js/cambiaCredencialesAjax.js"></script>
         <script src="../js/recogeElementos.js"></script>
         <script src="../js/abreContenedores.js"></script>
 
