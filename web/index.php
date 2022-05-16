@@ -27,10 +27,15 @@
 </head>
 <body>
 
+    <?php if(isset($_GET['closeSesion'])){
+        unset($_SESSION['idUser']);
+        header('Location: ../index.php');
+    } ?>
+
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
-    <form action="#" method='post'>
+    <form action="<?php $_SERVER[PHP_SELF] ?>" method='post'>
     <div class="contenedorLogin" id="contenedorLogin">
             <div class="contenedorCampos">
                 <div class="campo">
@@ -130,7 +135,7 @@
         </div>
         </a>
 
-        <p class="cierraSesion">Cerrar sesión</p>
+        <form action='../index.php'><button class="cierraSesion colorFondo" name='closeSesion'>Cerrar sesión</button></form>
 
     </div>
 

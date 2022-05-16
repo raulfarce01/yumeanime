@@ -517,9 +517,11 @@ nav form input{
 .contenedorPerfil{
     position: absolute;
     width: 200px;
+    height: 125px;
     display: flex;
     flex-direction: column;
     background-color: #0A1940;
+    justify-content: space-around;
     padding: 10px;
     border-radius: 10px;
     z-index: 20;
@@ -531,6 +533,24 @@ nav form input{
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+.cierraSesion{
+    border: 0;
+    width: fit-content;
+    background-color: none;
+    cursor: pointer;
+    background-color: #0A1940;
+    font-family: 'Mulish', sans-serif;
+}
+
+.contenedorPerfil a{
+    color: #FAF8F7;
+}
+
+.textoBotonMiPerfil i{
+    position: relative;
+    right: 0;
 }
 
 @media screen and (min-width:750px){
