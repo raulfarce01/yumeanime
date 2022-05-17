@@ -47,7 +47,7 @@
                 
                 <div class="campo">
                     <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-                    <input type="text" class="inputLogin" id="inputLoginPasswd" name='inputLoginPasswd'>
+                    <input type="password" class="inputLogin" id="inputLoginPasswd" name='inputLoginPasswd'>
                 </div>
             </div>
 
@@ -137,7 +137,7 @@
         </div>
         </a>
 
-        <form action='../index.php'><button class="cierraSesion colorFondo" name='closeSesion'>Cerrar sesión</button></form>
+        <form action='./index.php'><button class="cierraSesion colorFondo" name='closeSesion'>Cerrar sesión</button></form>
 
     </div>
 

@@ -173,6 +173,12 @@ El 06/05/2022 Se ha optado por eliminar los modelos "UserComentaAnime" y "UserGu
 
 ---
 
-El 12/05/2022 se ha eliminado el select de orden de la página de directorio debido a que la API no tenía forma de ordenar los animes fecha al mismo tiempo
+El 12/05/2022 se ha eliminado el select de orden de la página de directorio debido a que la API no tenía forma de ordenar los animes fecha al mismo tiempo.
+
+---
+
+El 16/05/2022 se ha decidido realizar el AJAX en cambio de datos por input de la ventana perfil del usuario, ha habido problemas ya que al principio intenté sacar los inputs por PHP, pero después de mucho Stack Overflow y foros me enteré de que AJAX no puede interactuar con inputs del lado servidor, por lo que opté a usar el servidor solo para sacar la información.
+
+Ah, y por alguna razón todos los días que cambio algo, si lo copio y pego en otro sitio, el JS dice: "Ah, no me gusta, no quiero funcionar" así que tengo que dedicar un ratito a cada página porque el JS es especialito :), es el niño tonto de la clase
 
 ---

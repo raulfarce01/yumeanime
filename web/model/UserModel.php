@@ -69,6 +69,8 @@ class User{
 
             if(!$existe){
 
+                $passwd = password_hash($passwd, PASSWORD_DEFAULT);
+
                 $db->query("INSERT INTO user(nombre, alias, correo, passwd, administrador) VALUES ('$nombre', '$alias', '$correo', '$passwd', $administrador)");
 
             }
@@ -118,7 +120,7 @@ class User{
 
         if ($recorreConsulta = $consulta->fetch_object()){
 
-            if($recorreConsulta->passwd == "$passwd"){
+            if(password_verify($passwd, $recorreConsulta->passwd)){
                 
                 if(!isset($_SESSION['idUser'])){
 

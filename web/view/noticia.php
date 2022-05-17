@@ -9,6 +9,7 @@
 
     require_once "../controller/NoticiaDedicadaController.php";
     require_once "../controller/UserController.php";
+    require "../controller/ComentarioController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,20 @@
 </head>
 <body>
 
+<?php 
+
+    $idNoticia = $_GET['idNoticia'];
+
+    if(isset($_GET['closeSesion'])){
+        unset($_SESSION['idUser']);
+    } 
+    if(isset($_POST['submitLogin'])){
+        UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
+    }
+    if(isset($_GET['submitComenta'])){
+        ComentarioController::creaComentarioController($_SESSION['idUser'], $idNoticia, $_GET['comentario']);
+    }
+    ?>
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- --------------------------LOGIN-------------------------------- -->
@@ -40,7 +55,7 @@
                 
                 <div class="campo">
                     <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-                    <input type="text" class="inputLogin" id="inputLoginPasswd" name='inputLoginPasswd'>
+                    <input type="password" class="inputLogin" id="inputLoginPasswd" name='inputLoginPasswd'>
                 </div>
             </div>
 
@@ -110,25 +125,27 @@
 
     <!-- --------------------------CUADRO DE PERFIL-------------------------------- -->
 
-    <div class="contenedorPerfil">
+    <div class="contenedorPerfil colorHeader colorFondo" id="contenedorPerfil">
 
-        <p class="miPerfil">Mi Perfil</p>
+        <p class="miPerfil titulo">Mi Perfil</p>
 
+        <a href='./perfil.php?idUser=<?php echo $_SESSION['idUser']; ?>'>
         <div class="botonMiperfil">
-
-            <p class="textoBotonMiperfil">Editar</p>
-            <i class="fa-regular fa-pencil"></i>
+           
+            <div class="textoBotonMiperfil"> Editar<i class="fa-solid fa-pencil"></i></div>   
 
         </div>
+        </a>
 
+        <a href='./listasGeneral.php?idUser=<?php echo $_SESSION['idUser']; ?>'>
         <div class="botonMiperfil">
 
-            <p class="textoBotonMiperfil">Mis listas</p>
-            <i class="fa-solid fa-list"></i>
+            <div class="textoBotonMiperfil">Mis listas<i class="fa-solid fa-list"></i></div>
 
         </div>
+        </a>
 
-        <p class="cierraSesion">Cerrar sesión</p>
+        <form action='../index.php'><button class="cierraSesion colorFondo" name='closeSesion'>Cerrar sesión</button></form>
 
     </div>
 
@@ -228,7 +245,6 @@
     <main>
         <div class="contenedorDedicado">
         <?php
-        $idNoticia = $_GET['idNoticia'];
         echo "<script>console.log($idNoticia)</script>";
         require_once "../controller/NoticiaDedicadaController.php";
         NoticiaDedicadaController::noticiaDedicada($idNoticia);
@@ -249,15 +265,16 @@
             <div class="comentarios">
                 <h3 class='colorHeaderLetra'>Cajita de Comentarios</h3>
                 <?php
-                    require "../controller/ComentarioController.php";
                     if(isset($_SESSION['idUser'])){
-                        ComentarioController::userComenta($_SESSION['idUser']);
+                        ComentarioController::userComenta($_SESSION['idUser'], $idNoticia);
                     }
                     ComentarioController::traeComentariosController($idNoticia);
                 ?>
             </div>
         </div>
+
         <script src="../js/recogeElementos.js"></script>
+        <script src="../js/abreContenedoresPerfil.js"></script>
         <script src="../js/abreContenedores.js"></script>
         
     </main>

@@ -41,7 +41,7 @@
     </form>
 
     <!-- --------------------------REGISTRO-------------------------------- -->
-        <form action='../controller/registroAjaxIndex.php' method='get'>
+        <form action='./registroAjax.php' method='get'>
         <div class="contenedorRegistro" id="contenedorRegistro">
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Usuario</p>

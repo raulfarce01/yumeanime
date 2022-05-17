@@ -83,11 +83,9 @@ main{
     width: 100%;
 }
 .personajeFoto{
-    font-size: 110pt;
+    font-size: 50pt;
 }
 .contenedorFotoPerfil{
-    width: 150px;
-    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;

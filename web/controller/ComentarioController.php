@@ -70,7 +70,7 @@ class ComentarioController{
 
     }
 
-    public static function userComenta($idUser){
+    public static function userComenta($idUser, $idNoticia){
 
         $user = new User();
 
@@ -96,10 +96,11 @@ class ComentarioController{
                     </div>
                     <div class='coment'>
                     
-                        <form action='#' method='post'>    
+                        <form action='#' method='get'> 
+                        <input type='hidden' name='idNoticia' value='$idNoticia'>   
                             <input type='text' placeholder='Escribe aquí tu comentario...' name='comentario' class='inputComenta contenedorAzul'>
                             <div class='botonSubmitComenta'>
-                            <input type='submit' value='Enviar' class='botonComenta colorHeader colorFondo texto'>
+                            <input name='submitComenta' type='submit' value='Enviar' class='botonComenta colorHeader colorFondo texto'>
                             </div>
                         </form>
 
