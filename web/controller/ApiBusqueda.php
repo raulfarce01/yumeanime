@@ -209,7 +209,7 @@ class ApiBusqueda{
             if(!is_null($animes["data"]["documents"][$i]['cover_image'])){
 
                 echo "
-            <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='colorFondo noticiaA'>
+                    <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='colorFondo noticiaA'>
                         <div class='noticia'>
                         
                             <div class='imagen imagenAnime'>
@@ -230,7 +230,7 @@ class ApiBusqueda{
 
             }else{
 
-                echo "<div class='noticia'></div>";
+                echo "<div class='noticiaA'></div>";
 
             }
 
