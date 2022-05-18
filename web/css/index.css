@@ -73,7 +73,7 @@ main{
     z-index: 3;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:850px) {
     
     .contenedorNoticias{
         grid-template-columns: repeat(3, 1fr);

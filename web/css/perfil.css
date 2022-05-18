@@ -127,7 +127,7 @@ main{
 .inputs label{
     font-size: 1.4em;
 }
-@media screen and (min-width:750px) {
+@media screen and (min-width:850px) {
     main{
         flex-direction: row;
         align-items: flex-start;

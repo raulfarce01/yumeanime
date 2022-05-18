@@ -109,7 +109,7 @@
     font-size: 1.2em;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:850px) {
     .detallesLista{
         width: 20%;
         right: 45%;

@@ -74,7 +74,7 @@ main{
     cursor: pointer;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:850px) {
     .contenedorBusca{
         width: 75%;
     }
