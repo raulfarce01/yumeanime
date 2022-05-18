@@ -48,3 +48,47 @@ INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (5, 3);
 INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (6, 1);
 INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (1, 2);
 INSERT INTO userGustaNoticia(idNoticia, idUser) VALUES (4, 2);
+
+INSERT INTO lista(nombreL, descL, idUser) VALUES ("Mis Favoritos", "Aquí se encuentran los animes que más me han gustado desde que empecé a visualizar los mismos. Por cierto, el mejor es Zero no Tsukaima, a pesar de ser antiguo me sacó lagrimones a mis 12 añitos cuando me lo vi :)", 1);
+INSERT INTO lista(nombreL, descL, idUser) VALUES ("Acción", "AMis animes de acción que más me han gustado y me han hecho vivirlo con intensidad durante la visualizzación", 1);
+INSERT INTO lista(nombreL, descL, idUser) VALUES ("Romances", "Los animes de romance que recomiendo, ya sea porque te saquen una lágrima o porque pienses: 'Ojalá mi pareja y yo seamos así en un futuro', algo que nunca va a pasar, por cierto, para que no te ilusiones y te decepciones también, que los cuentos son solo cuentos", 1);
+INSERT INTO lista(nombreL, descL, idUser) VALUES ("Misterio", "¿Te gusta el mundo de los detectives? Aquí tienes tu lista con las herramientas necesarias para convertirte en uno :P", 1);
+INSERT INTO lista(nombreL, descL, idUser) VALUES ("Actuales", "Si eres más fan de los animes que están en emisión actualmente, esta lista tiene lo necesario para que te sientas completo", 1);
+INSERT INTO lista(nombreL, descL, idUser) VALUES ("Lloros, muchos lloros", "Si has venido aquí con ganas de llorar te recomiendo que hables con algún amigo, los animes no curan las penas, pero sí te ayudan a cargarlas, pero si sigues con ganas y piensas que estás estupendo psicológicamente hablando pero se te antoja echar una lagrimilla, bienvenido a casa, hermano <3", 1);
+INSERT INTO lista(nombreL, descL, idUser) VALUES ("Don Comedia", "Animes que provocan risas, algunos no tanto, pero te hacen sentir que te lo estás pasando bien, para que los malos días se vuelvan buenos, y los bueno, en mejores", 1);
+INSERT INTO lista(nombreL, descL, idUser) VALUES ("Don Comedia para Adultos", "Lo mismo que Don Comedia versión normal, pero con chistes subiditos de tono ;)", 1);
+
+INSERT INTO animeLista(idAnime, idLista) VALUES (101922, 8);
+INSERT INTO animeLista(idAnime, idLista) VALUES (21355, 8);
+INSERT INTO animeLista(idAnime, idLista) VALUES (1195, 8);
+
+INSERT INTO animeLista(idAnime, idLista) VALUES (21355, 9);
+INSERT INTO animeLista(idAnime, idLista) VALUES (101922, 9);
+INSERT INTO animeLista(idAnime, idLista) VALUES (140960, 9);
+
+INSERT INTO animeLista(idAnime, idLista) VALUES (1195, 10);
+INSERT INTO animeLista(idAnime, idLista) VALUES (20665, 10);
+INSERT INTO animeLista(idAnime, idLista) VALUES (100675, 10);
+INSERT INTO animeLista(idAnime, idLista) VALUES (101921, 10);
+INSERT INTO animeLista(idAnime, idLista) VALUES (108489, 10);
+
+INSERT INTO animeLista(idAnime, idLista) VALUES (21234, 11);
+INSERT INTO animeLista(idAnime, idLista) VALUES (101291, 11);
+
+INSERT INTO animeLista(idAnime, idLista) VALUES (141014, 12);
+INSERT INTO animeLista(idAnime, idLista) VALUES (142074, 12);
+INSERT INTO animeLista(idAnime, idLista) VALUES (127911, 12);
+INSERT INTO animeLista(idAnime, idLista) VALUES (140960, 12);
+
+INSERT INTO animeLista(idAnime, idLista) VALUES (20665, 13);
+INSERT INTO animeLista(idAnime, idLista) VALUES (5114, 13);
+INSERT INTO animeLista(idAnime, idLista) VALUES (129874, 13);
+INSERT INTO animeLista(idAnime, idLista) VALUES (2167, 13);
+
+INSERT INTO animeLista(idAnime, idLista) VALUES (101921, 14);
+INSERT INTO animeLista(idAnime, idLista) VALUES (108511, 14);
+INSERT INTO animeLista(idAnime, idLista) VALUES (124080, 14);
+
+INSERT INTO animeLista(idAnime, idLista) VALUES (100675, 15);
+INSERT INTO animeLista(idAnime, idLista) VALUES (102976, 15);
+INSERT INTO animeLista(idAnime, idLista) VALUES (21776, 15);

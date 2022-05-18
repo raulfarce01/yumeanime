@@ -53,9 +53,6 @@ CREATE TABLE IF NOT EXISTS animeLista(
     FOREIGN KEY (idLista) REFERENCES lista(idLista)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
-    FOREIGN KEY (idAnime) REFERENCES anime(idAnime)
-    ON UPDATE CASCADE
-    ON DELETE CASCADE,
     PRIMARY KEY (idLista, idAnime)
 );
 

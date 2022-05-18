@@ -206,7 +206,9 @@ class ApiBusqueda{
 
         for($i = 0; $i < 6; $i++){
 
-            echo "
+            if(!is_null($animes["data"]["documents"][$i]['cover_image'])){
+
+                echo "
             <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='colorFondo noticiaA'>
                         <div class='noticia'>
                         
@@ -226,6 +228,12 @@ class ApiBusqueda{
                     </a>
                 ";
 
+            }else{
+
+                echo "<div class='noticia'></div>";
+
+            }
+
         }
 
     }
@@ -238,7 +246,7 @@ class ApiBusqueda{
         $page = $_GET['page'];
         //$link =  "https://api.aniapi.com/v1/user_story"; 
 
-        echo "<script>console.log($idAnime)</script>";
+        //echo "<script>console.log($idAnime)</script>";
 
         
             //$link =  "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false"; 
@@ -292,6 +300,12 @@ class ApiBusqueda{
         
         // <script src='../js/abreContenedoresAnime.js'></script>
         // <script src='../js/recogeContAnime.js'></script>
+    }
+
+    public static function recogeImagenLista($idLista){
+
+        
+
     }
 
 }

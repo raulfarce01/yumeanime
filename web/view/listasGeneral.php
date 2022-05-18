@@ -1,8 +1,8 @@
 <?php
-    require_once "../controller/UserController.php";
-
     session_start();
 
+    require_once "../controller/UserController.php";
+    require_once "../controller/ListaController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -260,8 +260,12 @@
         <div class="contenedorListas" id="contenedorListas">
 
             <?php
+                ListaController::recogeListasController();
+            ?>
+
+            <?php
                 if(isset($_SESSION['idUser'])){
-                    echo "<div class='masButton' id='masButton'><i class='fa-solid fa-circle-plus'></i></div>
+                    echo "<div class='contenedorLista'><div class='masButton' id='masButton'><i class='fa-solid fa-circle-plus'></i></div></div>
                     ";
                 }
             ?>

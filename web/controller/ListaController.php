@@ -57,7 +57,7 @@ class ListaController{
             for($i = 0; $i < count($listas); $i++){
                 if($i < 4){
 
-                echo "<a href='./lista.php?idLista=".$listas[$i]['idLista']."'><p class='titulo pointer colorFondo tituloAnimeLista'>".$listas[$i]['nombre']."</p></a>";
+                echo "<a href='./lista.php?idLista=".$listas[$i]['idLista']."'><div class='fotoLista contenedorAzul'><img src='".$animes["data"]["documents"][$i]["cover_image"]."'></div><p class='titulo pointer colorFondo tituloAnimeLista'>".$listas[$i]['nombre']."</p></a>";
                 
                 }
 
@@ -66,6 +66,44 @@ class ListaController{
         echo "<div class='masButton' id='masButtonLista'><i class='fa-solid fa-circle-plus'></i></div>
     </div>
         ";
+
+    }
+
+    // public static function recogeImagenController($idLista){
+
+    //     $lista = new Lista();
+
+    //     $imagen = $lista->recogeImagenLista($idLista);
+
+    //     return $imagen;
+
+    // }
+
+    public static function recogeListasController(){
+
+        $lista = new Lista();
+
+        $datos = $lista->recogeListas();
+
+        for($i = 0; $i < count($datos); $i++){
+
+            echo "<a href='./lista.php?idLista=".$datos[$i]['idLista']."' class='contenedorLista'><div class='miniContenedorLista'>
+            
+                    <div class='imagenLista contenedorAzul'>
+                    
+                        ".$datos[$i]["imagen"]."
+                    
+                    </div>
+
+                    <div class='titulo colorHeaderLetra tituloLista'>
+                    
+                        ".$datos[$i]['nombre']."
+                    
+                    </div>
+            
+                </div></a>";
+
+        }
 
     }
 
