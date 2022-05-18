@@ -167,7 +167,7 @@ footer{
 body > .botonesNav{
     display: none;
 } */
-@media screen and (min-width:750px) {
+@media screen and (min-width:850px) {
 
     .detallesLista{
         width: 20%;

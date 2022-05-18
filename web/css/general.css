@@ -552,7 +552,7 @@ nav form input{
     right: 0;
 }
 
-@media screen and (min-width:750px){
+@media screen and (min-width:850px){
     .contenedorContenedor{
         display: none;
     }

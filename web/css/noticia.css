@@ -170,7 +170,7 @@ hr{
     cursor: pointer;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:850px) {
     main{
         justify-content: space-around;
         height: fit-content;
