@@ -134,7 +134,7 @@ main{
     padding-left: 1%;
 }
 
-.animesLista{
+.animesLista, .listasLista{
     height: 70%;
 }
 

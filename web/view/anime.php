@@ -42,13 +42,30 @@
         </div>
 
         <div class="animesLista">
-            <p class="verTodo texto amarillo textoCentro">Ver todo</p>
+            
         </div>
 
     </div>
 
     <!-- ----------------------------FIN DETALLES LISTA----------------------------------- -->
     
+    <!-- ----------------------------LISTAS----------------------------------- -->
+
+    <div class="detallesLista" id='detallesLista'>
+
+    <div class="cabeceraLista">
+    <div class="imagenLista" id="imagenLista"></div>
+    <div class="titLista titulo textoCentro" id="titLista titulo">Mis Listas</div>
+    </div>
+
+    <div class="listasLista">
+        
+    </div>
+
+    </div>
+
+    <!-- ----------------------------FIN LISTAS----------------------------------- -->
+
     <!-- ----------------------- Crear lista Inicio ---------------------- -->
 
         <div class="crearLista colorHeader" id='crearLista'>

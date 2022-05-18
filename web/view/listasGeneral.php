@@ -202,9 +202,7 @@
 
     <?php
             
-            if(isset($_POST['submitLogin'])){
-                UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
-            }else if(isset($_SESSION['idUser'])){
+            if(isset($_SESSION['idUser'])){
                 UserController::userIniciado($_SESSION['idUser']);
             }else{
                 echo"
@@ -261,7 +259,13 @@
 
         <div class="contenedorListas" id="contenedorListas">
 
-            <div class="masButton" id="masButton"><i class="fa-solid fa-circle-plus"></i></div>
+            <?php
+                if(isset($_SESSION['idUser'])){
+                    echo "<div class='masButton' id='masButton'><i class='fa-solid fa-circle-plus'></i></div>
+                    ";
+                }
+            ?>
+            
         </div>
 
         <div class="noticiasPopu" id="noticiasPopu">

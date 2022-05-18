@@ -253,6 +253,7 @@
                 ListaController::montaListaEspecifica($idLista);
                 ?>
             </div>
+            
             <div class="guardarLista texto textoCentro colorHeader colorFondo" id="guardarLista"><i class="fa-solid fa-circle-plus"></i><p>Guardar Lista</p></div>
 
             <hr class="lineaMovil">

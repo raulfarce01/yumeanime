@@ -67,9 +67,6 @@ class ListaController{
     </div>
         ";
 
-        echo "<script src='../js/abreContenedoresAnime.js'></script>";
-        echo "<script src='../js/recogeContAnime.js'></script>";
-
     }
 
 }

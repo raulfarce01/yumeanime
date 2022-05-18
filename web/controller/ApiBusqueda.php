@@ -288,10 +288,10 @@ class ApiBusqueda{
                 </div>
             </div>
         
-        </div>
+        </div>";
         
-        <script src='../js/abreContenedoresAnime.js'></script>
-        <script src='../js/recogeContAnime.js'></script>";
+        // <script src='../js/abreContenedoresAnime.js'></script>
+        // <script src='../js/recogeContAnime.js'></script>
     }
 
 }
