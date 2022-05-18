@@ -67,27 +67,27 @@
         <div class="contenedorRegistro" id="contenedorRegistro">
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Usuario</p>
-                <input type="text" class="inputLogin" id="inputRegistroUser" name='inputRegistroUser'>
+                <input type="text" class="inputLogin" id="inputRegistroUser" name='inputRegistroUser' required>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-                <input type="text" class="inputLogin" id="inputRegistroPasswd" name='inputRegistroPasswd'>
+                <input type="password" class="inputLogin" id="inputRegistroPasswd" name='inputRegistroPasswd' required>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Confirmar Contraseña</p>
-                <input type="text" class="inputLogin" id="inputLoginConfirmaPasswd" name='inputLoginConfirmaPasswd'>
+                <input type="password" class="inputLogin" id="inputLoginConfirmaPasswd" name='inputLoginConfirmaPasswd' required>
             </div>
             
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Correo</p>
-                <input type="text" class="inputLogin" id="inputLoginCorreo" name='inputLoginCorreo'>
+                <input type="text" class="inputLogin" id="inputLoginCorreo" name='inputLoginCorreo' required>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Alias</p>
-                <input type="text" class="inputLogin" id="inputLoginAlias" name='inputLoginAlias'>
+                <input type="text" class="inputLogin" id="inputLoginAlias" name='inputLoginAlias' required>
             </div>
             
             <div class="botonesRegistro">
@@ -256,6 +256,7 @@
     </footer>
 
     <script src="./js/recogeElementos.js"></script>
+    <script src="./js/expresionRegular.js"></script>
     <script src="./js/abreContenedoresPerfil.js"></script>
     <script src="./js/abreContenedores.js"></script>
     

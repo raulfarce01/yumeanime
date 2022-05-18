@@ -12,4 +12,10 @@ var submitRegistro = document.getElementById("submitRegistro");
 var flechita = document.getElementById("flechita");
 var contenedorPerfil = document.getElementById("contenedorPerfil");
 
+var inputLoginCorreo = document.getElementById("inputLoginCorreo");
+var inputRegistroUserValue = document.getElementById("inputRegistroUser").value;
+var inputRegistroPasswdValue = document.getElementById("inputRegistroPasswd").value;
+var inputRegistroConfirmaPasswdValue = document.getElementById("inputRegistroConfirmaPasswdValue").value;
+var inputLoginAlias = document.getElementById("inputLoginAlias").value;
+
 console.log(flechita);
