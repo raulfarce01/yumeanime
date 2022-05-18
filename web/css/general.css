@@ -490,6 +490,8 @@ nav form input{
 
 .derecha{
     width: 15%;
+    padding-left: 10%;
+    padding-right: 5%;
 }
 
 .flechita{
@@ -499,6 +501,7 @@ nav form input{
 .personaje{
     width: 25px;
     height: 25px;
+    border-radius: 50%;
 }
 
 .masMiPerfil{
