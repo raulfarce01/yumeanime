@@ -1,8 +1,8 @@
 <?php
-    require_once "../controller/UserController.php";
-
     session_start();
 
+    require_once "../controller/UserController.php";
+    require_once "../controller/NoticiaDedicadaController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -245,20 +245,37 @@
         <div class="contenedorDetallesLista">
 
             <div class="cabeceraLista">
-                <div class="imagenLista contenedorAzul" id="imagenLista"></div>
+                <div class="imagenLista contenedorAzul" id="imagenLista">
                 <?php
-                require_once "../controller/NoticiaController.php";
-
                 require_once "../controller/ListaController.php";
+                $idLista = $_GET['idLista'];
+                $imagen = ListaController::recogeImagenController($idLista);
+                echo "$imagen";
+                ?>
+                </div>
+                <?php
                 ListaController::montaListaEspecifica($idLista);
                 ?>
+                </div>
+                <div class="guardarLista texto textoCentro colorHeader colorFondo" id="guardarLista"><i class="fa-solid fa-circle-plus"></i><p>Guardar Lista</p></div>
+                <div class="contenedorAnimesLista">
+
+                <?php
+                    ListaController::recogeAnimesLista($idLista);
+                ?>
+
             </div>
-            
-            <div class="guardarLista texto textoCentro colorHeader colorFondo" id="guardarLista"><i class="fa-solid fa-circle-plus"></i><p>Guardar Lista</p></div>
+            </div>
 
-            <hr class="lineaMovil">
+        </div>
 
-            <div class="contenedorAnimesLista"></div>
+        <div class="noticiasPopu" id="noticiasPopu">
+
+            <h3>Noticias Populares</h3>
+
+            <?php
+            NoticiaDedicadaController::noticiasPopusController();
+            ?>
 
         </div>
         

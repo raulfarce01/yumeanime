@@ -302,7 +302,7 @@ class ApiBusqueda{
         // <script src='../js/recogeContAnime.js'></script>
     }
 
-    public static function recogeImagenLista($idLista){
+    public static function recogeAnimesLista($idLista){
 
         
 

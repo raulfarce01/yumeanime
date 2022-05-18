@@ -118,15 +118,15 @@
     
             }
 
-            $consulta = $db->query("SELECT u.nombre, l.nombreL, l.descL, l.idUser, l.fechaCreacL FROM lista l NATURAL JOIN user u WHERE l.idLista = $idLista");
+            $consulta = $db->query("SELECT u.nombre as autor, l.nombreL as nombreLista, l.descL as descL, l.idUser as idUser, l.fechaCreacL as fecha FROM lista l NATURAL JOIN user u WHERE l.idLista = $idLista");
 
             while($recorreConsulta = $consulta->fetch_object()){
 
                 $lista = array(
-                    "nombre" => $recorreConsulta[1],
-                    "desc" => $recorreConsulta[2],
-                    "autor" => $recorreConsulta[0],
-                    "fecha" => $recorreConsulta[4]
+                    "nombre" => $recorreConsulta->nombreLista,
+                    "desc" => $recorreConsulta->descL,
+                    "autor" => $recorreConsulta->autor,
+                    "fecha" => $recorreConsulta->fecha
                 );
 
                 $listas[$cont] = $lista;
@@ -138,59 +138,62 @@
 
         }
 
-        // function recogeImagenLista($idLista){
+        function recogeImagenLista($idLista){
 
-        //     try{
-        //         $db = new mysqli('localhost', "yumeanime", "123456", "yumeanimedb");
+            try{
+                $db = new mysqli('localhost', "yumeanime", "123456", "yumeanimedb");
     
-        //         if($db->connect_errno){
+                if($db->connect_errno){
     
-        //             throw new Exception("No se ha podido acceder a la base de datos");
+                    throw new Exception("No se ha podido acceder a la base de datos");
     
-        //         }
-        //     }catch(Exception $ex){
+                }
+            }catch(Exception $ex){
     
-        //         echo "Excepción $ex <br>";
+                echo "Excepción $ex <br>";
     
-        //     }
+             }
 
-        //     $consulta = $db->query("SELECT idAnime FROM animeLista WHERE idLista = $idLista LIMIT 1");
+            $consulta = $db->query("SELECT idAnime FROM animeLista WHERE idLista = $idLista LIMIT 1");
 
-        //     $idAnime = $consulta->fetch_object();
+            $recorre = $consulta->fetch_object();
 
-        //     $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
-        //     $query = $_GET['query'];
-        //     $page = $_GET['page'];
-        //     //$link =  "https://api.aniapi.com/v1/user_story"; 
+            $idAnime = $recorre->idAnime;
 
-        //     echo "<script>console.log($idAnime)</script>";
+            //echo "<script>$idAnime</script>";
 
+            $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
+            $query = $_GET['query'];
+            $page = $_GET['page'];
+            //$link =  "https://api.aniapi.com/v1/user_story"; 
+
+            //echo "<script>console.log($idAnime)</script>";
         
-        //     //$link =  "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false"; 
-        //     $link = "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false";
+            //$link =  "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false"; 
+            $link = "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false";        
+
+            //'Authorization: Bearer <' . $key . '>',
+            $headers = array(
+                'Authorization: Bearer ' . $key,
+            );
+
+            $ch = curl_init();
+
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_URL, $link);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             
-        
+            $response = curl_exec($ch);
 
-        //     //'Authorization: Bearer <' . $key . '>',
-        //     $headers = array(
-        //         'Authorization: Bearer ' . $key,
-        //     );
+            $anime = json_decode($response, true);
 
-        //     $ch = curl_init();
+            //echo "<script>llego</script>";
 
-        //     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        //     curl_setopt($ch, CURLOPT_URL, $link);
-        //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            
-        //     $response = curl_exec($ch);
+            $imagen = "<img src='".$anime["data"]["documents"][0]["cover_image"]."'>";
 
-        //     $anime = json_decode($response, true);
+            return $imagen;
 
-        //     $imagen = "<img src='".$anime["data"]["documents"][0]["cover_image"]."'>";
-
-        //     return $imagen;
-
-        // }
+        }
 
         function recogeListas(){
 
@@ -262,6 +265,73 @@
             $db->close();
 
             return $contenedorListas;
+
+        }
+
+        function recogeAnimesLista($idLista){
+
+            try{
+                $db = new mysqli('localhost', "yumeanime", "123456", "yumeanimedb");
+    
+                if($db->connect_errno){
+    
+                    throw new Exception("No se ha podido acceder a la base de datos");
+    
+                }
+            }catch(Exception $ex){
+    
+                echo "Excepción $ex <br>";
+    
+            }
+            
+            $cont = 0;
+
+            $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+            ;
+            $query = $_GET['query'];
+            $page = $_GET['page'];
+            //$link =  "https://api.aniapi.com/v1/user_story"; 
+
+            $consulta = $db->query("SELECT idAnime FROM animeLista WHERE idLista = $idLista");
+
+            while($recorre = $consulta->fetch_object()){
+
+                $idAnime = $recorre->idAnime;
+
+                $link =  "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false"; 
+                
+            
+    
+            //'Authorization: Bearer <' . $key . '>',
+            $headers = array(
+                'Authorization: Bearer ' . $key,
+            );
+    
+            $ch = curl_init();
+    
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_URL, $link);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            
+            $response = curl_exec($ch);
+    
+            $animesJSON = json_decode($response, true);
+    
+            //var_dump($response["data"]["documents"]);
+
+            $animes[$cont] = array(
+                "nombre" => $animesJSON["data"]["documents"][0]["titles"]["rj"],
+                "imagen" => $animesJSON["data"]["documents"][0]["cover_image"],
+                "idAnime" => $idAnime,
+            );
+
+            $cont++;
+
+            }
+
+            $db->close();
+
+            return $animes;
 
         }
 

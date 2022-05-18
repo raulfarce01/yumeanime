@@ -11,27 +11,30 @@ class ListaController{
 
         $listas = $listaUser->montaCabecerasLista($idLista);
 
+        //var_dump($listas);
+        $listas[0]["fecha"] = substr($listas[0]["fecha"], 0, 10);
+
         echo "<div class='textoCabeceraLista'>
         <div class='titLista titulo' id='titLista'>";
 
-        $listas[0]["nombre"];
+        echo $listas[0]["nombre"];
 
         echo "</div>
         <div class='autorFecha'>
             <div class='autorLista texto' id='autorLista'><i class='fa-solid fa-user colorHeaderLetra'></i><p>";
             
-            $listas[0]["autor"];
+            echo $listas[0]["autor"];
             
             echo "</p></div>
             <div class='fechaLista texto' id='fechaLista'><i class='fa-solid fa-clock colorHeaderLetra'></i><p>";
             
-            $listas[0]["fecha"];
+            echo $listas[0]["fecha"];
             
             echo "</p></div>
         </div>
         <div class='descLista texto' id='descLista'>";
         
-        $listas[0]["desc"];
+        echo $listas[0]["desc"];
         
         echo "</div>
         <hr class='lineaPc'>
@@ -69,15 +72,15 @@ class ListaController{
 
     }
 
-    // public static function recogeImagenController($idLista){
+    public static function recogeImagenController($idLista){
 
-    //     $lista = new Lista();
+        $lista = new Lista();
 
-    //     $imagen = $lista->recogeImagenLista($idLista);
+        $imagen = $lista->recogeImagenLista($idLista);
 
-    //     return $imagen;
+        return $imagen;
 
-    // }
+    }
 
     public static function recogeListasController(){
 
@@ -103,6 +106,41 @@ class ListaController{
             
                 </div></a>";
 
+        }
+
+    }
+
+    public static function recogeAnimesLista($idLista){
+
+        $lista = new Lista();
+
+        $animes = $lista->recogeAnimesLista($idLista);
+
+        //var_dump($animes[0]);
+
+        for($i = 0; $i < count($animes); $i++){
+    
+            echo "
+            <div class='noticia busquedaDedicada'>
+            <a href='./anime.php?idAnime=".$animes[$i]["idAnime"]."' class=' colorFondo titulo'>
+                <div class='imagen contenedorAzul'>
+                
+                    <img src='".$animes[$i]["imagen"]."'></img>
+
+                </div>
+                </a>
+
+                <div class='titulo tituloBusqueda'>
+                <a href='./anime.php?idAnime=".$animes[$i]['idAnime']."' class=' colorFondo titulo'>
+                    <p class='letraNegra'>".$animes[$i]['nombre']."</p>
+                </a>
+                    <i class='fa-solid fa-ellipsis-vertical letraNegra'></i>
+                
+                </div>
+            
+            </div>
+        
+        ";
         }
 
     }
