@@ -282,7 +282,7 @@ class ApiBusqueda{
             <div class='textoAnime'>
                 <div class='titAnime titulo' id='titAnime'>".$anime["data"]["documents"][0]["titles"]["rj"]."</div>
                 <div class='descAnime texto'>".$anime["data"]["documents"][0]["descriptions"]["en"]."</div>
-                <div class='addButton pointer' id='addButton'>
+                <div class='addButton pointer' id='addAnimeLista'>
                     <div class='masButton'><i class='fa-solid fa-circle-plus colorHeaderLetra'></i></div>
                     <p class='colorFondo'>Añadir a Lista</p>
                 </div>
@@ -290,7 +290,8 @@ class ApiBusqueda{
         
         </div>
         
-        ";
+        <script src='../js/abreContenedoresAnime.js'></script>
+        <script src='../js/recogeContAnime.js'></script>";
     }
 
 }

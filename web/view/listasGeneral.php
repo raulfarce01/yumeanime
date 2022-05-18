@@ -266,6 +266,10 @@
 
         <div class="noticiasPopu" id="noticiasPopu">
             <h3>Noticias Populares</h3>
+            <?php
+            require_once "../controller/NoticiaDedicadaController.php";
+            NoticiaDedicadaController::noticiasPopusController();
+            ?>
         </div>
 
         <script src="../js/recogeElementos.js"></script>
@@ -273,11 +277,6 @@
         <script src="../js/abreContenedores.js"></script>
 
     </main>
-    <footer>
-
-        <p>Creador: Raúl Fernández Arce</p>
-
-    </footer>
     
 </body>
 </html>

@@ -54,15 +54,21 @@ class ListaController{
         echo "
         <div class='contenedorListas' id='contenedorListas'>";
 
-            for($i = 0; $i < 4; $i++){
+            for($i = 0; $i < count($listas); $i++){
+                if($i < 4){
 
-                echo "<p class='titulo pointer colorFondo tituloAnimeLista'>$listas[$i]['nombre']</p>";
+                echo "<a href='./lista.php?idLista=".$listas[$i]['idLista']."'><p class='titulo pointer colorFondo tituloAnimeLista'>".$listas[$i]['nombre']."</p></a>";
+                
+                }
 
             }
 
-        echo "<div class='masButton'><i class='fa-solid fa-circle-plus'></i></div>
+        echo "<div class='masButton' id='masButtonLista'><i class='fa-solid fa-circle-plus'></i></div>
     </div>
         ";
+
+        echo "<script src='../js/abreContenedoresAnime.js'></script>";
+        echo "<script src='../js/recogeContAnime.js'></script>";
 
     }
 

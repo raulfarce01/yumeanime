@@ -6,7 +6,7 @@
         private $desc;
         private $idUser;
     
-        public function __construct($nombre, $idUser, $desc){
+        public function __construct($nombre = '', $idUser = 0, $desc = ''){
     
             $this->nombre = $nombre;
             $this->idUser = $idUser;
@@ -22,7 +22,7 @@
             @param $desc contiene la descripción de la lista
         
         */
-        function creaLista($idUser, $nombre, $desc){
+        function creaLista($idUser, $nombre){
 
             try{
                 $db = new mysqli('localhost', "yumeanime", "123456", "yumeanimedb");
@@ -38,7 +38,7 @@
     
             }
 
-            $db->query("INSERT INTO lista(nombreL, descL, idUser) VALUES ('$nombre', '$desc', $idUser)");
+            $db->query("INSERT INTO lista(nombreL, idUser) VALUES ('$nombre', $idUser)");
 
         }
 
@@ -69,11 +69,12 @@
     
             }
 
-            $consulta = $db->query("SELECT u.nombre AS nombre, l.nombreL as nombreL, l.descL as descL, l.idUser as idUser, l.fechaCreacL as fechaCreac FROM lista l NATURAL JOIN user u WHERE l.idUser = $idUser");
+            $consulta = $db->query("SELECT u.nombre AS nombre, l.nombreL as nombreL, l.descL as descL, l.idUser as idUser, l.fechaCreacL as fechaCreac, l.idLista as idLista FROM lista l NATURAL JOIN user u WHERE l.idUser = $idUser");
 
             while($recorreConsulta = $consulta->fetch_object()){
 
                 $lista = array(
+                    "idLista" => $recorreConsulta->idLista,
                     "nombre" => $recorreConsulta->nombreL,
                     "desc" => $recorreConsulta->descL,
                     "autor" => $recorreConsulta->nombre,

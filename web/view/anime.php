@@ -25,16 +25,16 @@
     if(isset($_GET['closeSesion'])){
         unset($_SESSION['idUser']);
     } 
-    if(isset($_POST['submitLogin'])){
-        UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
-    }
+    // if(isset($_POST['submitLogin'])){
+    //     UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
+    // }
     ?>
 
     <!-- CONTENEDORES OCULTOS QUE SE MOSTRARÁN CON JAVASCRIPT -->
 
     <!-- ----------------------------DETALLES LISTA----------------------------------- -->
 
-    <div class="detallesLista">
+    <div class="detallesLista" id='detallesLista'>
 
         <div class="cabeceraLista">
             <div class="imagenLista" id="imagenLista"></div>
@@ -51,12 +51,16 @@
     
     <!-- ----------------------- Crear lista Inicio ---------------------- -->
 
-    <div class="crearLista colorHeader">
+        <div class="crearLista colorHeader" id='crearLista'>
             <div class="campo">
                 <label for="nombreLista" class="cabezaLogin">Nombre de la lista</p>
                 <input type="text" class="inputLogin" id="nombreLista">
+                <input type='hidden' id='idUserInput' value='<?php echo $_SESSION['idUser'] ?>'>
             </div>
-            <div class="botonRegistroLista botonCreaLista" id="botonRegistroLista"><p>Crear Lista</p></div>
+            <div class="botonRegistroLista botonCreaLista amarillo" id="botonRegistroLista">
+                <p>Crear Lista</p>
+        </div>
+        <p id='estadoL' class='colorFondo textoCentro texto'></p>
         </div>
 
     <!-- ----------------------- Crear lista Fin ---------------------- -->
@@ -203,9 +207,7 @@
 
             <?php
             
-            if(isset($_POST['submitLogin'])){
-                UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
-            }else if(isset($_SESSION['idUser'])){
+            if(isset($_SESSION['idUser'])){
                 UserController::userIniciado($_SESSION['idUser']);
             }else{
                 echo"
@@ -279,6 +281,9 @@
         <div class="cajaComentarios"></div>
         
         <script src="../js/recogeElementos.js"></script>
+        <script src="../js/creaListaAjax.js"></script>
+        <script src='../js/abreContenedoresAnime.js'></script>
+        <script src='../js/recogeContAnime.js'></script>
         <script src="../js/abreContenedoresPerfil.js"></script>
         <script src="../js/abreContenedores.js"></script>
 
