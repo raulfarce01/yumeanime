@@ -25,7 +25,7 @@ De esta manera ya hemos creado la cabecera de la lista, ahora procedemos a meter
 _EL ID del anime lo sacaremos de la página, así que va a tocar navegar por la misma hasta encontrarlo. Lo podemos ver en la URL al entrar en su página dedicada_
 
 ```
-INSERT INTO animeLista(idAnime, idLista) VALUES('value1', 'value2')
+INSERT INTO animeLista(idAnime, idLista) VALUES(value1, value2)
 ```
 
 - value1: Es un número entero que contiene el ID del anime que vamos a añadir a la lista.
