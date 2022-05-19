@@ -255,7 +255,7 @@ function submitAuto(){
 tiempo = setTimeout(submitAuto(), 1000);
 
 <script src="../js/recogeElementos.js"></script>
-<script src="./js/expresionRegular.js"></script>
+<script src="../js/expresionRegular.js"></script>
         <script src="../js/abreContenedores.js"></script>
 </script>
 </main>
