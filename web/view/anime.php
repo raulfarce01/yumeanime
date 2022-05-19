@@ -298,6 +298,7 @@
         <div class="cajaComentarios"></div>
         
         <script src="../js/recogeElementos.js"></script>
+        <script src="./js/expresionRegular.js"></script>
         <script src="../js/creaListaAjax.js"></script>
         <script src='../js/abreContenedoresAnime.js'></script>
         <script src='../js/recogeContAnime.js'></script>

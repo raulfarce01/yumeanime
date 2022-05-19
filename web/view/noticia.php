@@ -274,6 +274,7 @@
         </div>
 
         <script src="../js/recogeElementos.js"></script>
+        <script src="./js/expresionRegular.js"></script>
         <script src="../js/abreContenedoresPerfil.js"></script>
         <script src="../js/abreContenedores.js"></script>
         
