@@ -58,7 +58,34 @@ class ComentarioController{
                     </div>
                     <div class='coment'>
                     
-                        <p class='letraNegra comenta'>".$comentarios[$i]["texto"]."</p>
+                        <p class='letraNegra comenta'>";
+
+                        echo strlen($comentarios[$i]["texto"]);
+
+                        if(strlen($comentarios[$i]["texto"]) > 25){
+
+                            for($j = 0; $j < strlen($comentarios[$i]["texto"]); $j++){
+            
+                                if($j % 125 == 0){
+            
+                                    echo "<br>";
+                                    echo $comentarios[$i]["texto"][$j];
+            
+                                }else{
+
+                                    echo $comentarios[$i]["texto"][$j];
+
+                                }
+            
+                            }
+            
+                        }else{
+
+                            echo $comentarios[$i]["texto"];
+
+                        }
+                        
+                    echo "</p>
 
                     </div>
                 
