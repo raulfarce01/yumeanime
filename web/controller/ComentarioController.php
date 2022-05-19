@@ -60,7 +60,7 @@ class ComentarioController{
                     
                         <p class='letraNegra comenta'>";
 
-                        echo strlen($comentarios[$i]["texto"]);
+                        //echo strlen($comentarios[$i]["texto"]);
 
                         if(strlen($comentarios[$i]["texto"]) > 25){
 
