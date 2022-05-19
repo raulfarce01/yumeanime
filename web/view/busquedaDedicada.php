@@ -61,7 +61,7 @@
     <form action='../controller/registroAjax.php' method='get'>
         <div class="contenedorRegistro" id="contenedorRegistro">
             <div class="campo">
-                <label for="inputLogin" class="cabezaLogin">Usuario</p>
+                <label for="inputLogin" class="cabezaLogin">Correo</p>
                 <input type="text" class="inputLogin" id="inputRegistroUser" name='inputRegistroUser'>
             </div>
 

@@ -9,10 +9,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* 
 footer{
     display: none;
-}
+} */
 
 main{
     display: flex;

@@ -17,8 +17,8 @@ main{
 }
 
 .contenedor{
-    height: 80vh;
     display: flex;
+    padding-right: 50px;
 }
 
 .imagenAnime{
