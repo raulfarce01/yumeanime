@@ -54,6 +54,11 @@ class BusquedaController{
 
     }
 
+    /**
+     * 
+     * Función para buscar las 6 primeras noticias que coincidan con la cadena introducida por el usuario para introducirla en el cuadro de búsqueda
+     * 
+     */
     public function buscaNoticiaGeneral($busca){
 
         $cont = 0;

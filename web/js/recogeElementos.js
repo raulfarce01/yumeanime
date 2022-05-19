@@ -1,3 +1,10 @@
+
+/**
+ * 
+ * Lo que te he dicho en el archivo de justo encima, que me gusta separar las cosas, lo guardo todo en el cajón y lo voy sacando cuando lo uso
+ * 
+ */
+
 //GENERAL
 var botonLoginNav = document.getElementById("botonLoginNav");
 var botonRegistroNav = document.getElementById("botonRegistroNav");

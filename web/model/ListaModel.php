@@ -138,6 +138,14 @@
 
         }
 
+        /**
+         * 
+         * ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡IMPORTANTE!!!!!!!!!!!!!!!!!!!!!!!!!!
+         * ESTA FUNCIÓN TARDE UN POCO EN CARGAR PORQUE LLAMA TANTO A LA BD COMO A LA API, NO USAR EN EXCESO, PAGINAR BIEN SI SE VA A USAR MUCHO
+         * Función para recoger la imagen de portada de la lista (se selecciona la imagen del primer anime que haya en la lista)
+         * @param idLista contiene el identificador de la lista del que vamos a recibir la imagen
+         * 
+         */
         function recogeImagenLista($idLista){
 
             try{
@@ -195,6 +203,13 @@
 
         }
 
+        /**
+         * 
+         * ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡IMPORTANTE!!!!!!!!!!!!!!!!!!1
+         * NO UTILIZAR EN EXCESO PORQUE REALIZA CONSULTAS MUY GRANDES, PAGINAR BIEN PARA EVITAR DEMASIADA LENTITUD
+         * Po mira, esta función lo que hace es mostrar las listas que hay creadas para ponerlas en la página de listas
+         * 
+         */
         function recogeListas(){
 
             $contenedorListas = [];
@@ -268,6 +283,12 @@
 
         }
 
+        /**
+         * 
+         * Po esta función lo que hace es recoger los animes que hay dentro de una lista
+         * @param idLista contiene la lista de la que queremos extraer los animes
+         * 
+         */
         function recogeAnimesLista($idLista){
 
             try{

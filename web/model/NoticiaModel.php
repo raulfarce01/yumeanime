@@ -86,6 +86,13 @@ class Noticia{
 
     }
 
+    /**
+     * 
+     * Esta función recoge todo el contenido de las noticias para mostrarlas en el index
+     * 
+     * @return montaNoticiaIndex contiene un array con las noticias
+     * 
+     */
     function sacaTitularNoticiaIndex(){
 
         $cont = 0;

@@ -2,6 +2,11 @@
 
 class ApiBusqueda{
 
+    /* 
+    
+        Función para probar si la conexión a la API se realiza con éxito
+    
+    */
     public static function conectaApi(){
 
         $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
@@ -26,6 +31,11 @@ class ApiBusqueda{
 
     }
 
+    /* 
+    
+        Función que crea la lista de los géneros de los animes para introducirlos en el select del directorio
+    
+    */
     public static function listaGenerosAnime(){
 
         $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
@@ -61,6 +71,13 @@ class ApiBusqueda{
 
     }
 
+    /*
+    
+        Función para imprimir en el directorio los animes de una página y género seleccionados en la API
+        @param $genre especifica el género sobre el que se buscan animes, si está vacío, busca todo
+        @param $page especifica la página dentro del JSON de la API donde se encuentran los animes
+    
+    */
     public static function listaAnimes($genre = '', $page = 1){
         
         $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
@@ -117,6 +134,12 @@ class ApiBusqueda{
 
     }
 
+    /**
+     * 
+     *  Función para mostrar en la página dedicada a las búsquedas los animes con el título que contiene la cadena de caracteres introducida
+     * @param cadena contiene el texto que vamos a buscar en el título de los animes de la API 
+     * 
+     */
     public static function busquedaDedicadaAnime($cadena){
 
         $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
@@ -174,6 +197,12 @@ class ApiBusqueda{
         }
     }
 
+    /**
+     * 
+     * Función para buscar los 6 primeros animes que aparecen en la API con la cadena de caracteres introducida para colocarlos en el cuadro de búsqueda al realizar una
+     * @param cadena contiene la búsqueda del usuario 
+     * 
+     */
     public static function colocaAnimes($cadena){
 
         $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
@@ -238,6 +267,12 @@ class ApiBusqueda{
 
     }
 
+    /**
+     * 
+     * Función para colocar el anime seleccionado en su página dedicada con todos sus datos
+     * @param idAnime contiene el entero que usa la API para listar los animes
+     * 
+     */
     public static function buscaAnimeDedicado($idAnime){
 
         $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
@@ -300,12 +335,6 @@ class ApiBusqueda{
         
         // <script src='../js/abreContenedoresAnime.js'></script>
         // <script src='../js/recogeContAnime.js'></script>
-    }
-
-    public static function recogeAnimesLista($idLista){
-
-        
-
     }
 
 }

@@ -3,7 +3,14 @@ var estadoL = document.getElementById("estadoL");
 
 console.log("fumo?");
 
-
+/**
+ * 
+ * Función que manda una orden AJAX a PHP para que mande a la base de datos los datos de la lista a introducir para que la cree
+ * @param {*} nombre el nombre de la lista a crear
+ * @param {*} idUser el id del usuario al que asignar la lista
+ * 
+ * En serio, esto es increíble ehhh
+ */
 function creaLista(nombre, idUser){
 
     console.log("hola2");
@@ -31,6 +38,11 @@ function creaLista(nombre, idUser){
 
 }
 
+/**
+ * 
+ * Pulsas el botón y pasan cosas, lo típico, en este caso recoge el valor de lo inputs y lo manda al AJAX, nada nuevo
+ * 
+ */
 botonRegistroLista.addEventListener("click", function (){
 
     var nombre = document.getElementById("nombreLista").value;

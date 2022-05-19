@@ -99,6 +99,11 @@ class UserController{
 
     }
 
+    /**
+     * 
+     * Función para montar el header del usuario si ha iniciado sesión
+     * 
+     */
     public static function userIniciado($idUser){
 
         montaHeaderPerfil($idUser);

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * 
+ * Función para montar la parte derecha del header si el usuario ha iniciado sesión para mostrar su foto y su alias
+ * @param idUser contiene el identificador del usuario a mostrar
+ * 
+ */
 function montaHeaderPerfil($idUser){
 
     $user = new User();
@@ -32,6 +38,11 @@ function montaHeaderPerfil($idUser){
 
 }
 
+/**
+ * 
+ * Función para mostrar el botón de login en caso de que no esté iniciada la sesión
+ * 
+ */
 function montaLogin(){
 
     echo "<div class='botonesNav'>

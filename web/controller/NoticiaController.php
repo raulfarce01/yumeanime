@@ -50,6 +50,12 @@ class NoticiaController{
         
     }
 
+    /**
+     * 
+     * Función para sacar las noticias que se almacenan en el cuadro de PC de noticias populares
+     * 
+     */
+
     public static function noticiasPopusController(){
 
         $noticia = new Noticia();

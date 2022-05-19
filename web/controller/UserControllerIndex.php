@@ -110,6 +110,11 @@ class UserController{
 
     }
 
+    /**
+     * 
+     * Po lo mismos que el del UserController normal, pero para el index, porque es especialito
+     * 
+     */
     public static function userIniciado($idUser){
 
         montaHeaderPerfil($idUser);

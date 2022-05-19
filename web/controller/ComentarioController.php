@@ -70,6 +70,14 @@ class ComentarioController{
 
     }
 
+    /**
+     * 
+     * Función para crear el cuadro de comentario del usuario al tener la sesión iniciada
+     * @param idUser contiene el id del usuario que ha iniciado sesión y quiere comentar
+     * @param idNoticia contiene el id de la noticia en la que se va a realizar el comentario
+     * 
+     */
+
     public static function userComenta($idUser, $idNoticia){
 
         $user = new User();

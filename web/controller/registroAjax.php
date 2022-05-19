@@ -200,6 +200,12 @@
     <main>
     <?php
 
+/**
+ * 
+ * Esta página en principio iba a recibir una llamada de AJAX para registrar el usuario, pero daba problemas y también he creído conveniente mostrar una respuesta al usuario, así que he decidido crear otra página para que el usuario pueda ver una respuesta y pueda seguir trabajando
+ * 
+ */
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
@@ -249,6 +255,7 @@ function submitAuto(){
 tiempo = setTimeout(submitAuto(), 1000);
 
 <script src="../js/recogeElementos.js"></script>
+<script src="./js/expresionRegular.js"></script>
         <script src="../js/abreContenedores.js"></script>
 </script>
 </main>

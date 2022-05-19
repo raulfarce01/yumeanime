@@ -24,6 +24,7 @@ class NoticiaDedicadaController{
         $parrafos = $parrafoModel->sacaParrafosNoticia($idNoticia);
         $imagenes = $imagenModel->sacaImagenesNoticia($idNoticia);
 
+        //Separamos la fecha de la hora para mostrar solo la primera
         $titular["fecha"] = substr($titular["fecha"], 0, 10);
 
         //echo $titular["fecha"];
@@ -80,6 +81,11 @@ class NoticiaDedicadaController{
         echo "</div>";
     }
 
+    /**
+     * 
+     * @see NoticiaController::noticiasPopusController
+     * 
+     */
     public static function noticiasPopusController(){
 
         $noticia = new Noticia();

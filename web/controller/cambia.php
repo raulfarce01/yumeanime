@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * 
+ * Página donde se recibirá el AJAX para cambiar los credenciales del usuario en la base de datos desde su página de Perfil
+ * 
+ */
+
 session_start();
 
 ?>

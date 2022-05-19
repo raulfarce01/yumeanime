@@ -1,3 +1,17 @@
+
+/**
+ * 
+ * Lamento informar que esta función no funka, porque al imprimir las etiquetas por PHP, parace ser que no se llevan bien JS y PHP :(
+ * 
+ * Anyways, esto iba a crear el usuario al registrarse por AJAX, pero como no sirve, pos na
+ * 
+ * @param {*} user contiene el usuario que se va a registrar
+ * @param {*} passwd contiene la contraseña
+ * @param {*} passwdConfirm contiene la confirmación de la contraseña
+ * @param {*} correo contiene el correo con que se va a registrar
+ * @param {*} alias pues lo mismo pero con el alias
+ */
+
 function registro (user, passwd, passwdConfirm, correo, alias){
 
     console.log("user  "+user);

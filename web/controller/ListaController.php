@@ -3,7 +3,21 @@
 require_once "../model/ListaModel.php";
 require_once "../model/UserGuardaLista.php";
 
+/**
+ * 
+ * ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡IMPORTANTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * LA FUNCIONALIDAD DE LAS LISTAS NO ESTARÁ DISPONIBLE HASTA QUE NO SE UTILICE UN LENGUAJE ESTILO JAVASCRIPT A NIVEL DEL SERVIDOR PARA PODER INTERACTUAR CON LOS ELEMENTOS CREADOS POR PHP
+ * 
+ */
+
 class ListaController{
+
+    /**
+     * 
+     * Función para crear la página dedicada de una lista sobre la que ha clickado el usuario
+     * @param idLista contiene el identificador de la lista a montar
+     * 
+     */
 
     public static function montaListaEspecifica($idLista){
 
@@ -44,6 +58,12 @@ class ListaController{
 
     }
 
+    /**
+     * 
+     * Función para montar 4 listas dentro del cuadro "misListas" en el perfil del usuario
+     * @param idUser contiene el identificador del usuario sobre el que se van a buscar las listas
+     * 
+     */
     public static function montaListasPerfil($idUser){
 
         $listaUser = new Lista();
@@ -72,6 +92,12 @@ class ListaController{
 
     }
 
+    /**
+     * 
+     * Función para recoger la imagen de una lista (cabe decir que la imagen escogida es la del primer anime de la lista)
+     * @param idLista contiene el identificador de la lista
+     * 
+     */
     public static function recogeImagenController($idLista){
 
         $lista = new Lista();
@@ -82,6 +108,11 @@ class ListaController{
 
     }
 
+    /**
+     * 
+     * Función para recoger las listas de la base de datos (IMPORTANTE: TODO LO REALIZADO CON ESTA FUNCIÓN VA A TOMAR UN TIEMPO EN CARGAR PORQUE REALIZA CONSULTAS A LA API Y A LA BASE DE DATOS AL MISMO TIEMPO VARIAS VECES, NO EXCEDER EL NÚMERO DE REQUESTS)
+     * 
+     */
     public static function recogeListasController(){
 
         $lista = new Lista();
@@ -110,6 +141,12 @@ class ListaController{
 
     }
 
+    /**
+     * 
+     * Función para recoger los animes que hay contenidos dentro de una lista
+     * @param idLista contiene el identificador de la lista sobre la que vamos a buscar los animes
+     * 
+     */
     public static function recogeAnimesLista($idLista){
 
         $lista = new Lista();

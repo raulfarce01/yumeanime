@@ -1,9 +1,26 @@
+
+/**
+ * 
+ * Pa que no se te cuelen los listos con el correo, tú sabe
+ * 
+ */
+
 var correo = /[\w+(\-\_\.\/)]+[@][\w]+\.[\w]{3}/;
 
+/**
+ * 
+ * Deshabilitamos el botón de registro pa que ningún payaso lo pulse mientras falten credenciales y tal
+ * 
+ */
 submitRegistro.disabled = true;
 
 submitRegistro.style.backgroundColor = 'grey';
 
+/**
+ * 
+ * Recoge los datos del input de correo cada vez que se pulsa una tecla, para poder comprobarlo a tiempo real
+ * 
+ */
 inputLoginCorreo.addEventListener("keyup", function(){
 
     var inputLoginCorreoValue = document.getElementById("inputLoginCorreo").value;
