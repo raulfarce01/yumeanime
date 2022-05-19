@@ -1,15 +1,16 @@
 <?php
 
+session_start();
+
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
-    session_start();
 
     //if (!isset($_SERVER['DOCUMENT_ROOT']) || empty($_SERVER['DOCUMENT_ROOT']))
     //$_SERVER['DOCUMENT_ROOT'] = __DIR__;
 
     require_once "../controller/NoticiaDedicadaController.php";
     require_once "../controller/UserController.php";
-    require "../controller/ComentarioController.php";
+    require_once "../controller/ComentarioController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -187,9 +188,7 @@
 
             <?php
             
-            if(isset($_POST['submitLogin'])){
-                UserController::iniciarUser($_POST['inputLoginUser'], $_POST['inputLoginPasswd']);
-            }else if(isset($_SESSION['idUser'])){
+            if(isset($_SESSION['idUser'])){
                 UserController::userIniciado($_SESSION['idUser']);
             }else{
                 echo"

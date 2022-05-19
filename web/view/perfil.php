@@ -184,13 +184,13 @@
             <div class='inputs'>
                 
                 <label for='nombre' class='titulo colorHeaderLetra'>Nombre</label>
-                <input type='text' name='nombre' id='nombre' class='nombre texto input contenedorAzul' value='<?php echo $datos['nombre'] ?>'>
+                <input type='text' name='nombre' id='nombre' class='nombre texto input contenedorAzul' value='<?php echo $datos['nombre'] ?>' required>
 
                 <label for='correo' class='titulo colorHeaderLetra'>Correo</label>
-                <input type='text' name='alias 'class='alias texto input contenedorAzul' id='correo' value='<?php echo $datos['correo'] ?>'>
+                <input type='text' name='alias 'class='alias texto input contenedorAzul' id='correo' value='<?php echo $datos['correo'] ?>' required>
 
                 <label for='alias' class='titulo colorHeaderLetra'>Alias</label>
-                <input type='text' name='alias' class='alias texto input contenedorAzul' id='alias' value='<?php echo $datos['alias'] ?>'>
+                <input type='text' name='alias' class='alias texto input contenedorAzul' id='alias' value='<?php echo $datos['alias'] ?>' required>
 
                 
                 <div id='saveButton' class='saveButton texto' name='saveButton'><p>Guardar</p></div>
@@ -209,8 +209,9 @@
         </div>
 
         <script src="../js/recogeElementos.js"></script>
-        <script src="../js/abreContenedoresPerfil.js"></script>
         <script src="../js/cambiaCredencialesAjax.js"></script>
+        <script src="../js/expresionRegularPerfil.js"></script>
+        <script src="../js/abreContenedoresPerfil.js"></script>
         <script src="../js/abreContenedores.js"></script>
 
     </main>
