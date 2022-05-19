@@ -11,7 +11,7 @@ Lo primero que tenemos que saber es que las listas se componen de muchos animes,
 Lo primero es crear los registros dentro de la tabla *lista* de la siguiente manera:
 
 ```
-INSERT INTO LISTA(nombreL, descL, idUser) VALUES ('value1', 'value2', value3)
+INSERT INTO lista(nombreL, descL, idUser) VALUES ('value1', 'value2', value3)
 ```
 
 - value1: Es una cadena de caracteres, por lo que deberá entrecomillarse, que contiene el título/nombre que tendrá la lista
