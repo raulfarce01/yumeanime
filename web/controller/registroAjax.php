@@ -209,15 +209,24 @@ $nombre = $_GET['inputRegistroUser'];
 $alias = $_GET['inputLoginAlias'];
 $correo = $_GET['inputLoginCorreo'];
 $passwd = $_GET['inputRegistroPasswd'];
+$confirmaPasswd = $_GET['inputLoginConfirmaPasswd'];
 
-$usuario = new User();
+if($passwd != $confirmaPasswd){
 
-$respuesta = $usuario->registroUser($nombre, $alias, $correo, $passwd);
+    echo "<script>alert('Las contraseñas no coinciden')</script>";
 
-if($respuesta){
-    echo "<div class='alerta texto fondoRojo'>El usuario ya existe</div>";
 }else{
-    echo "<div class='alerta colorHeader texto colorFondo registroExito'>El usuario se ha creado con éxito</div>";
+
+    $usuario = new User();
+
+    $respuesta = $usuario->registroUser($nombre, $alias, $correo, $passwd);
+    
+    if($respuesta){
+        echo "<div class='alerta texto fondoRojo'>El usuario ya existe</div>";
+    }else{
+        echo "<div class='alerta colorHeader texto colorFondo registroExito'>El usuario se ha creado con éxito</div>";
+    }
+
 }
 
 ?>

@@ -92,12 +92,12 @@
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Contraseña</p>
-                <input type="text" class="inputLogin" id="inputRegistroPasswd" name='inputRegistroPasswd'>
+                <input type="password" class="inputLogin" id="inputRegistroPasswd" name='inputRegistroPasswd'>
             </div>
 
             <div class="campo">
                 <label for="inputLogin" class="cabezaLogin">Confirmar Contraseña</p>
-                <input type="text" class="inputLogin" id="inputLoginConfirmaPasswd" name='inputLoginConfirmaPasswd'>
+                <input type="password" class="inputLogin" id="inputLoginConfirmaPasswd" name='inputLoginConfirmaPasswd'>
             </div>
             
             <div class="campo">
