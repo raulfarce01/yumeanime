@@ -188,7 +188,7 @@ class ListaController{
 
         $lista = new Lista();
 
-        echo $idUser;
+        //echo $idUser;
 
         $datos = $lista->recogeListasUser($idUser);
 
