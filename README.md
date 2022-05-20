@@ -198,7 +198,7 @@ Se ha repartido la URL entre unos pocos usuarios y gracias a ellos he encontrado
 Para desplegarlo, hemos tenido que usar el comando:
 
 ```
-ngrok httpd yumeanime.com:80
+ngrok http yumeanime.com:80
 ```
 
 Ya que en el hosts marcamos que al poner eso nos redirigía a la página de la aplicación, como vimos en la configuración de Apache dentro de esta misma memoria.
