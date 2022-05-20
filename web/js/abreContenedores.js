@@ -27,6 +27,7 @@ lupaBuscar.addEventListener("click", function (){
  * Po mira, esto lo que hace es abrir el contenedor del login y cerrar el del registro (si está abierto) cuando pulses el botón login. Fácil o no eh? :v
  * 
  */
+try{
 botonLoginNav.addEventListener("click", () => {
     if(contenedorLogin.style.display == "none" || contenedorLogin.style.display == ""){
 
@@ -49,12 +50,17 @@ botonLoginNav.addEventListener("click", () => {
     console.log(contenedorRegistro.style.display);
     
 });
+}catch (error){
 
+    console.log(error);
+
+}
 /**
  * 
  * Lo mismo que el de arriba pero para el registro, tú sabe
  * 
  */
+try{
 botonRegistroNav.addEventListener("click", function (){
     console.log("holaRN");
     if(contenedorRegistro.style.display == "none" || contenedorRegistro.style.display == ""){
@@ -73,10 +79,16 @@ botonRegistroNav.addEventListener("click", function (){
 
     }
 });
+}catch (error){
+
+    console.log(error);
+
+}
 
 /**
  * Este es exactamente el mismo que el de arriba pero para el botón de registro que hay dentro del formulario de login
  */
+try{
 botonRegistro.addEventListener("click", function (){
     console.log("holaR");
     if(contenedorRegistro.style.display == "none" || contenedorRegistro.style.display == ""){
@@ -95,12 +107,18 @@ botonRegistro.addEventListener("click", function (){
 
     }
 });
+}catch (error){
+
+    console.log(error);
+
+}
 
 /**
  * 
  * Po este muestra el contenedor del login si pulsas el botón dentro del contenedor de registro
  * 
  */
+try{
 botonLoginRegistro.addEventListener("click", () => {
     if(contenedorLogin.style.display == "none" || contenedorLogin.style.display == ""){
 
@@ -123,3 +141,8 @@ botonLoginRegistro.addEventListener("click", () => {
     console.log(contenedorRegistro.style.display);
     
 });
+}catch (error){
+
+    console.log(error)
+
+}
