@@ -260,7 +260,13 @@
         <div class="contenedorListas" id="contenedorListas">
 
             <?php
+
+            if(isset($_GET['idUser'])){
+                $idUser = $_GET['idUser'];
+                ListaController::recogeListasUserController($idUser);
+            }else{
                 ListaController::recogeListasController();
+            }
             ?>
 
             <?php

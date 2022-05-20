@@ -78,15 +78,17 @@ class ListaController{
         <div class='contenedorListas' id='contenedorListas'>";
 
             for($i = 0; $i < count($listas); $i++){
-                if($i < 4){
+                if($i < 3){
 
-                echo "<a href='./lista.php?idLista=".$listas[$i]['idLista']."'><div class='fotoLista contenedorAzul'><img src='".$animes["data"]["documents"][$i]["cover_image"]."'></div><p class='titulo pointer colorFondo tituloAnimeLista'>".$listas[$i]['nombre']."</p></a>";
+                $imagen = $listaUser->recogeImagenLista($listas[$i]["idLista"]);
+
+                echo "<a href='./lista.php?idLista=".$listas[$i]['idLista']."' class='contenedorTocho'><div class='fotoLista'>".$imagen."</div><p class='titulo pointer colorFondo tituloAnimeLista'>".$listas[$i]['nombre']."</p></a>";
                 
                 }
 
             }
 
-        echo "<div class='masButton' id='masButtonLista'><i class='fa-solid fa-circle-plus'></i></div>
+        echo "<div class='masButton contenedorTocho' id='masButtonLista'><i class='fa-solid fa-circle-plus'></i></div>
     </div>
         ";
 
@@ -178,6 +180,36 @@ class ListaController{
             </div>
         
         ";
+        }
+
+    }
+
+    public static function recogeListasUserController($idUser){
+
+        $lista = new Lista();
+
+        echo $idUser;
+
+        $datos = $lista->recogeListasUser($idUser);
+
+        for($i = 0; $i < count($datos); $i++){
+
+            echo "<a href='./lista.php?idLista=".$datos[$i]['idLista']."' class='contenedorLista'><div class='miniContenedorLista'>
+            
+                    <div class='imagenLista contenedorAzul'>
+                    
+                        ".$datos[$i]["imagen"]."
+                    
+                    </div>
+
+                    <div class='titulo colorHeaderLetra tituloLista'>
+                    
+                        ".$datos[$i]['nombre']."
+                    
+                    </div>
+            
+                </div></a>";
+
         }
 
     }

@@ -203,9 +203,9 @@
             <p class="titulo">Mis listas</p>
             <?php
             //echo $_SESSION['idUser'];
-            //ListaController::montaListasPerfil($_SESSION['idUser']); 
+            ListaController::montaListasPerfil($_SESSION['idUser']); 
             ?>
-            <p class="todasListas">Todas las listas</p>
+            <a href='./listasGeneral.php?idUser=<?php echo $_SESSION['idUser'] ?>'><p class="todasListas">Todas las listas</p></a>
         </div>
 
         <script src="../js/recogeElementos.js"></script>
