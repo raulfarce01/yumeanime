@@ -182,3 +182,18 @@ El 16/05/2022 se ha decidido realizar el AJAX en cambio de datos por input de la
 Ah, y por alguna razón todos los días que cambio algo, si lo copio y pego en otro sitio, el JS dice: "Ah, no me gusta, no quiero funcionar" así que tengo que dedicar un ratito a cada página porque el JS es especialito :), es el niño tonto de la clase
 
 ---
+
+El 18/05/2022 se ha finalizado el proyecto, pasándolo a la fase de testing en el entorno propio y solucionando problemas con el diseño de algunas páginas que no estaban al 100% completas. La funcionalidad de las listas al final no se ha llevado a cabo porque no tenemos JS en el servidor, y al imprimir etiquetas por PHP e intentar recogerlas por JS, según muchos foros y consulta con compañeros de fuera, se ha llegado a la conclusión de que para realizar esa funcionalidad es necesario el uso de herramientas semejantes a NodeJS.
+
+La funcionalidad de las noticias funciona, pero no hay forma de crearlas desde la web, sino que deben hacerse desde la base de datos (para ello tenemos un documento tanto en PDF como en MarkDown llamado CrearNoticiasDocu dentro de esta misma carpeta). Las noticias no se crean desde la página puesto que no conozco forma de distinguir las imágenes del texto y separar cada uno de los párrafos (ver la Base de Datos para entender qué son los párrafos) dentro de un mismo cuadro de texto y saber posicionar cada cosa en el sitio donde se han insertado a la hora de mostrarla.
+
+Lo mismo sucede con las listas, al no poder crearlas desde la página podéis encontrar la documentación para la creación desde la base de datos en CrearListasDocu en PDF y en Markdown
+
+---
+
+El día 19/05/2022 se ha decidido desplegar la aplicación con Ngrok, una plataforma que usa una nube para redirigir una URL a tu Apache, que debe estar configurado para que te redirija a la carpeta donde se encuentra la web.
+
+Se ha repartido la URL entre unos pocos usuarios y gracias a ellos he encontrado fallos, de los cuales he sido capaz de solucionar todos menos uno. En el móvil, al deslizar hacia la izquierda, aparece el menú desplegable que está escondido, el problema es que si bajas se ve un espacio en blanco porque la altura del menú hamburguesa está calculada para que sea la misma que la de la pantalla.
+
+---
+
