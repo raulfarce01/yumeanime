@@ -195,5 +195,17 @@ El día 19/05/2022 se ha decidido desplegar la aplicación con Ngrok, una plataf
 
 Se ha repartido la URL entre unos pocos usuarios y gracias a ellos he encontrado fallos, de los cuales he sido capaz de solucionar todos menos uno. En el móvil, al deslizar hacia la izquierda, aparece el menú desplegable que está escondido, el problema es que si bajas se ve un espacio en blanco porque la altura del menú hamburguesa está calculada para que sea la misma que la de la pantalla.
 
+Para desplegarlo, hemos tenido que usar el comando:
+
+```
+ngrok httpd yumeanime.com:80
+```
+
+Ya que en el hosts marcamos que al poner eso nos redirigía a la página de la aplicación, como vimos en la configuración de Apache dentro de esta misma memoria.
+
+También cabe destacar la creación de un pequeño script en bash porque mi PHP Server, a mitad del TFG dejó de funcionar, así que decidí crear una script para ejecutarlo cada vez que hiciera un cambio y así poder también acceder desde el host configurado. El script es el siguiente:
+
+![Script](img/Memoria/script.png)
+
 ---
 
