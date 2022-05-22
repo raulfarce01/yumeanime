@@ -215,10 +215,5 @@
         <script src="../js/abreContenedores.js"></script>
 
     </main>
-    <footer>
-
-        <p>Creador: Raúl Fernández Arce</p>
-
-    </footer>
 </body>
 </html>

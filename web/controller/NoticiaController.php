@@ -15,6 +15,7 @@ class NoticiaController{
     */
     public static function noticiaIndex(){
 
+        //$area = [0, 0, 250, 150];
         $columna = 1;
 
         $noticiaModel = new Noticia();
@@ -22,6 +23,9 @@ class NoticiaController{
         $noticia = $noticiaModel->sacaTitularNoticiaIndex();
 
         for($i = 0; $i < 6; $i++){
+
+            //$imagen = str_replace("data:image/png;base64,", "", base64_decode($noticia[$i]["imagen"]));
+            //$imagenFinal = imagecrop($imagen, $area);
 
             echo "<a href='./view/noticia.php?idNoticia=".$noticia[$i]["idNoticia"]."'><div class='noticiaIndividual contenedorAzul'>
             <div class='tapaFinal contenedorAzul'></div>
