@@ -173,7 +173,7 @@ El 06/05/2022 Se ha optado por eliminar los modelos "UserComentaAnime" y "UserGu
 
 ---
 
-El 12/05/2022 se ha eliminado el select de orden de la página de directorio debido a que la API no tenía forma de ordenar los animes fecha al mismo tiempo.
+El 12/05/2022 se ha eliminado el select de orden de la página de directorio debido a que la API no tenía forma de ordenar los animes según la categoría y fecha al mismo tiempo.
 
 ---
 
@@ -209,4 +209,4 @@ También cabe destacar la creación de un pequeño script en bash porque mi PHP 
 
 ---
 
-El día 26 dde mayo se ha considerado ampliar el proyecto y se ha realizado una investigación para poder subir las noticias desde la página en lugar de la base de datos. Tras la investigación se ha observado que para esto necesitamos conocimientos de React, por lo que es otra funcionalidad que queda como extensión del proyecto.
+El día 26 de mayo se ha considerado ampliar el proyecto y se ha realizado una investigación para poder subir las noticias desde la página en lugar de la base de datos. Tras la investigación se ha observado que para esto necesitamos conocimientos de React, por lo que es otra funcionalidad que queda como extensión del proyecto.
