@@ -209,3 +209,4 @@ También cabe destacar la creación de un pequeño script en bash porque mi PHP 
 
 ---
 
+El día 26 dde mayo se ha considerado ampliar el proyecto y se ha realizado una investigación para poder subir las noticias desde la página en lugar de la base de datos. Tras la investigación se ha observado que para esto necesitamos conocimientos de React, por lo que es otra funcionalidad que queda como extensión del proyecto.
