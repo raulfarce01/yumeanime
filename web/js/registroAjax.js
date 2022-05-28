@@ -1,7 +1,7 @@
 
 /**
  * 
- * Lamento informar que esta función no funka, porque al imprimir las etiquetas por PHP, parace ser que no se llevan bien JS y PHP :(
+ * Lamento informar que esta función no funka, porque al imprimir las etiquetas por PHP, parece ser que no se llevan bien JS y PHP :(
  * 
  * Anyways, esto iba a crear el usuario al registrarse por AJAX, pero como no sirve, pos na
  * 
