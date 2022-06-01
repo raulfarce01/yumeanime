@@ -266,7 +266,7 @@
                     <p>Listas</p>
                 </div>
                 <div class="contenedorListas">
-
+                    
                 </div>
                 <a href='./busquedaDedicada.php?busca=<?php echo $busca;?>&buscaLista=true'><p class="verTodo texto amarillo textoDerecha">Ver todo</p></a>
             </div>

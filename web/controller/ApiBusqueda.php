@@ -38,12 +38,12 @@ class ApiBusqueda{
     */
     public static function listaGenerosAnime(){
 
-        $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+        //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
         ;
         $query = $_GET['query'];
         $page = $_GET['page'];
         //$link =  "https://api.aniapi.com/v1/user_story"; 
-        $link =  "https://api.aniapi.com/v1/resources/1.0/0"; 
+        $link =  "https://api.jikan.moe/v4/genres/anime"; 
 
         //'Authorization: Bearer <' . $key . '>',
         $headers = array(
@@ -63,9 +63,11 @@ class ApiBusqueda{
 
         $generos = json_decode($response, true);
 
-        for($i = 0; $i < count($generos["data"]["genres"]); $i++){
+        //echo count($generos["data"]);
 
-            echo "<option name='".$generos["data"]["genres"][$i]."' value='".$generos["data"]["genres"][$i]."'>".$generos["data"]["genres"][$i]."</option>";
+        for($i = 0; $i < count($generos["data"]); $i++){
+
+            echo "<option name='".$generos["data"][$i]["name"]."' value='".$generos["data"][$i]["mal_id"]."'>".$generos["data"][$i]["name"]."</option>";
 
         }
 
@@ -80,7 +82,7 @@ class ApiBusqueda{
     */
     public static function listaAnimes($genre = '', $page = 1){
         
-        $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+        //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
         ;
         //$key = "XQAWglMRCodMO1Zsdvzyxful187oPLDghHKlPiuie4H24BNL0MVnR7YoBgqLoWP";
         $query = $_GET['query'];
@@ -90,11 +92,11 @@ class ApiBusqueda{
 
         if($genre == ''){
 
-            $link =  "https://api.aniapi.com/v1/anime?page=$page&nsfw=true&with_episodes=false"; 
+            $link =  "https://api.jikan.moe/v4/anime?page=$page"; 
 
         }else{
 
-            $link =  "https://api.aniapi.com/v1/anime?page=$page&genres=$genre&nsfw=true&with_episodes=false"; 
+            $link =  "https://api.jikan.moe/v4/anime?page=$page&genres=$genre"; 
 
         }
         
@@ -122,12 +124,12 @@ class ApiBusqueda{
         /*echo $animes["data"]["current_page"];
         $animes["data"]["current_page"] = $page;*/
 
-        for($i = 0; $i < count($animes["data"]["documents"]); $i++){
+        for($i = 0; $i < count($animes["data"]); $i++){
 
             echo "<div class='anime animeA'>";
-            echo "<a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class=' colorHeaderLetra'><div class='imagen contenedorAzul contenedorImagen'><img src='".$animes["data"]["documents"][$i]["cover_image"]."' class='imgAnime'></div></a>";
-            echo "<a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class=' colorHeaderLetra'><div class='titAnime titulo'><p>".
-            $animes["data"]["documents"][$i]["titles"]["rj"]
+            echo "<a href='./anime.php?idAnime=".$animes["data"][$i]["mal_id"]."' class=' colorHeaderLetra'><div class='imagen contenedorAzul contenedorImagen'><img src='".$animes["data"][$i]["images"]["jpg"]["large_image_url"]."' class='imgAnime'></div></a>";
+            echo "<a href='./anime.php?idAnime=".$animes["data"][$i]["mal_id"]."' class=' colorHeaderLetra'><div class='titAnime titulo'><p>".
+            $animes["data"][$i]["title"]
             ."</p></a><i class='fa-solid fa-ellipsis-vertical'></i></div>";
             echo "</div>";
 
@@ -143,14 +145,14 @@ class ApiBusqueda{
      */
     public static function busquedaDedicadaAnime($cadena){
 
-        $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+        //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
         ;
         $query = $_GET['query'];
         $page = $_GET['page'];
         //$link =  "https://api.aniapi.com/v1/user_story"; 
 
         
-            $link =  "https://api.aniapi.com/v1/anime?title=$cadena&nsfw=true&with_episodes=false"; 
+            $link =  "https://api.jikan.moe/v4/anime?q=$cadena"; 
             
         
 
@@ -171,21 +173,21 @@ class ApiBusqueda{
 
         //var_dump($response["data"]["documents"]);
 
-        for($i = 0; $i < count($animes["data"]["documents"]); $i++){
+        for($i = 0; $i < count($animes["data"]); $i++){
 
             echo "
             <div class='noticia busquedaDedicada'>
-            <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class=' colorFondo titulo'>
+            <a href='./anime.php?idAnime=".$animes["data"][$i]["mal_id"]."' class=' colorFondo titulo'>
                 <div class='imagen contenedorAzul'>
                 
-                    <img src='".$animes["data"]["documents"][$i]["cover_image"]."'></img>
+                    <img src='".$animes["data"][$i]["images"]["jpg"]["large_image_url"]."'></img>
 
                 </div>
                 </a>
 
                 <div class='titulo tituloBusqueda'>
-                <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class=' colorFondo titulo'>
-                    <p class='letraNegra'>".$animes["data"]["documents"][$i]["titles"]["rj"]."</p>
+                <a href='./anime.php?idAnime=".$animes["data"][$i]["mal_id"]."' class=' colorFondo titulo'>
+                    <p class='letraNegra'>".$animes["data"][$i]["title"]."</p>
                 </a>
                     <i class='fa-solid fa-ellipsis-vertical letraNegra'></i>
                 
@@ -206,14 +208,14 @@ class ApiBusqueda{
      */
     public static function colocaAnimes($cadena){
 
-        $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+        //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
         ;
         $query = $_GET['query'];
         $page = $_GET['page'];
         //$link =  "https://api.aniapi.com/v1/user_story"; 
 
         
-            $link =  "https://api.aniapi.com/v1/anime?title=$cadena&nsfw=true&with_episodes=false"; 
+            $link =  "https://api.jikan.moe/v4/anime?q=$cadena"; 
             
         
 
@@ -236,21 +238,21 @@ class ApiBusqueda{
 
         for($i = 0; $i < 6; $i++){
 
-            if(!is_null($animes["data"]["documents"][$i]['cover_image'])){
+            if(!is_null($animes["data"][$i]['images']["jpg"]["large_image_url"])){
 
                 echo "
-                    <a href='./anime.php?idAnime=".$animes["data"]["documents"][$i]["anilist_id"]."' class='colorFondo noticiaA'>
+                    <a href='./anime.php?idAnime=".$animes["data"][$i]["mal_id"]."' class='colorFondo noticiaA'>
                         <div class='noticia'>
                         
                             <div class='imagen imagenAnime'>
                             
-                                <img src='".$animes["data"]["documents"][$i]["cover_image"]."'></img>
+                                <img src='".$animes["data"][$i]['images']["jpg"]["large_image_url"]."'></img>
             
                             </div>
             
                             <div class='titulo tituloBusqueda'>
                             
-                                <p>".$animes["data"]["documents"][$i]["titles"]["rj"]."</p>
+                                <p>".$animes["data"][$i]["title"]."</p>
                             
                             </div>
                         
@@ -276,7 +278,7 @@ class ApiBusqueda{
      */
     public static function buscaAnimeDedicado($idAnime){
 
-        $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+        //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
         ;
         $query = $_GET['query'];
         $page = $_GET['page'];
@@ -286,7 +288,7 @@ class ApiBusqueda{
 
         
             //$link =  "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false"; 
-            $link = "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false";
+            $link = "https://api.jikan.moe/v4/anime/$idAnime/full";
             
         
 
@@ -315,17 +317,17 @@ class ApiBusqueda{
             <div class='contenedor'>
 
             <div class='seccionIzq'>
-                <div class='imagenAnime contenedorAzul' id='imagenAnime'><img src='".$anime["data"]["documents"][0]["cover_image"]."'></div>
+                <div class='imagenAnime contenedorAzul' id='imagenAnime'><img src='".$anime["data"]["images"]["jpg"]["large_image_url"]."'></div>
                 <div class='contenedorCategorias' id='contenedorCategorias'>";
-                for($i = 0; $i < count($anime["data"]["documents"][0]["genres"]); $i++){
-                    echo "<div class='cat colorHeader colorFondo'>".$anime["data"]["documents"][0]["genres"][$i]."</div>";
+                for($i = 0; $i < count($anime["data"]["genres"]); $i++){
+                    echo "<div class='cat colorHeader colorFondo'>".$anime["data"]["genres"][$i]["name"]."</div>";
                 }
                 echo "
                 </div>
             </div>
             <div class='textoAnime'>
-                <div class='titAnime titulo' id='titAnime'>".$anime["data"]["documents"][0]["titles"]["rj"]."</div>
-                <div class='descAnime texto'>".$anime["data"]["documents"][0]["descriptions"]["en"]."</div>
+                <div class='titAnime titulo' id='titAnime'>".$anime["data"]["title"]."</div>
+                <div class='descAnime texto'>".$anime["data"]["synopsis"]."</div>
                 <div class='addButton pointer' id='addAnimeLista'>
                     <div class='masButton'><i class='fa-solid fa-circle-plus colorHeaderLetra'></i></div>
                     <p class='colorFondo'>Añadir a Lista</p>

@@ -170,7 +170,7 @@
 
             //echo "<script>$idAnime</script>";
 
-            $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
+            //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
             $query = $_GET['query'];
             $page = $_GET['page'];
             //$link =  "https://api.aniapi.com/v1/user_story"; 
@@ -178,7 +178,7 @@
             //echo "<script>console.log($idAnime)</script>";
         
             //$link =  "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false"; 
-            $link = "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false";        
+            $link = "https://api.jikan.moe/v4/anime/$idAnime/full";        
 
             //'Authorization: Bearer <' . $key . '>',
             $headers = array(
@@ -197,7 +197,7 @@
 
             //echo "<script>llego</script>";
 
-            $imagen = "<img src='".$anime["data"]["documents"][0]["cover_image"]."'>";
+            $imagen = "<img src='".$anime["data"]["images"]["jpg"]["large_image_url"]."'>";
 
             return $imagen;
 
@@ -240,7 +240,7 @@
                 $idAnime = $anime->idAnime;
 
 
-                $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
+                //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
             $query = $_GET['query'];
             $page = $_GET['page'];
             //$link =  "https://api.aniapi.com/v1/user_story"; 
@@ -248,7 +248,7 @@
             //echo "<script>console.log($idAnime)</script>";
         
             //$link =  "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false"; 
-            $link = "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false";
+            $link = "https://api.jikan.moe/v4/anime/$idAnime/full";
         
             //'Authorization: Bearer <' . $key . '>',
             $headers = array(
@@ -265,7 +265,7 @@
 
             $anime = json_decode($response, true);
 
-            $imagen = "<img src='".$anime["data"]["documents"][0]["cover_image"]."'>";
+            $imagen = "<img src='".$anime["data"]["images"]["jpg"]["image_url"]."'>";
 
                 $contenedorListas[$cont] = array(
                     "nombre" => $listas->nombreL,
@@ -307,7 +307,7 @@
             
             $cont = 0;
 
-            $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+            //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
             ;
             $query = $_GET['query'];
             $page = $_GET['page'];
@@ -319,7 +319,7 @@
 
                 $idAnime = $recorre->idAnime;
 
-                $link =  "https://api.aniapi.com/v1/anime?anilist_id=$idAnime&nsfw=true&with_episodes=false"; 
+                $link =  "https://api.jikan.moe/v4/anime/$idAnime/full"; 
                 
             
     
@@ -341,8 +341,8 @@
             //var_dump($response["data"]["documents"]);
 
             $animes[$cont] = array(
-                "nombre" => $animesJSON["data"]["documents"][0]["titles"]["rj"],
-                "imagen" => $animesJSON["data"]["documents"][0]["cover_image"],
+                "nombre" => $animesJSON["data"]["title"],
+                "imagen" => $animesJSON["data"]["images"]["jpg"]["large_image_url"],
                 "idAnime" => $idAnime,
             );
 
@@ -411,7 +411,7 @@
 
             $anime = json_decode($response, true);
 
-            $imagen = "<img src='".$anime["data"]["documents"][0]["cover_image"]."'>";
+            $imagen = "<img src='".$anime["data"]["images"]["jpg"]["large_image_url"]."'>";
 
                 $contenedorListas[$cont] = array(
                     "nombre" => $listas->nombreL,
