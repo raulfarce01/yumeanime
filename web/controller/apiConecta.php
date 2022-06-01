@@ -13,7 +13,7 @@
         $query = $_GET['query'];
         $page = $_GET['page'];
         //$link =  "https://api.aniapi.com/v1/user_story"; 
-        $link =  "localhost/WebAPI"; 
+        $link =  "localhost/WebAPI/Views/OAuth"; 
 
         //'Authorization: Bearer <' . $key . '>',
         $headers = array(
