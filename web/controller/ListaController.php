@@ -214,6 +214,47 @@ class ListaController{
 
     }
 
+    public static function buscaLista($cadena){
+
+        $lista = new Lista();
+
+        $listas = $lista->buscaLista($cadena);
+        //var_dump($listas);
+        //echo "2";
+        //var_dump($listas);
+
+        for($i = 0; $i < 6; $i++){
+
+            if(!is_null($listas[$i]['imagen'])){
+                echo "
+                <a href='./lista.php?idLista=".$listas[$i]["idLista"]."' class='colorFondo noticiaA'>
+                    <div class='noticia'>
+                    
+                        <div class='imagen imagenAnime'>
+                        
+                            ".$listas[$i]['imagen']."
+        
+                        </div>
+        
+                        <div class='titulo tituloBusqueda'>
+                        
+                            <p>".$listas[$i]["nombre"]."</p>
+                        
+                        </div>
+                    
+                    </div>
+                </a>
+                ";
+            }else{
+
+                echo "<div class='noticiaA'></div>";
+
+            }
+            
+        }
+
+    }
+
 }
 
 ?>

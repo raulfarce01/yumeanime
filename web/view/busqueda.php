@@ -266,7 +266,12 @@
                     <p>Listas</p>
                 </div>
                 <div class="contenedorListas">
-                    
+                    <?php
+                        require_once "../controller/ListaController.php";
+                        //echo "a";
+                        //echo $busca;
+                        ListaController::buscaLista($busca);
+                    ?>
                 </div>
                 <a href='./busquedaDedicada.php?busca=<?php echo $busca;?>&buscaLista=true'><p class="verTodo texto amarillo textoDerecha">Ver todo</p></a>
             </div>
