@@ -265,7 +265,7 @@
 
             $anime = json_decode($response, true);
 
-            $imagen = "<img src='".$anime["data"]["images"]["jpg"]["image_url"]."'>";
+            $imagen = "<img src='".$anime["data"]["images"]["jpg"]["large_image_url"]."'>";
 
                 $contenedorListas[$cont] = array(
                     "nombre" => $listas->nombreL,

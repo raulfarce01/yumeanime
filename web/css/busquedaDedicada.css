@@ -47,8 +47,17 @@ main{
     border-radius: 10px;
 }
 
-.imagen{
+.animeAA{
     width: 100%;
+    height: initial;
+}
+
+.animeAAImagen{
+    width: 100%;
+    height: 100%;
+}
+
+.imagen{
     padding: 2%;
     border-radius: 10px;
     transition: transform 0.2s linear;

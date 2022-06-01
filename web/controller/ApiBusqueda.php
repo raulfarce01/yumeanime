@@ -177,7 +177,7 @@ class ApiBusqueda{
 
             echo "
             <div class='noticia busquedaDedicada'>
-            <a href='./anime.php?idAnime=".$animes["data"][$i]["mal_id"]."' class=' colorFondo titulo'>
+            <a href='./anime.php?idAnime=".$animes["data"][$i]["mal_id"]."' class='animeAA colorFondo titulo'>
                 <div class='imagen contenedorAzul'>
                 
                     <img src='".$animes["data"][$i]["images"]["jpg"]["large_image_url"]."'></img>

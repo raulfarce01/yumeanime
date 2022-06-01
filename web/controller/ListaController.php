@@ -269,9 +269,9 @@ class ListaController{
             if(!is_null($listas[$i]['imagen'])){
                 echo "
                 <a href='./lista.php?idLista=".$listas[$i]['idLista']."' class='busquedaDedicada colorHeaderLetra titulo'>
-                <div class='noticia'>
+                <div class='noticia animeAA'>
             
-                <div class='imagen contenedorAzul'>
+                <div class='imagen contenedorAzul animeAA'>
                 
                     ".$listas[$i]["imagen"]."    
 
