@@ -255,6 +255,43 @@ class ListaController{
 
     }
 
+    public static function busquedaDedicadaLista($cadena){
+
+        $lista = new Lista();
+
+        $listas = $lista->buscaLista($cadena);
+        //var_dump($listas);
+        //echo "2";
+        //var_dump($listas);
+
+        for($i = 0; $i < count($listas); $i++){
+
+            if(!is_null($listas[$i]['imagen'])){
+                echo "
+                <a href='./lista.php?idLista=".$listas[$i]['idLista']."' class='busquedaDedicada colorHeaderLetra titulo'>
+                <div class='noticia'>
+            
+                <div class='imagen contenedorAzul'>
+                
+                    ".$listas[$i]["imagen"]."    
+
+                </div>
+
+                <div class='titulo tituloBusqueda'>
+                
+                    <p>".$listas[$i]['nombre']."</p>
+                
+                </div>
+            
+            </div>
+        </a>
+                ";
+            }
+            
+        }
+
+    }
+
 }
 
 ?>

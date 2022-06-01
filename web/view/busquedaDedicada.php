@@ -242,7 +242,8 @@
                     require_once "../controller/ApiBusqueda.php";
                     ApiBusqueda::busquedaDedicadaAnime($busca);
                 }else if(isset($_GET['buscaLista'])){
-
+                    require_once "../controller/ListaController.php";
+                    ListaController::busquedaDedicadaLista($busca);
                 }
                 
             ?>
