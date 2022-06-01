@@ -210,3 +210,26 @@ También cabe destacar la creación de un pequeño script en bash porque mi PHP 
 ---
 
 El día 26 de mayo se ha considerado ampliar el proyecto y se ha realizado una investigación para poder subir las noticias desde la página en lugar de la base de datos. Tras la investigación se ha observado que para esto necesitamos conocimientos de React, por lo que es otra funcionalidad que queda como extensión del proyecto.
+
+---
+
+El día 01/06/2022 he intentado arreglar la caída de la API del dominio público usando la API en mi propio entorno, así que he tenido que aprender a utilizar mongoloDB. He tenido que clonar el repositorio de ![AniAPI](https://www.github.com/AniAPI-Team/AniAPI).
+
+Esta imagen muestra las bases de datos, nosotros emos creado api_dotnet
+![dbs](img/Memoria/1.png)
+
+Aquí mostramos las colecciones, que equivalen a las tablas de mysql
+![dbs](img/Memoria/2.png)
+
+Podemos ver en la siguiente imagen el valor de la colección "app_settings", que contiene los valores para configurar el endpoint y la clave para que podamos usar la API en nuestro entorno
+![dbs](img/Memoria/3.png)
+
+En la siguiente y última imagen vemos los valores de los endpoints de los que la API que utilizamos saca los valores, todos correspondientes a endpoints de la API de MyAnimeList
+![dbs](img/Memoria/4.png)
+
+La vida es una tómbola, tom, tom tómbola.
+La vida es una tómbola, tom, tom, tómbola.
+De luz y de color, de luz y de color.
+
+Para el que valoró mis esfuerzos hasta el fin de los días: Besis, te quiero mucho <3
+Para el resto: empatía, por favor, gracias <3
