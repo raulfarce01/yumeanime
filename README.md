@@ -213,7 +213,7 @@ El día 26 de mayo se ha considerado ampliar el proyecto y se ha realizado una i
 
 ---
 
-El día 01/06/2022 he intentado arreglar la caída de la API del dominio público usando la API en mi propio entorno, así que he tenido que aprender a utilizar mongoloDB. He tenido que clonar el repositorio de ![AniAPI](https://www.github.com/AniAPI-Team/AniAPI).
+El día 01/06/2022 he intentado arreglar la caída de la API del dominio público usando la API en mi propio entorno, así que he tenido que aprender a utilizar mongoloDB. He tenido que clonar el repositorio de [AniAPI](https://www.github.com/AniAPI-Team/AniAPI).
 
 Esta imagen muestra las bases de datos, nosotros emos creado api_dotnet
 ![dbs](img/Memoria/1.png)
