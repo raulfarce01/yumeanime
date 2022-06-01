@@ -82,6 +82,7 @@ class ApiBusqueda{
         
         $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
         ;
+        //$key = "XQAWglMRCodMO1Zsdvzyxful187oPLDghHKlPiuie4H24BNL0MVnR7YoBgqLoWP";
         $query = $_GET['query'];
         //$link =  "https://api.aniapi.com/v1/user_story"; 
 
