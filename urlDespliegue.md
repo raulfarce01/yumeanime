@@ -9,4 +9,4 @@
 *La URL irá cambiando cada día:*  
 https://9036-94-73-50-102.eu.ngrok.io
 
-Estado actual: **Activo**
+Estado actual: **Inactvo, buenas noches <3**
