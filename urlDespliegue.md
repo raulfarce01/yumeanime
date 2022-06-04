@@ -4,9 +4,9 @@
 
 ---
 
-### Horario: 08:00 - 01:00
+### Horario: 09:30 - 00:00
 
 *La URL irá cambiando cada día:*  
-https://9036-94-73-50-102.eu.ngrok.io
+https://5422-94-73-50-102.eu.ngrok.io
 
-Estado actual: **Inactvo, buenas noches <3**
+Estado actual: **Activo, weno día <3**
