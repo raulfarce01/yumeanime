@@ -4,7 +4,7 @@
 
 ---
 
-### Horario: 09:30 - 00:00
+### Horario: 09:30 - 23:00
 
 *La URL irá cambiando cada día:*  
 https://ff6b-95-16-206-183.eu.ngrok.io
