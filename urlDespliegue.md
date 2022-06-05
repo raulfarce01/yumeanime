@@ -9,4 +9,4 @@
 *La URL irá cambiando cada día:*  
 https://5422-94-73-50-102.eu.ngrok.io
 
-Estado actual: **Activo, weno día <3**
+Estado actual: **Inactivo**
