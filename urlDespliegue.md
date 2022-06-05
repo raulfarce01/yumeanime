@@ -7,6 +7,6 @@
 ### Horario: 09:30 - 00:00
 
 *La URL irá cambiando cada día:*  
-https://5422-94-73-50-102.eu.ngrok.io
+https://ff6b-95-16-206-183.eu.ngrok.io
 
-Estado actual: **Inactivo**
+Estado actual: **Activo**
