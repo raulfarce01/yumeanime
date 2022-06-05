@@ -9,4 +9,4 @@
 *La URL irá cambiando cada día:*  
 https://ff6b-95-16-206-183.eu.ngrok.io
 
-Estado actual: **Activo**
+Estado actual: **Inactivo**
