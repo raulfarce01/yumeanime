@@ -4,9 +4,9 @@
 
 ---
 
-### Horario: 09:30 - 23:00
+### Horario: 08:00 - 22:00
 
 *La URL irá cambiando cada día:*  
 https://ba38-95-16-206-183.eu.ngrok.io
 
-Estado actual: **Activo, Felis Lunez**
+Estado actual: **Inactivo**
