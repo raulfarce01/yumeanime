@@ -1,6 +1,6 @@
 # URL PARA ACCEDER A YUMEANIME
 
-### Ya tengo entorno para el despliegue a partir del lunes, así que seguiremos con la web en pie
+### Estoy intentando arreglar un problemita con la generación de enlaces de ngrok en el nuevo entorno
 
 ---
 
