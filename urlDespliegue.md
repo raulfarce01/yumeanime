@@ -6,6 +6,6 @@
 ### Horario: 08:00 - 22:00
 
 *La URL irá cambiando cada día:*  
-https://3da8-2a02-2e02-2d8d-b500-9ea7-f858-3fc3-c345.eu.ngrok.io/
+https://026c-2a02-2e02-2d8d-b500-f199-8d34-204d-878a.eu.ngrok.io
 
-Estado actual: **Inactivo**
+Estado actual: **Activo**
