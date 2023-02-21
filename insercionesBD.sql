@@ -1,3 +1,4 @@
+/*Todas las inserciones de BBDD*/
 USE yumeanimedb;
 
 INSERT INTO user(nombre, alias, correo, passwd, administrador) VALUES ('arce', 'arce', 'arce', 'arce', 1);
