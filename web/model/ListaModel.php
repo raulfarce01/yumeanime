@@ -170,9 +170,9 @@
 
             //echo "<script>$idAnime</script>";
 
-            //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
-            $query = $_GET['query'];
-            $page = $_GET['page'];
+            $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
+            ////$query = $_GET['query'];
+            ////$pafe = $_GET['page'];
             //$link =  "https://api.aniapi.com/v1/user_story"; 
 
             //echo "<script>console.log($idAnime)</script>";
@@ -240,9 +240,9 @@
                 $idAnime = $anime->idAnime;
 
 
-                //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
-            $query = $_GET['query'];
-            $page = $_GET['page'];
+                $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
+            ////$query = $_GET['query'];
+            ////$pafe = $_GET['page'];
             //$link =  "https://api.aniapi.com/v1/user_story"; 
 
             //echo "<script>console.log($idAnime)</script>";
@@ -307,10 +307,10 @@
             
             $cont = 0;
 
-            //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
+            $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic"
             ;
-            $query = $_GET['query'];
-            $page = $_GET['page'];
+            //$query = $_GET['query'];
+            //$pafe = $_GET['page'];
             //$link =  "https://api.aniapi.com/v1/user_story"; 
 
             $consulta = $db->query("SELECT idAnime FROM animeLista WHERE idLista = $idLista");
@@ -386,9 +386,9 @@
                 $idAnime = $anime->idAnime;
 
 
-                //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
-            $query = $_GET['query'];
-            $page = $_GET['page'];
+                $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
+            //$query = $_GET['query'];
+            //$pafe = $_GET['page'];
             //$link =  "https://api.aniapi.com/v1/user_story"; 
 
             //echo "<script>console.log($idAnime)</script>";
@@ -459,8 +459,8 @@
                 $idAnime = $anime->idAnime;
     
     
-                //$key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
-                $query = $_GET['query'];
+                $key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MTIiLCJuYmYiOjE2NTIzNjA3MDYsImV4cCI6MTY1NDk1MjcwNiwiaWF0IjoxNjUyMzYwNzA2fQ.ApUPWyUu7VIUY1Sd5Hkr1fs3aJD1WI0PH4yReJ_Cpic";
+                //$query = $_GET['query'];
                 //$link =  "https://api.aniapi.com/v1/user_story"; 
         
                 //echo "<script>console.log($idAnime)</script>";
